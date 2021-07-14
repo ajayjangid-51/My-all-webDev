@@ -1,0 +1,112 @@
+<!-- YAHA pe apan Different EVENTS and unko LISTEN krne k bareh meh dekhenge. -->
+<!-- EVENT mtlb user k duvara webpage pe kiya gya koi bhi kaam EVENT-khalata hai jaise; user ne webpage k kisi button pe click kiya toh yeh click-EVENT kheleyga, or jaise user ne webpage k kisi element pe hover kiya toh voh hover-EVENT khlayega, etc.. -->
+
+<!-- some popular webpage-EVENTS: -->
+<!-- 
+1.click-EVENT (jab mouse click hoga then it is called click-EVENT)
+2.contextmenu (mtlb jab mouse right-click hoga then it is called contextmenu-EVENT)
+3.mouseover and mouseout (jab kisi element pe mousecursor ayega then then it is called mouseover-EVENT and jab
+mousecursor element se bahar chala jayega then this is called mouseout-EVENT)
+4.mousedown and mouserup (jab mousebutton pressed hai then it is called mousedown-EVENT and jab mousebutton press krke
+realesed hai then it is called mouseup-EVENT)
+5.mousemove (jab mousecursor mover hota hai that is called mousemove-EVENT)
+
+6.submit
+7.focus (jab kisi input-element pe focus kiya jata hai then this is called focus-EVENT)
+
+8.DOMcontentloaded (jab pura DOM-content load ho jata hai then it is called DOMcontentloaded-EVENT)
+9.transitioned and etc etc.. -->
+
+<!--
+aab jaise koi EVENT hua toh:
+Listening to event ka mtlb hai ki uss event ko sunn k usko respond krna (respond krna mtlb uss event k hone par kya
+kaam apply hoga voh set krna jaise for.eg "hide-button" pe click krne se paragraph hide ho jayega, and jaise kisi
+menu-option pe click krne se ek dusra menu khul jayega etc..).
+toh simply kisi event ko listen krna mtlb uss event pe koi kaam apply krna.
+NOW aab apan yeh dekhenge ki apan kis tarah browser event ko apan listen kr skteh hai mtlb kisi EVENT pe koi kaam hone
+wala hai toh uss kaam ko apan kaise set kre by CODING.
+
+toh agar apanko kabhi kisi EVENT ko listen krna hai then we simply type:
+
+apan click event ko listen kr rhe hai kis pe listen kr rhe ess button pe listen kr rhe hai
+mtlb ham chahete hai ki ess button pe click-EVENT listen then simply apan ess but pe click-EVENT ko listen krva denge.
+now ess button par click-EVENT ko listen krvane 2 tarike hai:
+       1. <button> onEVENT="function-name()" </button>(apan directly element meh hi daal skteh hai and phir JS meh usska function bana bana denge.)
+
+       2. addEventListener('event-NAME' , function )     (Simply agar apan kisi element pe koi-event ko listen krvana chahteh hai toh apan directly JAVASCRIPT meh uss element ko tag ya manipulate krke uss element meh "addEventListener()" function ka use krteh hai.)  -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Different Events and Listening to the EVENTS</title>
+</head>
+
+<body>
+    <div class="container">
+        <h1>This is a heading</h1>
+        <p id="hed">good ji</p>
+        <p id="para">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Est, a! Aliquam dignissimos, quaerat
+            vitae dolore tempore iste animi ipsa voluptatibus in non, assumenda odio obcaecati mollitia optio error
+            iure. Unde deleniti a placeat dolorem ducimus dolor iste quaerat rem? Perspiciatis consectetur explicabo
+            nostrum officiis fuga voluptatem? Nihil maxime natus ea modi inventore rem expedita nulla ipsum laboriosam,
+            maiores tenetur numquam eligendi fuga adipisci dolores doloremque aspernatur minima molestiae? Delectus
+            sequi dolorem error eius accusantium ipsa natus, dolorum culpa ut possimus porro quisquam quidem quos eum
+            ullam consequuntur odit nisi iste neque exercitationem? Laboriosam eveniet natus, qui rem beatae deleniti
+            itaque, alias corporis veniam maxime mollitia? Natus placeat odio dolore dolores numquam ratione eius
+            aspernatur obcaecati illum similique necessitatibus veniam, provident unde iure ducimus voluptatum suscipit!
+            Inventore, perspiciatis est! Qui, earum! Voluptates omnis mollitia fugiat cumque autem in quae a atque
+            veniam rerum ipsam iure, maiores nesciunt illum facere voluptatum nulla laboriosam aperiam, ea suscipit
+            exercitationem cupiditate! Repudiandae impedit reiciendis facilis temporibus molestias, enim voluptas
+            placeat quia harum nemo iure minima repellendus corporis sapiente itaque. Repellat iusto saepe dignissimos
+            ad. Laudantium, similique. Odio dolorem obcaecati cum. Explicabo ipsam sit illo delectus voluptatibus quod
+            vel ad! Inventore consectetur cumque aliquam expedita obcaecati quisquam impedit qui dolorem dolores
+            tenetur! Pariatur unde autem doloremque dicta quibusdam ea explicabo accusamus dolor obcaecati
+            exercitationem ipsum fugit id, quis modi consectetur itaque harum ipsa, sed aliquam delectus labore?
+            Laboriosam, magni?</p>
+    </div>
+    <button id="butn" onclick="hide()" oncontextmenu="menu()">Hide/Show</button>
+    <!-- yaha upar button meh onclick="hide()" ka mtlb hai ki jab button pe click event hone par yeh function run krdo -->
+    <script>
+        function hide() {
+            buttn = document.getElementById("butn")
+            par = document.getElementById('para')
+            // yaha upar apan ne phle dom-elements ko uthaya hai and then phir hi apan uss element pe kuch koi actio(ya kaam) apply kr skteh hai isiley manipulation of elements important hai.
+            //    par.style.display='none'
+            if (par.style.display != 'none') {
+                par.style.display = 'none'
+            }
+            else {
+                par.style.display = 'block'
+            }
+            //  here in par we applied style funtion and in style we have applied display function.  
+        }
+        // != (is not equal to)
+
+        //NOTE: this means click hone pr yeh fn run kr dena and now ess fn ka kaam yeh hai ki if(agar) para ki display none nhi toh usse none kr dena otherwise uski displya block hi rkhna mtlb on click-event pe agar para ki display none nhi toh voh none hojayega  and agar orr kuch hai toh uski display on click pe block hojayegi, mtlb onclick clicks pe hi kaam hoga
+        // mtlb agar hide nhi hai voh usse hide krdo on-click pe and otherwise kuch bhi ho usse vase hi rhene do(mtlb display=block) on click pe . 
+
+        function menu() {
+            par = document.getElementById('para')
+            par.style.display = "none"
+        }
+        // now agar ess <h1> element pe koi bhi event hoga toh use listen krvane k liyeh apan simply and directly "addEventListener('event-NAME' , function )"  FUNCTION ka use krteh hai:as like
+        let hedd = document.getElementById('hed')
+        hedd.addEventListener('mouseover', function ok() {
+            alert('your mouse is over the h1 element')
+        })
+        hedd.addEventListener('mouseout', function okk() {
+            alert('your mouse is now out the h1 element')
+        })
+        // for more html-dom-Events: visit this: 
+        // https://www.w3schools.com/jsref/dom_obj_event.asp
+
+        // NOTE or TIP:agar kisi element ki id=para hai then apanko JAVASCRIPT meh uss element ko phle tag ya manipulate nhi krna padega bcoz yeh apne aap hi uss para id wale element ko utha ya manipulate kr lega. 
+
+
+
+    </script>
+</body>
+
+</html>

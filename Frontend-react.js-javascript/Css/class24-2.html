@@ -1,0 +1,117 @@
+<!-- yaha pe apan display property ka mtlb and iska use dekhenge and saat hi saat apan yeh bhi janenge ki acchi responsive websites kaise banaee jati hai mtlb voh kon kon se small factors hai jo websites ko responsive banane meh help krte hai ya unka use hota hai -->
+<!-- and RESPONSIVE ka mtlb ki jaise website ko kisi pc,laptop, phone ya tablet meh access kiya jata means screen ka choti badi hona then user ko website dikhne meh and access krne comfort ho. -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TESTING</title>
+    <style>
+        header {
+            border: 2px solid red;
+            margin: auto;
+            /* display: inline; */
+            width: 20%;
+        }
+
+        img {
+            width: 32px; 
+            display: block;
+            margin: auto;
+            /*   img ko center meh laane ki liyeh bt by this we understand the use and role of display property 
+            TIP: agar display block hai toh simply margin auto krke apan kisi bhi element ko centre meh la skte hai*/
+
+                                     /* padding-left: 119px; */
+            /* now image ko centre meh lane k liyeh apan yaha pe padding-left ka bhi use kr skte hai but esseh apni website responsive nhi banegi that is only why we take the help of display property to lying the image at centre
+             */
+        }
+
+        h3 {
+            margin: 0px;
+            /* display: inline; */
+
+                                 /* padding-left: 60px; */
+            /* as above same here we not use padding instead of this we use text-align property to make it at centre so the our website can be made responsive. */
+            text-align: center;
+        }
+
+        /* HTML meh OVERLAPPING naam ki koi cheez hoti nhi hai actually voh sari cheeje conceptually kaam krti hai means jo rules defined kiyeh gayeh hai ussi tarah kaam hota hai bs kabhi kabar apana dhayn na rhne se voh apan ko kuch overlapping lagti hai.
+     */
+        /* and ha kuch results weird ho skteh hai bcoz jaise apan kisi block element ko inline element banateh and then developer tool se uss converted element pe cursor krte hai then vaha pe jaise dekhana chahiyeh vesa nhi dikhta and NOTE POINT: AGAR apan ko kabhi weird loo milta hai then we should try to find out ki esa look kaise aaya (for e.g above wali sitation(jaise apane pass ek inline element hai and usmeh ek inline and ek block element hai toh agar apan aab uss parent inline element ka define kre toh vaha ek weird look aata hai) ka reason hai ki border hamesa sqaure ya rectangle hi hota hai ) */
+        .ll {
+            border: 3px solid blue;
+        }
+
+        .me {
+            border: 2px solid olive;
+            width: 32px;
+        }
+        /* NOW AGAR apan ko kisi block element ko inline element banana hai and uski width bhi set krni hai then eske liyeh we use  the property "display:inline-block" */
+
+        .last{
+            background-color: 2px solid hotpink;
+            width: 89.4%;
+        }
+        .img2{
+            display: block;
+            margin: auto;
+        }
+        .lt{
+            text-align: center;
+        }
+        .now{
+            background-color: khaki;
+            border:3px solid darkred;
+            width: 31.77%;
+            display:inline-block;
+            padding: 3px;
+            margin: 2px;
+        }.classified{
+            margin: auto;
+            width: 90%;
+            margin-top: 13px;
+        }
+
+
+    </style>
+</head>
+
+<body>
+    <header>
+        <img src="https://www.codewithharry.com/static/common/img/photo.png" alt="">
+        <h3>welcome to my blog</h3>
+    </header>
+    <h2>SOME weird look and its reason is mentioned in above comment</h2>
+    <span class="ll">
+        <span class="tip">kaise ho sab log</span>
+        <p>hum thik hai ji</p>
+
+    </span>
+
+    <span class="me">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</span>
+    <hr style="border: solid 2px black;">
+    <hr style="border: solid 2px black;">
+    
+    <header class="last">
+        <img src="https://www.codewithharry.com/static/common/img/photo.png" alt="" class="img2">
+        <h3 class="lt">hello ji kaise ho</h3>
+    </header> 
+    <div class="classified">
+        <div class="now">
+            <h3 class="nw">SHORT STORY</h3>
+            <P class="new">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga, doloremque doloribus error incidunt alias architecto quaerat nobis dolore eos vero corrupti, reprehenderit aut officia. Neque voluptatum debitis eum ipsa omnis exercitationem architecto!</P>
+        </div>
+        <div class="now">
+            <h3 class="nw">SHORT STORY</h3>
+            <P class="new">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga, doloremque doloribus error incidunt alias architecto quaerat nobis dolore eos vero corrupti, reprehenderit aut officia. Neque voluptatum debitis eum ipsa omnis exercitationem architecto!</P>
+        </div>
+        <div class="now">
+            <h3 class="nw">SHORT STORY</h3>
+            <P class="new">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga, doloremque doloribus error incidunt alias architecto quaerat nobis dolore eos vero corrupti, reprehenderit aut officia. Neque voluptatum debitis eum ipsa omnis exercitationem architecto!</P>
+        </div>
+    </div>
+
+</body>
+
+</html>

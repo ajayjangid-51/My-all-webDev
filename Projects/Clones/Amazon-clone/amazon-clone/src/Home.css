@@ -1,0 +1,30 @@
+.home{
+    max-width: 1250px;
+    margin-left: auto;
+    margin-right: auto;
+    /* background-color: grey; */
+}
+.home__image{
+    width: 100%;
+    height: 80vh;
+    mask-image: linear-gradient(to bottom, rgb(0, 0,0, 1), rgba(0, 0, 0, 0));
+    /* Linear-gradient se image  one color different color meh linearly convert hoti jati hai. and yaha pe yeh last no. opacity ya transparency ko represent krta hai*/
+    /* max-width: 1500px; */
+
+    margin-bottom: -120px; /* thus yaha pe negative-meh-margin ka mtlb aab eske niche jo cheez hogi voh eske upar overlap kr jayegi */
+    z-index: -1;
+ }
+.home__row{
+    display: flex;
+    z-index: 1;
+    margin-left: 10px;
+    /* background-color: white; */
+}
+
+/* for icons: npm install @material-ui/icons */
+
+
+/* now aab apn React-Context-API k bareh meh dekhenge and React-Context-API ko setup krenge: */
+/* React-context-API kafi easy, simple and clean hai */
+/* now jaise apn React banateh hai, toh suppose apne pass product hai and usmeh kafi sare products hai */
+/* now suppose jaise sbse phle apni aap hai and now ess app meh koi user login krta hai then simply ess app meh uss user ki sari information accordingly fetch hojaygi mtlb usss app k sare sbhi components meh voh fetch hojayegi. */

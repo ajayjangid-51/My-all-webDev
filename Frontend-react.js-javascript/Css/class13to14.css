@@ -1,0 +1,7 @@
+/* # EXTERNAL CSS #
+agar apan external css ko add krenge HTML SHOWING CONTENT meh then apan ko alag se ek .css file create krni hogi jis meh apan sari style sheet banayenge and baad meh MARKUP(html code) meh head tag meh ess .css file ko dal denge by tagging the link tag */
+
+p.rules{
+ color:brown;
+ /* background-color: chartreuse; */
+}

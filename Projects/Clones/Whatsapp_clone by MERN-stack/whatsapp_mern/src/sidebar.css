@@ -1,0 +1,57 @@
+.sidebar{
+    display: flex;
+    flex-direction: column;
+    /* border: 1px dotted red; */
+    flex: 0.35;
+}
+
+.sidebar__header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* flex-direction: column; */
+    padding: 20px;
+    /* border-right: 1px solid blue; */
+    height: 50px;
+    border-right: 1px solid lightgray;
+}
+
+.sidebar__header .MuiSvgIcon-root{
+    /* margin-right: 10vw; */
+    margin: 0.5vw;
+    font-size: 30px !important;
+    /* yaha apnko !important lagana padega. */
+}
+.sidebar__search{
+    background: rgb(233, 227, 216);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    padding: 10px;
+}
+.sidebar__searchContainer{
+    display: flex;
+    align-items: center;
+    background-color: white;
+    width: 100%;
+    height: 35px;
+    border-radius: 20px;
+    
+}
+.sidebar__searchContainer .MuiSvgIcon-root{
+    color: blue;
+    /* as yeh icon-html-svg text hi hai, thus toh apn text hi tarah hi enn icons ki styling kr skteh hai. */
+    padding: 10px;
+}
+.sidebar__searchContainer input{
+    border: none;
+    outline-width: 0;
+    margin-left: 10px;
+}
+.sidebar__chats{
+    overflow-y: scroll;
+}
+
+
+/* NOw we will build-Whatapp-backend: */

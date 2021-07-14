@@ -1,0 +1,77 @@
+<!-- NOW YAHA pe apn "Canvas" meh Drawing krna dekhenge: -->
+<!--  -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canvas</title>
+    <style>
+        #gd{
+            border: 1px solid red;
+            /* background-color: blue; */
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <canvas id="gd" width="200" height="200" ></canvas>
+    <script>
+        let canvas_box = document.getElementById("gd")
+        //as JavaScript Object-oriented-programming-language hai thus esmeh hr variable k liyeh compilation-time pe ek dedicated-Object define hota hai, thus toh now ess canvas Object k liyeh bhi ek object-define hota hai jiske functions ka use krke apn esmeh drawing kr skteh hai. as like this. as dedicated-Object ka naam uss Variable-name k equal hi hota hai.
+        // now apn ess function se ek drawing object create krenge, mtlb yeh function ek Object-return krta hai jismeh kafi-sare functions hoteh hai , thus toh apn enn functions ka use krke apn canvas meh drawing kr skteh hai and krenge bhi as like this.
+
+        console.log(canvas_box.getContext("2d"))
+        // as toh ess-code se apn dekh skteh hai ki getContext()-fn ki return value ek object hi hai jismeh bohat sare key-value-pairs hai and kafi sare functions bhi hai. thus toh apn enn functions and properties ko acche se explore bhi krenge.
+
+        // as ess function ka yeh suggestion hai =>> HTMLCanvasElement.getContext(contextId: "2d", options?: CanvasRenderingContext2DSettings): CanvasRenderingContext2D 
+        // as toh mtlb esseh samaj skteh hai ki eske parameter-1 ka name contextId hai and p2 ka name options hai jo ki optional hai. and ess function ki return-value ka name CanvasRenderingContext2D hai thus toh as mtlb yeh naam hi return-value ki description hai , thus toh mtlb ess description se samaj skteh hai ki yeh return-value kaisi hi
+
+        let getContext_object_or_drawingObject = canvas_box.getContext("2d")
+
+        // thus phle apn ess getContextObject meh kuch keys ki value change kr deteh hai , takki apni drawing as according apne jaisi ho.
+        // as toh apn fillStyle-key ki value set krenge , as yeh key-ki-value use ki gayi hai for giving the color in the drawing jo apn draw krenge.
+
+        getContext_object_or_drawingObject.fillStyle = "red"
+        // as ess fillStyle-key ki value black hoti hai by default
+
+        // as now apn ess drawing-Object (mtlb getContext_object_or_drawingObject ) k fillRect()-fn se rectange draw kr skteh hai. as like this:
+        getContext_object_or_drawingObject.fillRect( 10, 20 , 50 , 100)
+        // as yaha yeh x and y parameter actually canvas k upper-left corner's cordinates hai thus toh yeh baat apnko pata honi chahiyeh.
+        // note-point: 🎆: by defalut html-Canvas-element ki upper-left default cordinates 0 , 0 hoteh hai.
+
+        // 🔔🔔 AS apn  line-no:48 meh se dekh kr ess drawing-object k orr bhi functions explore kr skteh hai , thus toh apnko one-by-one sbko try krna hai. as q ki essehi mastery banti hai. jaise::
+
+        // getContext_object_or_drawingObject.rotate(58*2)
+        // getContext_object_or_drawingObject.arc(10 , 10 , 50 , 0 , 80 , true)
+        let a = true
+        getContext_object_or_drawingObject.arc(10 , 10 , 50 , 0 , 80 , a)
+        getContext_object_or_drawingObject.stroke()
+        // as apnko stroke()-fn ka use krna hota hai tabhi changes apply hoteh hai.
+        // getContext_object_or_drawingObject.arc()
+
+
+        // 🎆 Drawing a line in Canvas🎆
+        // as line draw krne k liyeh apn drawing-Object k moveTo() and lineTo() function ka use krteh hai. 
+        getContext_object_or_drawingObject.moveTo(10 , 30 )
+        // as moveTo()-fn se line-starting-point set hota hai.
+        getContext_object_or_drawingObject.lineTo(100, 150)
+        // as lineTo()-fn se line-starting-point set hota hai.
+        // as yaha suggestion meh => CanvasPath.lineTo(x: number, y: number): void meh  x and y canvas k cordinates ko hi represent krteh hai.
+        getContext_object_or_drawingObject.stroke()
+
+        // 🎆 Drawing a Circle in Canvas🎆
+
+getContext_object_or_drawingObject.beginPath()
+// as agr apn beginPath()-fn run nhi krteh hai then drawing-pointer jaha last meh stop huaa tha vahi se hi vapis continue hota hai thus ess beginPath()-fn se apn drawing-pointer ko vapise se reset kr deteh hai. 
+       getContext_object_or_drawingObject.arc( 40, 30 , 20 , 0 , 2*Math.PI)
+    //    as yaha arc meh x and y paramter arc-center k cordinates ko represent krteh hai.
+        getContext_object_or_drawingObject.stroke()
+
+
+        
+
+    </script>
+</body>
+</html>

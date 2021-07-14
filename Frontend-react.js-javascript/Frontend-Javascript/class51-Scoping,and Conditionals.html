@@ -1,0 +1,117 @@
+<!-- YAHA pe apan variable ki "SCOPING(global or block)" k bareh meh and JAVASCRIPT meh CONDITIONALS-statement-SYNTAX k bareh meh dekhenge: -->
+
+<!-- SCOPING (scoping is simply related to the update(or changement) of pre-asigned value of any variable mtlb ki agar creted-variable ka scope "global" hai then uss variable ki value ko apan kahi pr and kabhi bhi update(or change) kr skteh and agar scope "block" hai then uss variable ki value ko apan sirf uske BLOCK meh change kr skthe hai) -->
+
+
+<!-- 
+conditnals-statement ka use tab hota jab koi kisi asigned-data pe kuch condition apply krni ho ya vohassigned data kisi applied condition ko statisfy krta ho then phir apan simply block meh kuch orr conditionya function(jaise console-print function etc.) laga skteh hai. and ase kisi variable pe koi condition applykrni ho then we simply use the CONDITIONALS-statement-SYNTAX. -->
+<!-- CONDITIONALS-statement-SYNTAX mainly two-types ki hoti hai bt enn dono ka kaam same sa hota hai: -->
+             <!-- 1.if-esle statement -->
+             <!-- 2.switch-case statement -->
+<!-- notice: enn dono ki fuctioning niche explain ki huee hai -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scoping and Conditionals(if-else and switch-case)</title>
+</head>
+
+<body>
+    <div>
+        <ul>
+            <li>line-1</li>
+            <li>line-2</li>
+            <li>line-3</li>
+            <li>line-4</li>
+            <li>line-5</li>
+            <li>line-6</li>
+        </ul>
+    </div>
+
+    <script>
+        var string1 = 'this is string1'
+        string1 = 'this is updated or read clear string1'
+        console.log(string1)
+
+        let string = 'okay this is let string'
+        // let string="okay this is updated read-clear let string"
+        {
+        }
+        console.log(string)
+
+        let newvar = "this is new variable by let"
+        {
+            let newvar = "good good"
+            console.log(newvar)
+        }
+        // TOH apan let-variable ka use isiliy krteh hai ki agar apan kabhi koi new variale create kre bt actually uss naam se koi phle se hi variable pre-created tha toh then voh yaha pe simply voh pre-created variable update ho jayega toh means iski vajah se apna sara algorithm kharab ho skta hai that is only why hamesa let-variable ka use hi krteh hai.  
+
+
+
+        let newvar1 = "okay okay"
+        console.log(newvar1)
+
+        // NOTE:"var" ka  SCOPE "global" hota hai mtlb script meh agar apan script meh kahi par bhi kisi pre-created variable(by using var) ko update(ya read-clear) krna chahe toh voh apan easily kr skteh hai.
+
+        // and let ka SCOPE "block" hota hai mtlb agar apan script meh kahi kisi pre-created variable(by using let) ko update ya read-clear krna chahe toh voh nhi hoga, voh only sirf usske block meh hi update hoga(mtlb directly apan yeh khe skteh ki "let se bane variable" ko apan block k bahar update nhi kr skteh or apan ase bhi khe skteh hai ki let se bana variable as "CONST" ki tarah behave krta hai except inside the BLOCK isiley apan aab se hamesa kisi variable ko create krne k liyeh "let" ka hi use krenge, takki apna algorithm khrab na ho,)
+
+        const constant = "we defined a constant"
+        // const constant="hello ji"
+        console.log(constant)
+
+        // switch (age) {
+        //     case 20: console.log("the age is 14")
+        //         // case (value of variable jo ya toh user input krega ya phir program uski value phle se hi asign hai)
+        //         break;
+        //     case 43: console.log('the age is less than  15')
+        //         break;
+        //     case 20: console.log("the is age 20")
+        //     default:
+        //         console.log('no match to the entered data')
+        //         break;
+        // }
+
+        let physics=5
+        console.log(physics)
+        if (physics>4) {
+            console.log("you scored greter than 4 so you are eligible for second class")
+        }
+        // this means:
+        // agar yeh condition hai(note:essmeh apan sirf ek hi condition laga skteh hai and agar dusri koi alag conditon lagani hai toh apan "esle if ()" meh lagayenge) { 
+        //     then do this(jp in form of funtion likha hota hai)
+        // }
+
+        else if (physics<7){
+            console.log("you have less than 2")
+        }
+        // so this else if codition will not print bcoz "if-else" statement meh agar upar wali condition phle statisfy ho jati hai toh voh niche wali ko scan bhi nhi krega bt switch-case meh apan ase print krva skteh agar apan vaha pe "break" na lagayeh. 
+        else{
+            console.log('sorry')
+        }
+        // this means:
+        // otherwise(mtlb agar upar wali condition nahi toh) {
+        //     then do this
+        // }
+
+
+        switch (physics) {
+            case 10: console.log("you scored full out of fully")
+                
+            case 5:console.log("5 is your answers")
+            // note:apan yaha pe sirf ek hi value daal skteh hai and agar apnko one or more value aur daalni then voh apan other meh daalenge.
+            case 10:console.log("so godd") 
+            break;
+        
+            default:console.log('pleases enter the data')
+                break;
+        }
+
+        // NOTE: Switch-case meh apan koi "condition" nahi daal skteh but vaha sirf apan variable ki value hi daal skteh hai.
+
+
+    </script>
+</body>
+
+</html>

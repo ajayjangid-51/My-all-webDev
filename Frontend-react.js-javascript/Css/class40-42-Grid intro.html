@@ -1,0 +1,102 @@
+<!-- YAHA pe apan CSS meh display-"GRID" property k bareh meh dekhenge: -->
+<!-- dislay-GRID property ka use mainly layout design krne k liyeh hota hai.
+    
+note:"LAYOUT" means webpage meh elements ki mapping,aligning ya bichana (aur phir webpage meh jo external-designing "means html box kaha aur kaise dekh rhe hai" hoti hai usseh bhi apan layout bolte hai), -->
+
+<!-- #TIP: TOH mtlb apan jab bhi koi website design krte hai toh sabse phle apan uss website ka layout design(mtlb layout banana yani apan phle bahot sareh div create kr lenge and phir css-grid-property ki help se unn sab div ko webpage meh as per design align kr denge and now aab jo apnko dikhega usse apan website ka layout bolte hai) krte hai and phir designed layout meh apan acchi tarah se content daal dete hai -->
+
+<!-- CSS-GRID part-1 -->
+
+<!-- by using CSS-GRID-property part-1 meh apan mainly parent-GRID-BOX meh ."column" create krna, "row" create krna and kisi particular GRID-item ko "span" krna dekhenge: -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS-GRID introduction</title>
+    <style>
+        .container{
+            display: grid;
+            /* esseh .container-BOX as a GRID-box banjayega and phir essmeh apan different GRID-properties laga skte hai as like shown below: */
+            grid-template-columns:200px 400px 100px;
+            /* toh esseh kya hoga ki actually ess .container-BOX meh 3 imagenary-column banjayegi as per given width, and phir ess .container-BOX k grid-items apne aap enhi columns meh serial-wise arrange ho jayenge.    */
+            grid-template-columns:2fr 4fr 1fr;
+            grid-template-columns: repeat(3, auto);
+            /* repeat(no. of columns, width of column) means create 3 columns of same size 200px  */
+            grid-template-columns: repeat(auto-fit,  minmax(100px, 300px));
+           
+
+            grid-gap: 3px;
+            /* esseh GRID-items k bich and side meh gap create ho jata hai. */
+        }
+        .box{
+            background-color: burlywood;
+            border: 2px solid black;
+            padding: 5px;
+        }
+        .rowcn{
+            background-color: rgb(38, 224, 168);
+            border: 2px solid black;
+            padding: 5px;
+        }
+        .conti2{
+            display: grid;
+            grid-template-rows: 100px 50px 100px 50px;
+            /* esseh BOX meh 4 imagenary-rows create ho jayegi of the given width and note krne wali baat ki hamesa ek row meh ek hi GRID-item aata hai.  */
+
+            grid-auto-rows: 30px;
+            /* esseh reamaning-rows(jo apan ne g-t-c meh create nhi ki) unki width set hoti hai. */
+
+            grid-template-columns: repeat(3, auto);
+            grid-gap:3px;
+        }
+
+        /* NOW yaha pe apan GRID-item ki "SPANNING" k bareh meh dekhenge:
+        Spanning yani fealna and toh grid-itme spanning mtlb grid-item ka kisi dusre row and column k element tak feal jana ya vaha tak apne app ko expand kr lena. */
+
+        /* toh agar apanko GRID k kisi grid-item ko span krna hai then in that GRID-item we simply apply:
+                      1.grid-column: 1/span 2; (mtlb ess particular grid-item ko column meh eske dusre-item tk span kr ko)
+                      2.grid-row:1/span 2; (mtlb ess particular grid-item ko row meh eske dusre-item tk span kr ko) */
+
+        #it1{
+          /* grid-column-start: 1;
+          grid-column-end: 3;
+          grid-row-start: 1;
+          grid-row-end: 3; */
+
+         grid-column: 1 /span 2;
+         grid-row: 1/span 2;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box" id="item1">This is item-1</div>
+        <div class="box">This is item-2</div>
+        <div class="box">This is item-3</div>
+        <div class="box">hello ji</div>
+        <div class="box">This is item-4</div>
+        <div class="box">This is item-5</div>
+        <div class="box">This is item-6</div>
+        <div class="box">This is item-7</div>
+        <div class="box">This is item-8</div>
+        <div class="box">This is item-9</div>
+        <div class="box">This is item-10</div>
+    </div>
+    <hr><hr>
+    <div class="conti2">
+        <div class="rowcn" id="it1">this is row-item-1</div>
+        <div class="rowcn">this is row-item-2</div>
+        <div class="rowcn">this is row-item-3</div>
+        <div class="rowcn">this is row-item-4</div>
+        <div class="rowcn">this is row-item-5</div>
+        <div class="rowcn">this is row-item-6</div>
+        <div class="rowcn">this is row-item-7</div>
+        <div class="rowcn">this is row-item-8</div>
+        <div class="rowcn">this is row-item-9</div>
+        <div class="rowcn">this is row-item-10</div>
+    </div>
+    
+</body>
+</html>

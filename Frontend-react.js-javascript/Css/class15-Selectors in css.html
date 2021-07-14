@@ -1,0 +1,45 @@
+<!-- YAHA pe apan SELECTORS k bareh meh dekhenge
+jaise apan jante hai ki selectors are the empty block in which we select the elements simply by writing the name of element with its ID and CLASSV in that empty block(SELECTOR)
+SELECTORS mainly 4 types k hote hai:
+1.element selector (simply jis element meh style dal ni hai uss element ka name likhenge e.g. div element toh markup k sare div element meh yeh style lg jayegi )
+2.id selector (agar markup k kisi specific element meh add krni ho then simply #idname selector meh type krenge )
+3.clas selector (agar markup ki kisi particular class meh style add krni ho then .classname selector meh type krenge)
+4.grouping selector (agar multiple element ya multiple class meh style add krni ho then simply type elementname,.classname,) -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>INTRODUCTION TO SELECTORS in CSS SYNTAX</title>
+    <style>
+        p{color:indigo;}
+        span{color:seagreen;}
+        div{background-color: rgb(179, 144, 110);}
+     /* these are element selector means all paras are selected and unmeh style bhi apply ho gayi bt aage apan kisi specific para and paras ki style change kr skte hai simply by the use of ID SELECTOR,CLASS SELECTOR and GROUPING SELECTOR */
+     #span2{border:2px solid lightgreen}
+     #div4{background-color: rebeccapurple;}
+     /* UPPER is ID selector */
+     .extrainfo{border:2px solid brown  }
+     /* this is CLASS SELECTOR */
+    div,span{background-color: rgb(235, 235, 21);}
+    /* this is GROUPING SELECTOR */
+
+    </style>
+</head>
+<body>
+    <h3>INTRODUCTION TO SELETORS</h3>
+    <P>HELLO everyone this a paragraph</P>
+    <p id="imp"> this is also a paragraph with id imp</p>
+    <p class="extrainfo">para 1 of a class extrainfo </p>
+    <p id="imp2" class="extrainfo">para 2 of a class extrainfo</p>
+    <div>
+    <p class="extrainfo">para 3 of a class extrainfo</p>
+    <p id="div4"  class="extrainfo">para 4 of a class extrainfo</p>
+    <p>hello this is para someting</p>
+</div>
+   <span class="span1">this is a span 12</span>
+   <span id="span2">this is span 3 </span> <span id="span3">this is span 4 with id span2 and class span1</span>
+
+</body>
+</html>

@@ -1,0 +1,148 @@
+<!-- YAHA pe apn Regular-Expression and Regular-Expression(RegExp)-Object k bareh meh dekhenge: -->
+<!-- Regular-Expressions simply voh Expressions hoteh hai jo ki pattern-matching , searching , replacing process ko specify and modify krteh hai ki mtlb yeh specify krta hai searching kuch ess tarah krni hai. thus isiliy apn string-match()-fn meh regular-expressions input krteh hai mtlb apni searching orr acche se modify hoke aayegi bcoz yeh regular-expression uss searching-process or specify kr deteh hai. -->
+<!-- Now Regular-Expression ka format-syntax ess tarah ka hota hai: orr mtlb kabhi bhi apnko yeh format dikhta hai then mtlb yeh regular-expression hi hai::
+                                /pattern-type/modifier-name;                -->
+
+
+<!-- As thus toh apn regular expression object ka use krke string k tukde ko search and replace kr skteh hai , apn diff strings ki pattern-Matching kr skteh hai mtlb etc..etc apn patterns of characters mtlb string pattern pe kaam kr skteh hai -->
+
+<!-- Regular-Expressions -->
+<!-- regular-expressions meh 2-cheeze hoti hai:
+    1.pattern or string jo ki apnko search krni hai ya mtlb jis pattern se apnko searching krni hai.
+     thus apnko now aab alag-alag pattern dekhne hai. -->
+    <!-- mow pattern k liyeh 4-chheze hoti hai:
+        1.Brackets (brakets are used to find the range of characters)
+            1.[abc] (esseh a or b or c koi bhi character find hojayega mtlb enmeh se jo mile voh find ho jayga)
+            2.[^abc] (esseh apnko a , b and c k alava sbhi letter milenge)
+            3.[0-9] (esseh apno 0 to 9 including 0 and 9 k sabhi numbers mil jayenge)
+            3.[^0-9] (esseh apnko 0 to 9 including 0 and 9 k alava sabhi numbers mil jayenge)
+            5.(x|y) ( esseh apnko x or y meh jo milega voh mil jayega.)
+        2.metacharacters = {
+                1.\w ( esseh apnko string meh present sare word-characters mil jateh hai. )
+                2.\W ( esseh apnko string meh present are non-word-character mil jateh hai. )
+                3.\d (esseh apnko string meh present sare digit-number mil jateh hai)
+                4.\D (esseh apnko string meh present sare non-digit-number mil jateh hai)
+                5.\s (esseh apnko string meh present sare whitespaces mil jateh hai)
+                6.\S (esseh apnko string meh present sare non-whitespaces mtlb whitespaces k alava characters mil jateh hai)
+                7.\b (esseh apnko string k words k begining meh b hone wale string-words mil jateh hai.)
+                8.\B (esseh apnko string k words jinke begining and ending meh B hai unke alava milteh hai.)
+                9.\0 (esseh apnko string meh present null-character mil jata hai)
+                10.\n (esseh apnko string meh present new-line-character mil jata hai)
+                11.\f (esseh apnko string meh present form-feed-character mil jata hai)
+                12.\r (esseh apnko string meh present carriage-return-character mil jata hai)
+                13.\t (esseh apnko string meh present tab-character mil jata hai)
+                14.\v (esseh apnko string meh present vertical-tab-character mil jata hai)
+                15.\xxx 
+                16.\xdd 
+                17.\udddd
+        }
+        3.Quantifiers = {
+                1.n+  ( esseh apnko string meh sare words k sare "n" mil jateh hai, and voh har har words k n by "," se separated hoteh hai.)
+                1.n* ()
+                1.n? ()
+                1.n{X}
+                1.n{X,Y}
+                1.n{X,}
+                1.
+        }
+        4.
+     -->
+    <!--2..modifier: modifiers searching-process ko modify krteh hai mtlb searching-domain ko set krteh hai.
+                1.g ( esseh applied-string pe global-match hota hai mtlb agr match mil jata hai then voh rukta nhi hai mtlb or bhi search krta hai jab string khatam nhi jayeh tab tk. note-point: As esseh toh match()-fn sirf ek baar match hoteh hi searching stop kr deta hai but yaha agr apn regular-expression ka use krteh hai then match()-fn ki searching first-match pe nhi rukti voh toh phir last-match hi jake rukti hai. toh yeh actually bada faydaa hai of regular-expressions ka)
+                2.i (esseh case-Insentitive matching hoti hai.)
+                3.m ( esseh multiline matching hoti hai mtlb agr ek line inputed-cheez match ho gayi toh voh use second-line meh bhi search krega.)
+
+                --> 
+
+<!-- RegExp-Object -->
+<!-- Regular-Expression object meh defined "regular-expression" k related information and functionality hoti hai: jaise: -->
+<!-- RegExp-Object-properties and Functions: -->
+<!-- RegExp-Object-Properties: 
+        1.global (esmeh true or false set hota hai on the basis ki  regular-expression meh "g" modifier se hai k nhi mtlb regular-expression meh "g" set kiya hai k nhi)
+        2.multiline (esmeh true or false set hota hai on the basis ki regular-expression meh  "m" modifier set hai k nhi)
+        3.ignoreCase (esmeh true or false set hota hai on the basis ki  regular-expression meh "i" modifier set hai k nhi)
+        4.constructor 
+        5.source (ess-key meh regular-expression-pattern text hota hai.)
+        6.lastIndex
+     -->
+     <!-- for more visit: https://www.w3schools.com/jsref/jsref_obj_regexp.asp -->
+
+<!-- RegExp-Object-Functions:
+        1.test() ( yeh function search krta hai string meh kuch milne pe mtlb match hone pe true return krta hai otherwise false return krta hai.)
+        2.exec() ( yeh function search krta hai string meh kuch milne pe mtlb match hone pr voh first matched item return krta hai.)
+        3.toString() (yeh function regular-expression ko string meh convert kr deta hai. )
+     -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Regular-Expressions:</title>
+</head>
+<body>
+    <h1>Regular-Expressions</h1>
+    <script>
+        var string1 = "hey hlo bro KAisa hai koi idea aaya , just think all the time only about it"
+        var searchresult = string1.match("bro")
+        // where yaha pe yeh match()-fn apni String meh search krta hai for the inputed string or regular-expression mtlb regular-expression k according search krta hai, thus isiliy apnko Regular-Expression acchi tarah likhna aana chahiyeh bcoz mtlb agr apn regular-expression ko input meh daalteh hai then yeh match()-fn regular-expression k according searching krta hai, and regular-expression k according search krna mtlb apna search kafi acceptable hoga ,actual hoga , accha hoga. and last meh yeh match()-fn apne search result mtlb matched-items ko return kr deta hai.
+        // 📓: as apn esseh bhi bol skteh hai ki match()-fn meh input koi regular-expression hi jata hai.
+        console.log(searchresult)
+
+        // let regularexpression = /kaisa/i
+        // let regularexpression = /kaisa/g
+        let regularexpression = /kaisa/igm
+        console.log(regularexpression.global)
+        console.log(regularexpression.ignoreCase)
+        console.log(regularexpression.multiline)
+
+        let string2 = "hi bbro what is all okay hi okay bye hi BRo all IS \n what is this is brO a okla new ALL HI line Bro bro c"
+        // now abb apn ess String pe searching process krenge. and yeh searching-process apn regular-expression apply krke krenge takki apni searching process kafi acchi ho.
+        console.log(string2.match(/bro/i))  // esseh toh apnko only hi k baad bro milega
+        console.log(string2.match(/bro/im)) // esseh apnko hi k baad wala bro and second meh is k baad wala brO milega
+        console.log(string2.match(/bro/ig)) // esseh apnko case-Insesitively sabhi bro mil jayenge
+        console.log(string2.match(/bro/img)) // esseh apnko case-Insesitively sabhi bro mil jayenge
+        console.log(string2.match(/bro/mg)) // esseh apnko case-sesitively bro milega
+        console.log(string2.match(/bro/))
+        console.log(string2.match(/bro/m))
+        console.log(string2.match(/bro/g))
+
+        console.log(string2.match(/[abcz]/g))
+        // as toh esseh apnko apni string meh jitne a , b and c hai voh sab mil jayenge.
+        // as yeh match()-fn serach-result ko as a array return kr deta hai but indexing serached items ki index-return nhi krta esseh brackets k liyeh.
+
+        console.log(string2.match(/[^abc]/g))
+        console.log(string2.match(/[a|z]/g))
+
+        let string3 = "hi bro kaisa hai allright% i haggva mu_ch $250 \n okay_ then bye \t and more form so now i will make #211 & @ and \n so onok somgany g ideasok"
+        console.info(string3.match(/\w/ig))
+        console.info(string3.match(/\W/ig))
+        console.info(string3.match(/\n/ig))
+        console.info(string3.match(/\n/))  // esseh krne apnko matched-item ka index bhi milta hai.
+        console.info(string3.match(/\t/ig))
+        console.info(string3.match(/\t/))
+        // note-point and agr koi bhi item match nhi hota then apnko null-return hota hai.
+        console.info(string3.match(/\f/))
+        console.info(string3.match(/\xdd/))
+        console.info(string3.match(/\xxx/))
+        console.info(string3.match(/\d/g))
+        console.info(string3.match(/\D/g))
+        console.info(string3.match(/\s/g))
+        console.info(string3.match(/\S/g))
+        console.info(string3.match(/ok\b/g))
+        console.info(string3.match(/\bok/g))
+
+
+
+        console.info(string3.match(/g+/g))
+        // console.info(string3.match(/g*/g))
+        console.log(string3.match(/g?/g))
+        console.info(string3.match(/g?/g))
+
+        // thus toh regular-Expressions Searching-process meh kafi imporant role play krti hai.
+
+
+
+    </script>
+</body>
+</html>

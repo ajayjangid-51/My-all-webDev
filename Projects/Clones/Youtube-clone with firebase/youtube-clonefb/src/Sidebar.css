@@ -1,0 +1,31 @@
+.sidebar{
+    flex: .17;
+    /* border: 1px dotted red; */
+}
+.sidebar hr{
+    height: 1px;
+    border: 0;
+    background-color:lightgray;
+    
+}
+/*  🔔 Shifted to Componenet-approach.
+.cc{
+    display: flex;
+    padding: 10px;
+    padding-left: 25px;
+    padding-right: 25px;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+}
+.cc p{
+    padding-left: 1.5vw;
+}
+.cc .MuiSvgIcon-root:hover{
+    color: red;
+}
+.cc:hover{
+    background: rgb(196, 196, 196); 
+
+}
+*/

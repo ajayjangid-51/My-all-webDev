@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slideshow</title>
+    <link rel="stylesheet" href="slideshow.css">
+</head>
+
+<body>
+    <h1>SlideShow for Product-Page</h1>
+    <div class="container">
+        <div class="mySlides">
+            <div class="numbertext">1/7</div>
+            <img src="images/Image-10.jpg" alt="">
+        </div>
+        <div class="mySlides">
+            <div class="numbertext">2/7</div>
+            <img src="images/product 5.jpg" alt="">
+        </div>
+        <div class="mySlides">
+            <div class="numbertext">3/7</div>
+            <img src="images/Image-11.jpg" alt="">
+        </div>
+        <div class="mySlides">
+            <div class="numbertext">4/7</div>
+            <img src="images/Image-19.jpg" alt="">
+        </div>
+        <div class="mySlides">
+            <div class="numbertext">5/7</div>
+            <img src="images/Image-20.jpg" alt="">
+        </div>
+        <div class="mySlides">
+            <div class="numbertext">6/7</div>
+            <img src="images/Image-1 (1).jpg" alt="">
+        </div>
+        <div class="mySlides">
+            <div class="numbertext">7/7</div>
+            <img src="images/product 3.jpg" alt="">
+        </div>
+        <button class="prev" onclick="plusSlides(-1)"> &#60 </button>
+        <button class="next" onclick="plusSlides(1)"> &#62 </button>
+        <div class="caption-container">
+            <p id="caption">Caption-Container</p>
+        </div>
+        <div class="row">
+            <div class="column">
+                <img src="images/Image-10.jpg" class="demo cursor" onclick="currentSlide(1)" alt="">
+            </div>
+            <div class="column">
+                <img src="images/product 5.jpg" class="demo cursor" onclick="currentSlide(2)" alt="">
+            </div>
+            <div class="column">
+                <img src="images/Image-11.jpg" class="demo cursor" onclick="currentSlide(3)" alt="">
+            </div>
+            <div class="column">
+                <img src="images/Image-19.jpg" class="demo cursor" onclick="currentSlide(4)" alt="">
+            </div>
+            <div class="column">
+                <img src="images/Image-20.jpg" class="demo cursor" onclick="currentSlide(5)" alt="">
+            </div>
+            <div class="column">
+                <img src="images/Image-1 (1).jpg" class="demo cursor" onclick="currentSlide(6)" alt="">
+            </div>
+            <div class="column">
+                <img src="images/product 3.jpg" class="demo cursor" onclick="currentSlide(7)" alt="">
+            </div>
+        </div>
+    </div>
+    <script>
+        var currentSlideindex = 1;
+        showSlides(currentSlide)
+
+        function plusSlides(p1_n) {
+            showSlides(currentSlide += p1_n)
+        }
+        function currentSlide(p1_num) {
+            showSlides(currentSlide = p1_num)
+
+        }
+        function showSlides(n) {
+            var slides = document.getElementsByClassName("mySlides")
+            var demo_images = document.getElementsByClassName("demo")
+            var img_caption = document.getElementsByClassName("caption")
+        }
+        if (n > slides.length) { currentSlideindex = 1 }
+        if (n < 1) { currentSlideindex = slides.length }
+        for (var i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none"
+        }
+        for (var i = 0; i < dots.length; i++) {
+            demo_images[i].className = demo_images[i].className.replace("active", "")
+        }
+        slides[currentSlideindex - 1].style.display = "block";
+        demo_images[currentSlideindex - 1].className += " active";
+        img_caption.innerHTML = demo_images[currentSlideindex - 1].alt;
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,90 @@
+<!-- bas sirf concept ko build krna hota hai and then phir short-notes banane hoteh hai jis voh sari important bateh include honi chahiyeh jo apanne concept-building k time kari thi. and concept-building achi and puri honi chahiyeh phir chahiyeh jada time hi q na lage; -->
+
+<!-- YAHA pe apan DOM-elements ko Manipulate krna and phir unheh edit krne k bareh meh dekhenge: -->
+<!-- kisi cheez ko manipulate krna mtlb uss cheez ko kisi se lena ya uss cheez ko kisi se uthana (toh jaise
+JAVASCRIPT-coding-language meh Manipulating DOM-element means DOM meh se element ko lena ya uthana(lena ya uthana mtlb
+uss element k content ko lena ya uthana)). -->
+
+<!-- Now some "METHODS" or some "FUNTIONS" in JAVASCRIPT for Manipulating the DOM-element:
+    1.document.getElementById("select here by id-name")
+    2.document.getElementsByClassName("select here by class-name")
+
+TIP:and jaise apan CSS meh DOM k kisi element ko select krne k liyeh SELECTORS ka use krteh the same ussi tarah apan enn "CSS-SELECTORS" ka use JAVASCRIPT meh bhi DOM k kisi element ko select ya utha kr skteh hai, 
+    3.document.querySelector('select here by CSS-SELECTOR') as.eg. ('#id'),('.class'),('.class>li') etc.. all CSS-SELECTORS will work. -->
+
+
+<!-- 
+AND now AGAR apnko manipulated-element ko edit krna hai then we simply use or type but usse phle apnko manipulated-element ko as a variable store krvana hoga(mtlb vaha compiler yeh samaj jayega ki ha vaha koi esi cheez bhi hai:
+variable.innerHTML="editing"     -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manipulating the DOM-element</title>
+</head>
+
+<body>
+    <div id="cont1" class="container1">
+        <ul>
+            <li>list no.one</li>
+            <li>list no. two</li>
+            <li>list no. three</li>
+            <li>list no. four</li>
+            <li>list no. five</li>
+        </ul>
+    </div>
+    <div class="container">
+        <hr>
+        this is a content of container class
+    </div>
+    <div class="container">
+        <hr>
+        this is a second content of container class
+    </div>
+    <div id="cont2" class="container">
+        <hr>
+        this is also a content of container class
+        <h1 id="h1">hello jo</h1>
+        <h1 id="h2">kaise ho ji
+
+        </h1>
+        <h1 id="oka">okay ji
+            <!-- <p>paragraph</p> -->
+        </h1>
+        <hr>
+    </div>
+    <script>
+        let getup = document.getElementById("cont2")
+        console.log(getup)
+        // note: and enn codes ka kaam apnko acche se dekkna hai then we apan developer-tool meh console.print() krva k dekh lenge,
+
+        // getup.innerHTML="p is a paragraph"
+        // NOTE: .innerHTML is a function jisse apan DOM-element ko edit kr skteh hai.
+
+        let getcl = document.getElementsByClassName("container")
+        console.log(getcl)
+        // NOTE: yaha upar apan phle ek variable create kiya hai and phir .log() se print krvaya hai yeh simply bcoz apanko apni ankho se yeh dekhna hai ek code kaam kaise or kya kr rha hai otherwise apan enn code ka kaam apne mind meh hi dhan rkhenge. 
+        console.log(getcl[2])
+
+
+        //    NOTE:apan jaise css meh "SELECTORS" se  DOM-elements ko select ya lete ya uthate the vase hi same enn CSS-SELECTORS ka use apan javascript meh DOM-elements ko select ya manipulate kr skteh hai,
+
+        let cssslt = document.querySelector('#oka')
+        console.log(cssslt)
+
+        document.querySelectorAll('.container')
+        // and here let a=document.qsa('.container') ka mtlb hai ki apan ne .container k sareh content ko select kr k var "a" meh store krva liya hai, and simply document.qsa('.container') ka mtlb apan ne simply ese select kr liya hai mtlb sirf select hi kiya hai store nhi kiya hai and aage agar apnko selected-element ko meh orr kuch function apply krne then phir vaha pe apanko phle usseh select krke variable meh store krvana hoga apan ese;
+        //  ('.container[1]'.innerHTML="updated")   directly edit  nhi kr skteh hai.
+
+        // so
+        let a = document.querySelectorAll('.container')
+        console.log(a)
+        a=a[1].innerHTML = "updated"
+        console.log("okay ji"+ a)
+        // now esseh sirf targeted contents bas edit ho jayega
+    </script>
+</body>
+
+</html>

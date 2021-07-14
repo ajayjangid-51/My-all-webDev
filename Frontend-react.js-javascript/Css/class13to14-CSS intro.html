@@ -1,0 +1,53 @@
+<!-- Now aab se apan CSS k bareh meh dekhenge
+CSS ka mtlb CASCADING STYLE SHEET mtlb voh sheet jo different styles content krti ho and jab yeh STYLE SHEET(CSS) HTML content meh add krne par esski(CSS) sari ki sari styles and properties HTML content meh add ho jati hai ya HTML CONTENT modify ho jata hai jaise.. paragraph ka text color, font size, background-color, text k charo taraf border lagna etc etc
+CSS se apan apni WEBSITES ko responsive bhi bana skte hai (yaha responsive ka mtlb.. jaise koi website kisi pc,phone, ya tablet meh open ki jati toh uss k according website alag tarike se shown hoti hai(means voh convenint lage) toh esi ko hi apan bolte hai ki yeh website responsive hai)  -->
+
+
+<!-- IMP NOTE KRNE wali BAAT for website development website meh mainly 3 chije hai,
+phli website ka  SHOWING content and information (BY HTML)
+second one is uss SHOWING content and information ki designing and styling (BY CSS)
+third one is uss content text and information ko brain provide krvana (mtlb kya kaam kis tarah hoga or kis logic se hoga ya apan kr skte hai jaise badi badi websites like facebook jo ki social networkin ka kaam krvati hai ,youtube jo vedios uploading and viewing ka kaam krvati and zomato jo food delvering logic pe kaam krti hai jaise kaise order lena and phir kaise order alot krna hai and then delivering mtlb yeh jo logic and setting and thinking yeh sari bateh hm JAVASCRIPT se daal skte hai ) (BY JAVASCRIPT) -->
+
+<!-- MTLB simply apan ko HTML,CSS and JAVASCRIPT differently and as per their working sikhna hai and then 3no ko combine krke ek USEFULL CONTENT WALI, STYLISH, and ek alag hi LOGIC se useful WORKING OR IDEA. WEBSITE create kr ske
+means HTML se html wala kaam hi krvane hai (jaise HTML meh img tag meh apan img width and height nahi denge bcoz yeh kaam designinh hai and voh apan css se hi krenge) , CSS se css wala kaam and JS se js wala kaam. -->
+
+<!-- NOW aab apan css ka thoda syntax mtlb usse kaise ya kis tarah apply krte hai in HTML SHOWING CONTENT..
+    [ SELECTOR{PROPERTY:value} as e.g <p>{color:green;} or <p>,<span>,header.classname{properties:values;} ]
+yaha selector mtlb apan ko konse element ya elements meh design ya style daal rhe hai (mtlb us element ka naam with its id or class or agar apan ko selector ko define krna ho then selector voh empty block hai jis meh apan ELEMENTS KO SELECT krte simply uss ya unn particular elements ka naam dal k e.g P, DIV, SPAN ) and phir PROPERTY ka mtlb apan uss element ko konsi style ya styles de rhe hai, and phir uss style ki  VALUE ya values.                               -->
+
+<!-- AAB css ko HTML SHOWING CONTENT meh add apan 3 tarike se kr skte hai:
+1.INLINE CSS ya INLINE adding mtlb directly kisi element meh STYLE add kr dena
+2.INTERNAL CSS mtlb ek badi si CSS SHEET likna sare SHOWING CONTENT k liyeh in HTML HEAD meh.(bt esse .html file .css file ki tarah lag skti hai and voh sirf website k particular webpage meh add ki gayi hai sirf ussi meh kaam kregi means website k sabhi webpages meh kaam nhi kregi ) 
+3.EXTERNAL CSS mtlb ek alag se .css file create krna and phir sabhi webpages meh add ya include kr dena. -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>CSS IMPLIMENTS</title>
+        <link rel="stylesheet" href="class13.css">
+    <style>
+        h2{color:red}
+       .rules{color:palevioletred}
+        .tagline{color: hotpink;}
+        </style>
+    <!-- yaha apan ne internal css add kiya hai simply by tagging style element in head element and phir required styles sabhi elements with ID and CLASS ko one by one pick krke add kr diya. -->
+    
+    <!-- yaha "common" internal and external css ki priority enke order pe depend krti hai incase agar !important attribute use na kiya ho(jo css sabse baad meh add kiya hai uski priority first hogi and jis ) -->
+</head>
+
+<body>
+    <h2 style="color: purple; background-color: seagreen;">WELCOME PLATFORM</h2>
+    <P style="color: salmon; border:2px solid peru ;">Hello ji kaise ho aap sab log everything is fine..</P>
+<!-- yaha apan ne directly multi inline CSS add kiya hai and inline css ki priority first hoti in comparison to internal and external css -->
+
+    <p class="tagline">toh yaha aap sab logo yeh krna hoga</p>
+<p id="imp" class="tagline">phli baat koi bhi yeh kaam nhi krega</p>
+<p class="rules">no will cheat</p>
+<p class="rules">no will wear casual dress</p>
+<p class="rules">girls not allowed in shorts </p>
+</body>
+
+</html>

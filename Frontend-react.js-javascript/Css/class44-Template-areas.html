@@ -1,0 +1,122 @@
+<!-- GRID PART-3: -->
+<!-- YAHA pe apan GRID ki g-t-a(GRID-Template-area) property k bareh meh dekhege: -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GRID-Template-area property of GRID</title>
+    <style>
+        .container {
+            display: grid;
+            grid-gap: 3px;
+            grid-template-areas:
+                'nav nav nav nav'
+                'sec sec sec side'
+                'footer footer footer footer'
+                /* 'sec sec side side' */
+            ;
+        }
+
+        .item {
+            background-color: burlywood;
+            border: 4px solid black;
+            padding: 22px;
+        }
+
+        #navbar {
+            grid-area: nav;
+        }
+
+        #section {
+            grid-area: sec;
+            border-radius: 13px;
+        }
+
+        #sidebar {
+            grid-area: side;
+        }
+
+        #footer {
+            grid-area: footer;
+        }
+
+        .items {
+            display: grid;
+            grid-gap: 3px;
+            /* grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); */
+            grid-template-areas:
+            'navi navi navi navi navi '
+            'seci seci seci sidi sidi'
+            'footi footi footi footi footii'
+
+            ;
+            /* NOTE: apan yaha pe grid-area  other row meh repeat nhi kr skte  */
+        }
+
+        .child {
+            background-color: cadetblue;
+            border: 2px solid rgb(1, 1, 14);
+            border-radius: 18px;
+            text-align: center;
+           
+        }
+
+        #child-1 {
+            grid-area: navi;
+            /* NOTE: grid-area ki value apan only numerical nhi rkh skte, */
+            height: 100px;
+        }
+
+        #child-2 {
+            grid-area: seci;
+        }
+
+        #child-3 {
+            grid-area: sidi;
+        }
+
+        #child-4 {grid-area: footi;}
+
+        #child-5 {grid-area:footii;}
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="item" id="navbar">
+            HOME GALLERY VIEW CONTACT US
+        </div>
+        <div class="item" id="section">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquid reiciendis corporis commodi debitis sint
+            itaque? Asperiores quam nemo numquam, aspernatur ab id enim sunt eius officia. Facere possimus minus at
+            commodi error sunt repellendus neque quam excepturi quas in harum, tempora doloribus illo incidunt?
+            <div class="items">
+                <div class="child" id="child-1">CHILD-1</div>
+                <div class="child" id="child-2">CHILD-2</div>
+                <div class="child" id="child-3">CHILD-3</div>
+                <div class="child" id="child-4">CHILD-4</div>
+                <div class="child" id="child-5">CHILD-5</div>
+            </div>
+        </div>
+        <div class="item" id="sidebar">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam ut placeat voluptates corporis, quis soluta
+            dolorem quasi, ratione sed dicta nulla esse impedit. Unde iure, ipsum nobis autem ducimus sequi cumque,
+            rerum asperiores repudiandae, ab odio accusantium cupiditate repellendus dolorum facere ratione earum
+            aperiam. Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit consequatur dolore nemo cupiditate
+            accusamus qui sequi nam incidunt repudiandae? Odit eum consequuntur, incidunt quod hic necessitatibus
+            reiciendis ut iusto libero earum ad dolores.
+        </div>
+        <div class="item" id="footer">
+
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum vitae nemo laudantium assumenda!
+        </div>
+
+    </div>
+
+</body>
+
+</html>

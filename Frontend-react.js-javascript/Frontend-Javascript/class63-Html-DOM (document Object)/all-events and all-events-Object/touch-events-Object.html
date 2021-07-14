@@ -1,0 +1,59 @@
+<!-- YAHA pe apn Touch-Events k bareh meh dekhenge -->
+<!-- As Touch-Events voh Events hoteh hai jab Touch-screen-based-devide apne Webpage pe kisi bhi tarike ka touch kiya jata hai -->
+
+<!-- Now yaha pe apn phle Touch-Events-Functions dekhenge mtlb voh functions-Dekhenge jo Touch-Event hone pr apne app hi Execute ho jateh hai. and apne hi naam k STRUCTURE meh apni Respective-return value Respective-Strucutre-KEY meh store kr deteh hai.
+
+thus yeh kuch apne Touch-Events-Functions hai:
+    1.altkey
+    2.ctrlkey ( this return ki whether teh ctrlkey pressed or not while the touch-event occured)
+    2.for more Touch-Events-Functions visit-this: https://www.w3schools.com/jsref/obj_touchevent.asp
+-->
+
+<!-- NOw apn Touch-Events dekhenge:
+    1..ontouchstart (jab finger webpage-element pe page hoti hai then mltb yeh event huaa hai)
+    2..ontouchmove (jab finger webpage pe drag hoti hai tab mtlb yeh event hota hai mtlb ess event ko touchmove-event khteh hai.)
+    3.ontouchend (jab touched-finger uthaa li jati hai tab)
+    4.ontouchcancel (when touch is intrupted mtlb yeh running-event-ko-intrup kr deta hai )
+
+    thus toh apn yeh sabhi events as like this set kr skteh hai:
+    <h1 id="cordinates" onTouchEvent=" function-name=to-be-executed ">Hi Hello ji kaise ho ji</h1>
+
+ -->
+
+<!-- demonstration: -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Touch-Events</title>
+</head>
+<body>
+    <div class="touchevent">
+        <h1 ontouchmove="mytouchfunction()" id="touchonHead" >hello Touch on this toh start the movie</h1>
+    </div>
+    <script>
+
+    // M1:
+       let h1_element = document.getElementById("touchonHead")
+       h1_element.addEventListener("touchmove", ()=>{
+
+       })
+
+    //      M2 is good bcoz apn directly actual STRUCTURE-datatype ko samaj k according kr skteh hai:
+    document.getElementById("touchonHead").ontouchmove = function(){
+        touchmovefunction()
+    }
+    function touchmovefunction(){
+        document.getElementById("touchonHead").style.background = "red"
+        console.log("okay the Touchmove-Event is done")
+    }
+
+    // M3: Sbse easy and fast mtlb sirf html-element meh yeh cheez set krdo then yeh krdo:
+    //  <h1 ontouchmove="mytouchfunction()" id="touchonHead" >Heading</h1>
+    function mytouchfunction(){
+        document.getElementById("touchonHead").style.background = "blue"
+    }
+    </script>
+</body>
+</html>

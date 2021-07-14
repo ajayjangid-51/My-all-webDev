@@ -1,0 +1,35 @@
+<!-- YAHA pe apn Canvas meh Text-draw krna dekhenge: -->
+<!-- thus toh Canvas meh Text-draw krne k liyeh apn mainly 3-cheezo (1 key and 2-functions ka use) krteh hai.  -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drawing Text in Canvas</title>
+    <style>
+        #cavs{
+            border: 1px solid saddlebrown;
+        }
+    </style>
+</head>
+<body>
+    <canvas id="cavs" width="300" height="300" ></canvas>
+    <script>
+        ourcanvas = document.getElementById("cavs")
+        drawingObject = ourcanvas.getContext("2d")
+
+        drawingObject.font = "50px Arial"
+        drawingObject.fillStyle = "red"
+        drawingObject.textAlign = "center"
+        // apn esseh  apne-drawed text ko center-align kr skteh hai.
+        drawingObject.fillText( "helllo brother" , ourcanvas.width/2 , ourcanvas.width/2 )
+        // Note-point: 📓: as yeh X and Y cordinates w.r.t body define hoteh na ki canvas k respect meh define hoteh hai.
+        // drawingObject.fillText()
+        drawingObject.fillStyle = "yellow"
+        drawingObject.strokeText("i am Stroke Text" , 50 , 50 )
+        // drawingObject.stroke()
+
+    </script>
+</body>
+</html>

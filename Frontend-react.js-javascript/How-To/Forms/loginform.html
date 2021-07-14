@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>login Form</title>
+    <link rel="stylesheet" href="loginform.css">
+    <script src="loginform.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Concert+One&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+    <div id="be">
+
+   
+    <h2>Login Form</h2>
+    <button id="btn" onclick="loginpagefn()">Login</button>
+
+    <div id="id01" class="modal">
+        <form action="/action_phppage" class="modal-content animate" method="post">
+            <div class="imgcontainer">
+                <span class="close" onclick="closeloginfn()" title="Closi">close</span>
+                <!-- where title se apn jab uss pe hover krenge then apnko yeh title dikhega/ -->
+                <img src="" alt="">
+            </div>
+            <div class="container">
+                <label for="username"><b>Username</b></label>
+                <input type="text" name="username" id="" placeholder="Username" required>
+                <!-- yaha pe type as id ki tarah behave krta hai  mtlb css styling meh yeh apn kaam leteh hai -->
+                <label for="userpassword"><b>Password</b></label>
+                <input type="text" name="userpassword" id="" placeholder="Enter Password" required>
+
+                <button type="submit">Login</button>
+                <label>
+
+
+                    <input type="checkbox" name="remember" checked="checked" id=""> Remember me
+                </label>
+            </div>
+            <div class="container">
+                <button class="cancelbtn" type="button"
+                    onclick="document.getElementById('id01').style.display ='none'">Cancel</button>
+                <span class="psw">Forgot <a href="#">Password</a></span>
+            </div>
+
+
+        </form>
+    </div>
+</div>
+    
+</body>
+
+</html>

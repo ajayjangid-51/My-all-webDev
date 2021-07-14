@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Concert+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Concert+One&family=Monoton&display=swap');
+
+body{
+    margin: 0px;
+}
+#navbar{
+    display: flex;
+/* border: 2px solid gray; */
+background-color: indianred;
+}
+#navbar ul{
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    list-style: none;
+    font-family: 'Concert One' , cursive ;
+}
+#navbar ul li{
+    padding: 4px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+#navbar ul li a{
+    color: black;
+    font-weight: bold;
+ text-decoration: none;
+}
+#navbar ul li a:hover{
+    color: white;
+}
+#sec1::before {
+    content: "";
+    background: center/cover  no-repeat url(staticsfls/bg.jpg);
+    /* background-repeat: repeat-y; */
+
+    position: absolute;
+    top: 0px;
+    height: 150%;
+    width: 100%;
+    opacity: 0.6;
+    z-index: -1;
+
+}
+#sec1{
+    height: 400px;
+    /* background-color: purple; */
+    font-family: 'Concert One', cursive;
+    display: flex;
+    flex-direction: column;
+justify-content: center;
+align-items: center;
+font-size: 33px;
+
+}
+#sec2{
+    height: 250px;
+    background-color: #92586d;
+
+}
+#sec2 h2{
+    text-align: center;
+    font-weight: bold;
+    font-family: 'Monoton', cursive;
+}
+#sec3{
+    height: 300px;
+    background-color: black;
+
+
+}
+#foot{
+    height: 70px;
+    background-color: grey;
+    /* color: white; */
+
+}
+
+.headn{
+    font-size: 59px;
+}
+.small{
+    font-size: 30px;
+}
+#mission{
+    height: 300px;
+    margin: auto;
+    width: 70% ;
+}
+#mission h2{
+    text-align: center;
+    font-weight: bold;
+    font-family: 'Monoton', cursive;
+}
+.card{
+
+    display: inline-block;
+    margin: 6px;
+    width: 31%;
+    border: 2px solid black;
+    border-radius: 10px;
+    height: 202px;
+    text-align: center;
+    font-family: 'Monoton', cursive;
+
+}
+#logo{
+    display: flex;
+    align-items: center;
+    margin: 0px 20px 0px 0px;
+    font-size: 29px;
+}
+.pic{
+    display: flex;
+    align-items: center;
+    font-weight: lighter;
+    font-family: Arial, Helvetica, sans-serif;
+}
+#logo img{
+    height: 50px;
+    width: 50px;
+}
+.pic img{
+    height: 123px;
+    width: 80px;
+   
+}
+.pic img img{
+    height: inherit;
+}
+#sponsorlogo{
+    display: flex;
+    justify-content: space-around;
+}
+#sponsorlogo img{
+    height: 130px;
+    width: 130px;
+}
+#foot{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 23px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}

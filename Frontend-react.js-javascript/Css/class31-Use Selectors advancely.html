@@ -1,0 +1,84 @@
+<!-- APAN YAHA pe SELECTORS KA advance meh use krna dekhenge:
+advance way ka mtlb hai ki jaise agar apnko kisi div meh kisi single element ko ya kisi multiple elements ko select(ya target) krna ho toh apan SELECTOR meh elements ko advancely select krenge: -->
+
+<!-- SOME ways to select advancely in SELECTORS: -->
+<!-- agar apanko kabhi kisi particular element ko target krna ho then; jaise for.eg
+          div li p{  }
+
+thus this upar syntax can understand as jaise..phle apan targeted element ka address likhenge( e.g "parent-element  just-baby-element target-element") and phir atlast targeted element likhenge. -->
+
+<!-- 1.element element (div p), (this means ki "div" element meh jitne bhi "p" elements hai unko select krna hai)
+2.element > element (div > p), (this means ki "div" element ka direct baby elements(means BETA) "P" hai unko select krna hai )
+3.element+element (div+p), (this means ki "div" element ka just sibling element "P" ko select krna hai)
+note point: sibling means in a particular element(parent) how many baby-element(only baby element not grand-baby etc) exists and vs-code meh apan sibling elements k bareh meh easily pta chal jata means sibling elements ek same vertical line meh arrange hoteh in vs-code and phir just-left meh vertical line meh enka parent element and uss same line meh parent-element k siblings, then again just-left meh parent-element ka parent-element as like this it carry on,-->
+
+<!-- NOTE: we can target(or select) an element in the SELECTOR by two ways:
+   1.simply apan jis element ko style k liyeh target kr rhe hai usko id ya class provide kr denge. and then SELECTOR meh select kr likhenge.
+   2.seleting the element ADVANCELY by first tracing the address of targeted element and phir keeping in mind the use of just-baby( ">") and "sibling element" terms jab apan targeted element ki SELECTOR  meh  addresing kr rhe ho tab. bcoz these two "terms" make the addresing easy and accurate -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HOW to use SELECTORS in advance way</title>
+    <style>
+        div li p{
+            background-color: brown;
+        }
+        /* yaha upar apan only that "p" ko target kr rhe hai jo "li" meh hai and phir "div" meh hai */
+        div h2 li{
+            background: rgb(75, 185, 47);
+        }
+        div > p{
+            border: 2px solid blue;
+        }
+        div div+h2{
+            background-color: crimson;
+        }
+        div h2+div li h2{
+            background-color: darkolivegreen;
+        }
+        div h2+ul li h2+p{
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="1">
+            <h2>this is  first heading</h2>
+            <div class="2">
+                <ul>
+                    <li>hi kaise ho </li>
+                    <li><h2>this is third heading</h2></li>
+            </ul>
+                <div><p>hello ji kaise ho</p></div>
+            </div>
+
+            <!-- now targetting below h2 as follow in the above written style, -->
+            <h2>this is second heading</h2>
+        </div>
+        <p>okay ji</p>
+        <p>yeh okay</p>
+        <!-- note: suppose apanko upper "p" meh styling add krni hai then eske 2 tarike hai: first is simply mark the id and class to the both paras and then simply select in SELECTOR by their id or class. 
+        second is SELECTING the elements in SELECTORS "ADVANCELY" (using selector techniques) -->
+        <h2>this is fifth heading</h2>
+        <ul>
+            <li>
+                <h2>this is sixth heading
+                    <p>hi hello </p>
+                    <ul><li>this is li in h2</li></ul>
+                </h2>
+                <p>hi li kaise ho</p>
+                <!-- toh here we targeted upper para by selecting this para ADVANCELY in SELECTOR by keeping in mind the use and meaning of "just-baby element" and "sibling-elements"  -->
+
+            </li>
+        </ul>
+
+    </div>
+    <p>i wiil okay</p>
+    <h2>this is fourth heading</h2>
+    
+</body>
+</html>

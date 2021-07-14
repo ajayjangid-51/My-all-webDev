@@ -1,0 +1,24 @@
+{
+  "name": "class69-npm",
+  "version": "1.0.0",
+  "description": "this is package for facebook like app",
+  "main": "npm.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "awesome"
+  ],
+  "author": "ajay jangid",
+  "license": "ISC",
+  "dependencies": {
+    "browserify": "^16.5.1",
+    "j"// NOTE: yaha ^16.5.1 meh eska "^" tmtlb hai ki jab apn kisi orr ko yeh package.json file denge and phir vaha voh npm install krta hai enn dependencies ka extactly yahi version install hoga,                       ,and agar ^ ki jagah "~" yeh then ess dependency ka lastest version install hoga, and agar ^,~ ki jagah > hai then vaha pe ess dependency ka just greater patach version install hoga.
+    
+    "express": "^4.17.1",
+    "slugify": "^1.2.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.4"
+  }
+}

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>animated-scrool bar</title>
+    <link rel="stylesheet" href="animated_scrollbar.css">
+</head>
+<body>
+    <div id="progress_scrollbar"></div>
+    <div class="scrollpath"></div>
+    <section>
+        <h2>This is animated-designed Scroll-bar</h2>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsam voluptas dolores ex vel dolorum consectetur rerum non ea repellendus placeat perspiciatis, iusto distinctio? Repellendus dolor, expedita id debitis praesentium ducimus accusamus beatae hic quas dolorem quibusdam possimus cupiditate eligendi distinctio maiores voluptas pariatur incidunt voluptatum fuga mollitia consequatur veniam dolorum?</p>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsam voluptas dolores ex vel dolorum consectetur rerum non ea repellendus placeat perspiciatis, iusto distinctio? Repellendus dolor, expedita id debitis praesentium ducimus accusamus beatae hic quas dolorem quibusdam possimus cupiditate eligendi distinctio maiores voluptas pariatur incidunt voluptatum fuga mollitia consequatur veniam dolorum?</p>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsam voluptas dolores ex vel dolorum consectetur rerum non ea repellendus placeat perspiciatis, iusto distinctio? Repellendus dolor, expedita id debitis praesentium ducimus accusamus beatae hic quas dolorem quibusdam possimus cupiditate eligendi distinctio maiores voluptas pariatur incidunt voluptatum fuga mollitia consequatur veniam dolorum?</p>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsam voluptas dolores ex vel dolorum consectetur rerum non ea repellendus placeat perspiciatis, iusto distinctio? Repellendus dolor, expedita id debitis praesentium ducimus accusamus beatae hic quas dolorem quibusdam possimus cupiditate eligendi distinctio maiores voluptas pariatur incidunt voluptatum fuga mollitia consequatur veniam dolorum?</p>
+    </section>
+    <script type="text/javascript">
+    let progress = document.getElementsByid('progress_scrollbar');
+    // thus  yeh document.getElementByClassName() function apn yeh wala html-element return kr dega.
+    let totalheight = document.body.scrollHeight - window.innerHeight;
+
+    window.onscroll = function(){
+        let progressheight = (window.pageYOffset / totalheight) * 100;
+        progress.style.height = progressheight + "%";
+    }
+    </script>
+</body>
+</html>

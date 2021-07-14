@@ -1,0 +1,21 @@
+.searchpage{
+    flex: .83;
+    /* border: 1px dotted green; */
+    background: rgb(245, 245, 245);
+    padding: 20px;
+}
+.searchpage_header{
+    display: flex;
+    align-items: center;
+}
+.searchpage_header h4{
+    margin-left: 10px;
+    color: gray;
+}
+hr{
+    height: 1px;
+    background: gray;
+    margin-top: 10px;
+    border: 0;
+    margin-bottom: 10px;
+}

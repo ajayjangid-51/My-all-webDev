@@ -1,0 +1,125 @@
+<!-- YAHA pe apan Loops k bareh meh dekhenge: -->
+<!-- Loops ka use apan tab krteh jab apnko kisi ek kaam ko baar-baar karana ho with updation then simply and directly apan LOOPS ka use krteh hai. -->
+<!-- Loop mtlb cycles and ess loop meh koi na koi process(as per need) embed ki jati hai and phir yeh embeded process complete hoti hai and phir yahi process vapis se hoti hai but ess baar cycle-update ho jayegi and phir vapis se embed process complete ho jayegi and then again cycle-update hogi and  embed-process cyclic way meh hoti rhegi means ess tarah yeh loop chalta rhega.
+and bas apanko loop meh embed-process k saat saat dedicated process ki starting and ending value daalni hoti hai.  -->
+<!-- NOTE: loops bhi ek function hi hai bt bs yeh function baar-baar run hoteh hteh hai with updation from starting to ending mtlb cycle chalti rheti hai -->
+
+<!-- NOTE: LOOPS ka use mainly ARRAYS and OBJECTS k elements ko iterate krne k liyeh hota hai ya kiya jata hai.
+now some types of LOOPS: -->
+
+<!-- FOR LOOPS:
+   1.for(starting-value; upto(or ending)-value; cycle-update){process}
+
+   2.for ARRAY-Loop:
+   for (let index = 0; index < array.length; index++) {
+    const element = array[index];
+    
+       }
+SOME MODERN loops for ARRAYS in JAVASCRIPT:
+   3.for-Each Loop:
+   friends.forEach(function fc(element){
+    console.log(element)
+}) 
+ 
+   4.for-of Loop:
+   for (element of friends){
+    console.log(element)
+} 
+   5.for-in Loop: (used for iterating the elements of OBJECTS)
+   for (key in objt) {
+                console.log( `the value of ${key} is ${objt[key]} `)
+        }
+   
+-->
+
+<!-- WHILE LOOP:
+   6.While loop:
+   while (a<5) {
+    console.log(`${a} is less than 5`);
+    a++;
+}
+   
+    7.DO-while Loop:
+    do{
+        console.log(`${k} is a number less thanm 5`);
+        k++;
+        // this k++ is update after one-cycle of "do-while" loop
+        }while(k<5); -->
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loops(or cycle)</title>
+</head>
+
+<body>
+    <div class="cont">
+        <h1>welcome to loops tutorial</h1>
+    </div>
+    <script>
+        for (e = 0; e < 4; e++) {
+            console.log(e)
+            // firstly first-place check hogi and then second-place(condition-place) check hogi and agar first-place condition ko obey krti hai then directly it will jump to this-block and block meh jo kuch bhi daala hai voh follow ho jayega.
+        }
+        // for(1;condition;cylce-update){kaam} means () ess k liyeh yeh {kaam} krdo. 
+        // note: for-loop k liyeh variable,variable pe condition and cycle-update ek jagah hi aata hai;
+
+        let friends = ["tom", "oggy", "cockroges", "kapil", "khemo", "utsav"]
+        console.log(friends)
+
+        // iterating the elements of array one by one by using loops(for,foreach,for-of) and interating the element mtlb ek baar phir se(doharana) element ko print ya show krna:
+
+        // for (let index = 0; index < friends.length; index++) {
+        //     console.log(friends[index]);
+
+        // }
+
+        // MODERN-JAVASCRIPT LOOP-function: designed only for ARRAY and OBJECTS,
+
+        friends.forEach(function fc(element) {
+            console.log(element)
+        })
+        // yaha pe upar mtlb for-each meh jo function hai usse for-each-loop-function baar-baar chlayega
+
+        for (element of friends) {
+            console.log(element)
+        }
+
+        let objt={
+            name: "physicsfeel",
+            channel: "feels",
+            about: "youtuber"
+        }
+        for (key in objt) {
+                console.log( `the value of ${key} is ${objt[key]} `)
+        }
+
+
+        let a = 0;
+        while (a < 5) {
+            console.log(`${a} is less than 5`);
+            a++;
+        }
+        // while(condition){kaam} means jab tak yeh (condition) hai tab tak yeh {kaam} karo;
+        // and kaam may be print,sorting etcc..
+
+        let k = 1;
+        do {
+            console.log(`${k} is a number less thanm 5`);
+            k++;
+            // this k++ is update after one-cycle of "do-while" loop
+        } while (k < 5);
+// do{kaam}while() means yeh kaam karo and while() means jab tak yeh condition hai.
+// NOTE: do-while and while loops-function meh input meh conditions hi lagti hai mtln vaha pe apan input meh koi function nhi daal skteh.
+
+
+
+    </script>
+</body>
+
+</html>

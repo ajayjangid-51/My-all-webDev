@@ -1,0 +1,34 @@
+.sidebaroption{
+    display: flex;
+    align-items: center;
+    width: fit-content;
+    padding: .7em;
+    padding-left: 10px;
+    padding-right: 30px;
+    border-radius: 30px ;
+    cursor: pointer;
+    font-size: 17px !important;
+    /* box-sizing: border-box; */
+    
+
+}
+.sidebaroption h3{
+    margin: 0;
+    padding: 0;
+    padding-left: 15px;
+
+}
+.sidebaroption:hover{
+    background-color: rgba(181, 227, 255, 0.589);
+    /* color:rgb(29,161,242) ; */
+    color: var(--twittercolor);
+    /* as agr apn ess Css-variable ki value change kr deteh hai then jaha jaha yeh variable-use for color use huaa hai vaha vaha voh sab jagah yeh color update hojayega. thus this is power of using of Css-variables.. */
+    /* color: #e8f5fe; */
+    background-color:#e8f5fe ;
+    /* transition: color 10000ms ease-out; */
+    transition: color 100ms ease-out;
+}
+.focusd{
+    /* background-color: blueviolet; */
+    color: var(--twittercolor);
+}

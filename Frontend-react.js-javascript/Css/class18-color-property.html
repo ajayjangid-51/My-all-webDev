@@ -1,0 +1,33 @@
+<!-- yaha pe apan CSS meh "COLOR property" k bareh meh dekhenge, jaise ki color property or bhi dusri property meh use hoti hai as like in "background-color" color is set, for "border" also color is set
+SO mainly COLOR property ki value set krne ya color dene k 3 ways hai:
+  1.simply by writing the name of color,
+  2.by setting the rgb value of the color (here rgb stand for (red,green,blue) respectively and value of each lies in btwn 0 to 256 toh simply sabhi ki value set ki jati hai as like (34,0,54) and combine color will be the result)
+  3.by setting the hex value of the color (hex value of any color is simply given by "#2342ff" and apan google se bhi color ki hex value search krke apply kr skte hai) -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color property in CSS</title>
+    <style>
+      p{color:red}
+      /* here color value set by directly by color name */
+      span{color:rgb(10, 49, 105)}
+      /* yaha color value is set by rgb values of color  */
+      #yes2{color:#e8e531 }
+      /* and yaha color ki value is set by hex value of color */
+      .paras{color:rgb(30, 88, 116)}
+    </style>
+</head>
+<body>
+    <h2>GOOD property of css that is color</h2>
+    <p class="paras">this is para one</p>
+    <p class="paras">this is para two</p>
+    <p id="pthree" class="p">this is para three</p>
+    <p id="pfour" class="mm">this is para four</p>
+    <span id="yes">this is the actually one of the span1</span>
+    <span id="yes2">this is the actually one of the span2</span>
+    <span id="yes3">this is the actually one of the  span3</span>
+</body>
+</html>

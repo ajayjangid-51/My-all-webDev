@@ -1,0 +1,922 @@
+<!-- Note: Website ko resoponsive banani hai kabhi bhi fixed width(height ko apan kr skte hai bcoz esse responsivenes pe koi frk nhi pta toh mtlb responsiveness ko sirf orr sirf width se fark padta hai) define nhi krni hoti and  -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Physicsfeel</title>
+    <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap" rel="stylesheet">
+    <style>
+        body {
+            color: black;
+            margin: 0px;
+            /* background-repeat: repeat; */
+            /* border: 4px solid red; */
+            font-family: 'Patrick Hand', cursive;
+        }
+
+        .box {
+            width: 96%;
+            margin: auto;
+            /* border: 2px solid green; */
+            display: grid;
+            grid-gap: 35px;
+            grid-template-areas:
+                'lsidebar  rarea rarea rarea rarea'
+                'down down down down down '
+                /* 'downn downn downn downn downn' */
+                /* 'u u u u u' */
+            ;
+        }
+
+        .boxx {
+            /* border: 2px solid brown; */
+            /* background-color:#59ab9b; */
+        }
+
+        .boxx::before {
+            content: "";
+            background: url(ljjoihi.jpg);
+            /* background-repeat: repeat-y; */
+
+            position: absolute;
+            top: 635px;
+            height: 330%;
+            width: 100%;
+            opacity: 0.6;
+            z-index: -1;
+
+        }
+
+        #outbox-1 {
+            grid-area: upnav;
+        }
+
+        #outbox-2 {
+            grid-area: lsidebar;
+        }
+
+        #outbox-3 {
+            grid-area: rarea;
+        }
+
+        #outbox-4 {
+            /* grid-area: down; */
+
+            /* border: 2px solid hotpink; */
+            width: 70%;
+            margin: 10px auto;
+        }
+
+        .adverr1 {
+            display: grid;
+            grid-gap: 3px;
+            grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+            grid-template-rows: repeat(1, 200px);
+            /* border: 2px solid rgb(115, 255, 0); */
+        }
+
+        .adverr {
+            border: 2px solid rgb(20, 17, 17);
+            background: url(poison-1481596_640.jpg);
+            border-radius: 5px;
+        }
+
+        .adver {
+            border: 2px solid rgb(12, 6, 6);
+            background: url(test-tubes-904546_640.jpg);
+            border-radius: 5px;
+        }
+
+        .adverr2 {
+            width: 60%;
+            margin-top: 10px;
+            margin: auto;
+            /* border: 2px solid blue; */
+            display: grid;
+            grid-gap: 3px;
+            grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+            grid-template-rows: repeat(1, 200px);
+        }
+
+        /* #outbox-5 {
+            grid-area: downn;
+        } */
+
+        #outbox-6 {
+            grid-area: u;
+        }
+
+        #outbox-7 {
+            grid-area: uu;
+        }
+
+        /*#outbox-8 {
+            grid-area: ;
+        }
+
+        #outbox-9 {
+            grid-area: ;
+        }
+
+        #outbox-10 {
+            grid-area: ;
+        }
+
+        #outbox-11 {
+            grid-area: ;
+        }
+
+        #outbox-12 {
+            grid-area: ;
+        }
+
+        #outbox-13 {
+            grid-area: ;
+        }
+
+        #outbox-14 {
+            grid-area: ;
+        }
+
+        #outbox-15 {
+            grid-area: ;
+        } */
+
+        .outbox {
+            /* background-color: blanchedalmond; */
+            /* border: 2px solid black; */
+        }
+
+        .lsid {
+            /* margin-top: 4px; */
+            margin: 4px auto;
+            /* border: 2px solid brown; */
+            width: 80%;
+            padding: 4px;
+        }
+
+        #bbox1 {
+            /* border: 2px solid blueviolet; */
+            /* display: flex; */
+            /* flex-direction: column; */
+            /* justify-content: center; */
+            /* align-items: center; */
+        }
+
+        .notes {
+            /* background-color: coral; */
+            /* border: 2px solid darkgreen; */
+            margin: 1px;
+        }
+
+        .pdf {
+            display: grid;
+            grid-gap: 11px;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            grid-template-rows: repeat(2, 250px);
+        }
+
+
+        /* #outbox-1{
+            background:
+                url(banner-1240822_1920.jpg);
+            /* opacity: 0.4; */
+
+        /* } */
+        /* #outbox-1{ */
+        /* content: ""; */
+        /* background: url(); */
+        /* opacity: ; */
+        /* } */
+        #poutbox::before {
+            content: "";
+            background: url(banner-1240822_1920.jpg);
+            /* background: url(https://images.pexels.com/photos/132197/pexels-photo-132197.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500); */
+            position: absolute;
+            top: 0px;
+            height: 104.5%;
+            width: 100%;
+            opacity: 0.6;
+            z-index: -1;
+            background-repeat: repeat;
+
+        }
+
+
+
+
+        #outt {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        #lista {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        #lista li a {
+            font-size: 20px;
+            font-weight: bold;
+            font-family: 'Patrick Hand', cursive;
+        }
+
+        #lista li a:hover {
+            color: gray;
+        }
+
+        #formm a,
+        input,
+        span {
+
+            font-family: 'Patrick Hand', cursive;
+            font-weight: bold;
+        }
+
+        #formm a,
+        span {
+            font-size: 20px;
+        }
+
+        #formm input {
+            border-radius: 4px;
+            border: 1px solid black;
+            padding: 2px;
+        }
+
+        #signup input {
+            margin: 4px;
+            border: 1px solid black;
+            border-radius: 3px;
+            padding: 6px;
+            /* text-align: center; */
+        }
+
+        #gender {
+            font-weight: bold;
+        }
+
+        .lsid ul a {
+            font-weight: bold;
+        }
+
+        .lsid ul a:hover {
+            color: rgba(133, 34, 34, 0.644);
+
+        }
+
+        .footi li a:hover {
+            color: rgba(133, 34, 34, 0.644);
+        }
+
+        #formm a:hover {
+            color: gray;
+        }
+
+        a {
+            text-decoration: none;
+            color: black;
+        }
+
+        #lista li {
+            list-style: none;
+            padding: 4px;
+            margin: 4px;
+        }
+
+
+        #imgh {
+            display: flex;
+            align-items: center;
+            /* justify-content: space-around; */
+            /* justify-content: center; */
+        }
+
+        #lisfo {
+            display: flex;
+            align-items: center;
+
+
+        }
+
+        /* ul{
+            list-style: nones;
+        } */
+
+        /* #formm {
+            /* position: absolute;
+                    right: 6px;} */
+
+        @media (min-width:0px) and (max-width:858px) {
+            /* #formm{
+                display: none;
+            } */
+        }
+
+        .footer {
+            /* border: 3px solid black; */
+            margin-top: 56px;
+            /* background-color: blueviolet; */
+            display: grid;
+            grid-gap: 8px;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            grid-template-rows: repeat(1, 250px);
+        }
+
+        .footi {
+            /* border: 2px solid brown; */
+        }
+
+        #face {
+            display: grid;
+            grid-gap: 133px;
+            width: 80%;
+            margin: auto;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        }
+
+        #good::before {
+            /* background-image: url(https://cdn.pixabay.com/photo/2019/03/31/07/37/black-hole-4092609_960_720.jpg ); */
+            content: "";
+            background: url(pfgreen.jpg);
+            position: absolute;
+            /* top: 0px; */
+            height: 80%;
+            width: 34%;
+            opacity: 0.75;
+            z-index: -1;
+            /* border: 2px solid black; */
+            border-radius: 3px;
+
+        }
+
+        input[value="Sign up"] {
+            width: 140px;
+            padding: 13px;
+        }
+
+        input[value="Sign up"]:hover {
+            background-color: gray;
+
+        }
+
+        #outbox-1 {
+            width: 96%;
+            margin: auto;
+            /* margin-top: 6px; */
+        }
+
+        #freetut {
+            /* border: 2px solid yellow; */
+        }
+
+        .pfooter {
+            width: 90%;
+            margin-top: 10px;
+            margin: auto;
+            /* background-color: cadetblue; */
+        }
+        .ppfoot{
+            background-color: #466d49;
+            height: 330px;
+        }
+
+        .aboline {
+            text-align: center;
+        }
+
+        #foottr {
+            width: 100%;
+            /* border: 2px solid brown; */
+        }
+
+        #foottr ul {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            list-style: none;
+        }
+
+        .lihead {
+            font-weight: bold;
+        }
+
+        #imgh h2 {
+            font-size: 26px;
+            text-shadow: 4px 3px 14px black;
+            /* background-color: white; */
+            color: #56943d;
+        }
+
+        #imgh img {
+            box-shadow: 6px 5px 14px black;
+        }
+
+        #trial div {
+            border: 3px solid black;
+            border-radius: 3px;
+        }
+        #good{
+            height: 423px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div id="poutbox">
+            <div class="outbox" id="outbox-1">
+                <div id="outt">
+                    <div id="imgh">
+                        <!-- <div></div> -->
+                        <img src="logo.jpg" alt="not-access" width="40px" height="40px">
+                        <h2>&nbsp; physicsfeel</h2>
+                        <!-- <p>The feel of physics</p> -->
+                    </div>
+                    <div id="lisfo">
+                        <ul id="lista">
+                            <li><a href="http://google.com" target="_blank">Home</a> </li>
+                            <li><a href="http://google.com" target="_blank">info</a> </li>
+                            <li><a href="http://google.com" target="_blank">Physics</a> </li>
+                            <li><a href="http://google.com" target="_blank">Chemistry</a> </li>
+                            <li><a href="http://google.com" target="_blank">Contact us</a> </li>
+                        </ul>
+
+                    </div>
+                    <div>
+                        <form id="formm" action="#">
+                            <a href="http://facebook.com">Register now &nbsp </a>
+                            <span>Search:</span>
+                            <input type="text" placeholder="search here:">
+                        </form>
+                    </div>
+                </div>
+                <div id="face">
+                    <div id="good">
+                        <!-- <img src="https://cdn.pixabay.com/photo/2019/03/31/07/37/black-hole-4092609_960_720.jpg" alt="ccc" width="300px" height="300px"> -->
+                        <!-- <ul>
+                    <li><form action="#"><input type="text" placeholder="enter your name"></form></li>
+                    <li><form action="#"><input type="text" placeholder="enter your name"></form></li> 
+                    <li><form action="#"><input type="text" placeholder="enter your name"></form></li>
+                    <li><form action="#"><input type="text" placeholder="enter your name"></form></li>
+                    <li><form action="#"><input type="text" placeholder="enter your name"></form></li>
+                </ul>
+                <ul><li class="lisst">list-1</li>
+                <li class="lisst">list-2</li>
+                <li class="lisst">list-3</li>
+                <li class="lisst">list-4</li>
+                <li class="lisst">list-5</li>
+                <li class="lisst">list-6</li>
+                <li class="lisst">list-7</li>
+                <li class="lisst">list-8</li>
+                <li class="lisst">list-9</li>
+                <li class="lisst">list-10</li>
+                <li class="lisst">list-11</li>
+                <li class="lisst">list-12</li>
+                <li class="lisst">list-13</li>
+                <li class="lisst">list-14</li>
+                <li class="lisst">list-15</li>
+                <li class="lisst">list-16</li>
+                <li class="lisst">list-17</li>
+                <li class="lisst">list-18</li>
+                <li class="lisst">list-19</li>
+                <li class="lisst">list-20</li></ul> -->
+
+                    </div>
+                    <div id="signup">
+                        <h1>Create an account</h1>
+                        <h3>it's quick and easy</h3>
+                        <form action="#">
+                            <input type="text" placeholder="First name">
+                            <input type="text" placeholder="Surname"><br>
+                            <input type="email" placeholder="Mobile number or email address"><br>
+                            <input type="password" name="#" id="#" placeholder="New password">
+                        </form>
+                        <div>
+                            <h3>Birthday</h3>
+                            <form action="#">
+                                <input type="date" name="#" id="#" placeholder="#">
+                            </form>
+                        </div>
+                        <div>
+                            <div id="gender">
+                                &nbsp;
+                                <!-- <p>&nbsp;</p> -->
+                                <!-- <h3>&nbsp;</h3> -->
+                                <form action="#">
+                                    Gender <br>
+                                    Male<input type="radio" name="Gender" id="" placeholder="Male">
+                                    Female<input type="radio" name="Gender" id="" placeholder="Female">
+                                    Custom<input type="radio" name="Gender" id="" placeholder="Custom">
+                                </form>
+                            </div>
+                            <div>
+                                <p>by clicking submit button the entry data will be submitted to the facebook.php</p>
+                                <form action="#">
+                                    <input type="submit" value="Sign up">
+                                </form>
+
+                            </div>
+                            <p>&nbsp;</p>
+                            <p>&nbsp;</p>
+                        </div>
+
+
+                    </div>
+                </div>
+                <hr>
+                <hr>
+            </div>
+
+        </div>
+
+        <!-- <div class="outbox" id="outbox-7"> box 7</div> -->
+        <div class="boxx">
+            <div class="box">
+                <div class="outbox" id="outbox-2">
+                    <!-- <h3>Visit to Chapter:</h3> -->
+                    <div class="lsid">
+                        <ul style="list-style: none;">
+                            <li class="basics"><a href="http://google.com">&#x02A36 Home</a></li>
+                            <li class="basics"><a href="http://google.com">&#x02736 Trending</a></li>
+                            <li class="basics"><a href="http://google.com">&#x022C9 Account</a></li>
+                        </ul>
+                    </div>
+                    <div class="lsid">
+                        <ul style="list-style: none;">
+                            <li class="basics"><a href="http://google.com">&#x022C9 Library</a></li>
+                            <li class="basics"><a href="http://google.com">&#x022C9 History</a></li>
+                            <li class="basics"><a href="http://google.com">&#x022C9 Watch later</a></li>
+                            <li class="basics"><a href="http://google.com">&#x022C9 Live on</a></li>
+                            <li class="basics"><a href="http://google.com">&#x022C9 Faculty</a></li>
+                        </ul>
+                    </div>
+                    <hr>
+                    <div class="lsid">
+
+                        <ul style="list-style: none;">
+                            <li>
+                                <h3>Demo notes:</h3>
+                            </li>
+                            <li class="basics"><a href="http://google.com">&#x0255A Newton laws</a></li>
+                            <li class="basics"><a href="http://google.com">&#x0255A Fuilds</a></li>
+                            <li class="basics"><a href="http://google.com">&#x0255A Work power & energy</a></li>
+                            <li class="basics"><a href="http://google.com">&#x0255A Circular motion</a></li>
+                            <li class="basics"><a href="http://google.com">&#x0255A Electrostatics</a></li>
+                            <li class="basics"><a href="http://google.com">&#x0255A Magnetics</a></li>
+                            <li class="basics"><a href="http://google.com">&#x0255A Waves</a></li>
+                            <li class="basics"><a href="http://google.com">&#x0255A Center of Mass</a></li>
+                            <li class="basics"><a href="http://google.com">&#x0255A Rotational motion</a></li>
+                            <li class="basics"><a href="http://google.com">&#x0255A Modern physics</a></li>
+                            <li class="basics"><a href="http://google.com">&#x0255A Semicondutors</a></li>
+                            <li class="basics"><a href="http://google.com">&#x0255A Communication systm</a></li>
+                        </ul>
+                    </div>
+                    <div class="lsid">
+                        <ul style="list-style: none;">
+                            <li>
+                                <h3>Question sheet:</h3>
+                            </li>
+                            <li class="basics"><a href="http://google.com">&#x02736 Newton laws</a></li>
+                            <li class="basics"><a href="http://google.com">&#x02736 Fuilds</a></li>
+                            <li class="basics"><a href="http://google.com">&#x02736 Work power & energy</a></li>
+                            <li class="basics"><a href="http://google.com">&#x02736 Circular motion</a></li>
+                            <li class="basics"><a href="http://google.com">&#x02736 Electrostatics</a></li>
+                            <li class="basics"><a href="http://google.com">&#x02736 Magnetics</a></li>
+                            <li class="basics"><a href="http://google.com">&#x02736 Waves</a></li>
+                            <li class="basics"><a href="http://google.com">&#x02736 Center of Mass</a></li>
+                            <li class="basics"><a href="http://google.com">&#x02736 Rotational motion</a></li>
+                            <li class="basics"><a href="http://google.com">&#x02736 Modern physics</a></li>
+                            <li class="basics"><a href="http://google.com">&#x02736 Semicondutors</a></li>
+                            <li class="basics"><a href="http://google.com">&#x02736 Communication systm</a></li>
+                        </ul>
+                    </div>
+                    <!-- <div class="lsid">topic no-5</div>
+                    <div class="lsid">topic no-6</div>
+                    <div class="lsid">topic no-7</div> -->
+                    <!-- <div class="lsid">topic no-8</div>
+                    <div class="lsid">topic no-9</div>
+                    <div class="lsid">topic no-10</div>
+                    <div class="lsid">topic no-11</div>
+                    <div class="lsid">topic no-12</div>
+                    <div class="lsid">topic no-13</div>
+                    <div class="lsid">topic no-14</div>
+                    <div class="lsid">topic no-15</div>
+                    <div class="lsid">topic no-16</div>
+                    <div class="lsid">topic no-17</div>
+                    <div class="lsid">topic no-18</div>
+                    <div class="lsid">topic no-19</div>
+                    <div class="lsid">topic no-20</div> -->
+                </div>
+                <div class="outbox" id="outbox-3">
+                    <div id="bbox1">
+                        <div id="head">
+                            <h3 style="margin: 9px;">Recommended</h3>
+                            <!-- <h4 style="margin: 0px;"></h4> -->
+                        </div>
+                        <!-- <hr> -->
+                        <div class="pdf">
+                            <div class="notes">
+                                <div id="trial">
+                                    <a href="https://www.youtube.com/watch?v=YXcgD8hRHYY">
+                                        <div>
+                                            <img src="pf2.jpg" alt="" width="207px" height="247px">
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="notes">
+                                <div id="trial">
+                                    <a href="https://www.youtube.com/watch?v=YXcgD8hRHYY">
+                                        <div>
+                                            <img src="pf2.jpg" alt="" width="207px" height="247px">
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="notes">
+                                <div id="trial">
+                                    <a href="https://www.youtube.com/watch?v=YXcgD8hRHYY">
+                                        <div>
+                                            <img src="pf2.jpg" alt="" width="207px" height="247px">
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="notes">
+                                <div id="trial">
+                                    <a href="https://www.youtube.com/watch?v=YXcgD8hRHYY">
+                                        <div>
+                                            <img src="pf2.jpg" alt="" width="207px" height="247px">
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="notes">
+                                <div id="trial">
+                                    <a href="https://www.youtube.com/watch?v=YXcgD8hRHYY">
+                                        <div>
+                                            <img src="pf2.jpg" alt="" width="207px" height="247px">
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="notes">
+                                <div id="trial">
+                                    <a href="https://www.youtube.com/watch?v=YXcgD8hRHYY">
+                                        <div>
+                                            <img src="pf2.jpg" alt="" width="207px" height="247px">
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="notes">
+                                <div id="trial">
+                                    <a href="https://www.youtube.com/watch?v=YXcgD8hRHYY">
+                                        <div>
+                                            <img src="pf2.jpg" alt="" width="207px" height="247px">
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="notes">
+                                <div id="trial">
+                                    <a href="https://www.youtube.com/watch?v=YXcgD8hRHYY">
+                                        <div>
+                                            <img src="pf2.jpg" alt="" width="207px" height="247px">
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <!-- <div class="notes">note-9</div> -->
+                            <!--
+                        <div class="notes">note-18</div>
+                        <div class="notes">note-19</div>
+                        <div class="notes">note-20</div> -->
+                        </div>
+
+                    </div>
+                    <!-- <hr> -->
+                    <div id="freetut">
+                        <div>
+                            <h3>Demo tutorials</h3>
+                        </div>
+                        <div class="pdf">
+                            <div class="notes">
+                                <div id="trial">
+                                    <a href="https://www.youtube.com/watch?v=YXcgD8hRHYY">
+                                        <div>
+                                            <img src="pf2.jpg" alt="" width="207px" height="247px">
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="notes">
+                                <div id="trial">
+                                    <a href="https://www.youtube.com/watch?v=YXcgD8hRHYY">
+                                        <div>
+                                            <img src="pf2.jpg" alt="" width="207px" height="247px">
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="notes">
+                                <div id="trial">
+                                    <a href="https://www.youtube.com/watch?v=YXcgD8hRHYY">
+                                        <div>
+                                            <img src="pf2.jpg" alt="" width="207px" height="247px">
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="notes">
+                                <div id="trial">
+                                    <a href="https://www.youtube.com/watch?v=YXcgD8hRHYY">
+                                        <div>
+                                            <img src="pf2.jpg" alt="" width="207px" height="247px">
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="notes">
+                                <div id="trial">
+                                    <a href="https://www.youtube.com/watch?v=YXcgD8hRHYY">
+                                        <div>
+                                            <img src="pf2.jpg" alt="" width="207px" height="247px">
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="notes">
+                                <div id="trial">
+                                    <a href="https://www.youtube.com/watch?v=YXcgD8hRHYY">
+                                        <div>
+                                            <img src="pf2.jpg" alt="" width="207px" height="247px">
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="notes">
+                                <div id="trial">
+                                    <a href="https://www.youtube.com/watch?v=YXcgD8hRHYY">
+                                        <div>
+                                            <img src="pf2.jpg" alt="" width="207px" height="247px">
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="notes">
+                                <div id="trial">
+                                    <a href="https://www.youtube.com/watch?v=YXcgD8hRHYY">
+                                        <div>
+                                            <img src="pf2.jpg" alt="" width="207px" height="247px">
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- <div class="outbox" id="outbox-5"> downn</div> -->
+                <!-- <hr><hr><hr> -->
+                <hr>
+                <hr>
+                <hr>
+                <hr>
+                <hr>
+                <!-- <div class="outbox" id="outbox-6"> box-6</div> -->
+                <!-- <div class="outbox" id="outbox-8"> box 8</div> -->
+                <!-- <div class="outbox" id="outbox-9"> box 9</div> -->
+                <!-- <div class="outbox" id="outbox-10"> box 10</div> -->
+                <!-- <div class="outbox" id="outbox-11"> box 11</div> -->
+                <!-- <div class="outbox" id="outbox-12"> box 12</div>
+            <div class="outbox" id="outbox-13"> box 13</div>
+            <div class="outbox" id="outbox-14"> box 14</div>
+            <div class="outbox" id="outbox-15"> box 15</div>
+            <div class="outbox" id="outbox-16"> box 16</div>
+            <div class="outbox" id="outbox-17"> hi hello ji</div>
+            <div class="outbox" id="outbox-18"> hi hello ji</div>
+            <div class="outbox" id="outbox-19"> hi hello ji</div>
+            <div class="outbox" id="outbox-20"> hi hello ji</div> -->
+            </div>
+            <div class="outb" id="outbox-4">
+                <div class="adverr1">
+                    <div class="adver"><a href="http://facebook.com"> </a></div>
+                    <div class="adver"><a href="http://facebook.com"> </a></div>
+                    <div class="adver"><a href="http://facebook.com"> </a></div>
+                </div>
+                <div class="adverr2">
+                    <div class="adverr"><a href="http://facebook.com"> </a></div>
+                    <div class="adverr"><a href="http://facebook.com"> </a></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="ppfoot">
+        <div class="pfooter">
+            <div class="footer">
+
+                <div class="footi" id="footi1">
+                    <ul>
+                        <li class="lihead">ABOUT</li>
+                    </ul>
+                    <ul>
+                        <li><a href="http://google.com">About us</a></li>
+                        <li><a href="http://google.com">Contact us </a></li>
+                        <li><a href="http://google.com">Careers</a></li>
+                        <li><a href="http://google.com">Our stories </a></li>
+                        <li><a href="http://google.com">Press</a></li>
+
+                    </ul>
+                </div>
+                <div class="footi" id="footi2">
+                    <ul>
+                        <li class="lihead">HELP</li>
+                    </ul>
+                    <ul>
+                        <li><a href="http://facebook.com">Doubts</a></li>
+                        <li><a href="http://facebook.com">Payments</a></li>
+                        <li><a href="http://facebook.com">FAQ</a></li>
+                        <li><a href="http://facebook.com">Faculty</a></li>
+                        <li><a href="http://facebook.com">Report infringeprint</a></li>
+
+                    </ul>
+                </div>
+                <div class="footi" id="footi3">
+                    <ul>
+                        <li class="lihead">POLICY</li>
+                    </ul>
+                    <ul>
+                        <li><a href="http://google.com">Return Policy</a></li>
+                        <li><a href="http://google.com">Security</a></li>
+                        <li><a href="http://google.com">Privacy</a></li>
+                        <li><a href="http://google.com">Terms of use</a></li>
+                        <li><a href="http://google.com">Site map</a></li>
+                        <li><a href="http://google.com">ETR compliance</a></li>
+
+                    </ul>
+                </div>
+                <div class="footi" id="footi4">
+                    <ul>
+                        <li class="lihead
+                    ">SOCIAL</li>
+                    </ul>
+                    <h4></h4>
+
+                    <ul>
+                        <li><a href="http://google.com">Facebook</a></li>
+                        <li><a href="http://google.com">Twitter</a></li>
+                        <li><a href="http://google.com">Youtube</a></li>
+                        <!-- <li><a href="http://google.com"></a></li>
+                    <li><a href="http://google.com"></a></li> -->
+
+                    </ul>
+                </div>
+                <div class="footi" id="footi5">
+                    <div style="margin: 6px;">
+                        <h4>Mail us:</h4>
+                        <p> Physicsfeel Internet Private Limited,
+                            Buildings Alyssa, Begonia &
+                            Clove Embassy Tech Village,
+                            Outer Ring Road, Jaiput,
+                            Rajasthan, 560103,
+                            Gujarat, India</p>
+                    </div>
+
+
+                </div>
+                <div class="footi" id="footi5">
+                    <div style="margin: 6px;">
+                        <h4>Registered Office:</h4>
+                        <p> physicsfeel Internet Private Limited,
+                            Buildings Alyssa, Begonia &
+                            Clove Embassy Tech Village,
+                            Bengaluru, 560103,
+                            Karnataka, India
+                            CIN : U51109KA2012PTC0
+
+                            Telephone: 1800 208 9898</p>
+                    </div>
+
+                </div>
+            </div>
+            <hr>
+            <div id="foottr">
+                <ul>
+                    <li class="footlist"><a href="http://google.com">&#x02720 Certificate</a></li>
+                    <li class="footlist"><a href="http://google.com">&#x029C9 Advertise</a></li>
+                    <li class="footlist"><a href="http://google.com">&#x1D54B Tests</a></li>
+                    <li class="footlist"><a href="http://google.com">&#x0260E Help Center</a></li>
+                    <li class="footlist">©2020 physicsfeel.com</li>
+                    <li class="footlist">&#x029CF &#x029BF &#x029BF &#x029BF &#x029BF &#x029BF &#x029D0</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

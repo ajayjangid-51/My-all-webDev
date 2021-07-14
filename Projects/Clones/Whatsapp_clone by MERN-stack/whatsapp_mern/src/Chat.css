@@ -1,0 +1,131 @@
+.chat{
+    display: flex;
+    /* border: 1px dashed green; */
+    flex-direction: column;
+    flex: 0.65;
+}
+.chat__header_right .MuiSvgIcon-root{
+    color: red;
+    /* float: right; */
+
+}
+.chat__header{
+    display: flex;
+    align-items: center;
+    /* border: 1px dotted green; */
+    padding: 20px;
+    justify-content: space-between;
+    height: 50px;
+    border-bottom: 1px solid gray;
+
+}
+
+.chat__header_info{
+    /* flex: 0.6; */
+    /* margin-left: -5vw; */
+    flex: 1;
+    padding-left: 20px;
+    /* border: 1px solid orange; */
+}
+.chat__header_info h1{
+    font-weight: 500;
+    margin-bottom: 3px;
+
+}
+.chat__header_info p{
+    color: green;
+
+}
+.chat__header_right{
+    /* border: 1px solid orange; */
+    /* flex: 0.3; */
+    padding-left: 20px;
+    width: fit-content;
+    /* float: right; */
+    
+}
+.chat__body{
+    flex: 1;
+    padding: 30px;
+    background-image: url("https://user-images.githubusercontent.com/15075759/28719144-86dc0f70-73b1-11e7-911d-60d70fcded21.png");
+    /* background-image: url(https://images.squarespace-cdn.com/content/v1/5cb06a6cd7456246c1156693/1555335589603-NB3CQ3AHR6SFMOUOUDNZ/ke17ZwdGBToddI8pDm48kN12xG-HbjuR-TIg6OJnzNAUqsxRUqqbr1mOJYKfIPR7LoDQ9mXPOjoJoqy81S2I8PaoYXhp6HxIwZIk7-Mi3Tsic-L2IOPH3Dwrhl-Ne3Z28Bb07hTaLvQAh-Yxhh8tF7jXoU-0BQhSBP3PCqw3kcShHAH51QaxKq4KdVMVBxpG/Hayls+World+-+Whatsapp+Background+-+01.jpg); */
+    /* overflow: scroll; */
+    background-position: center;
+    background-repeat: repeat;
+    overflow-y: scroll;
+}
+.chat__message{
+    position: relative;
+    /* font-size: 50px; */
+    font-size: 16px;
+    width: fit-content;
+    border: 1px solid red;
+    border-radius: 10px;
+    padding: 10px;
+    margin-bottom: 1vw;
+    background-color: white;
+}
+.chat_timestamp{
+    font-size: x-small;
+    margin-left: .5vw;
+
+}
+.chat_name{
+    position: absolute;
+     /* position: relative; */
+     /* position-relative mtlb eski position eske parent-k-border k respect meh hogi. */
+    /* bottom: -105px;  */
+    top: -15px;
+    font-weight: 800;
+    font-size: x-small;
+    /* border: 1px solid red; */
+
+}
+.chat__receiver{
+    background: rgb(144, 187, 144);
+    width: fit-content;
+    padding: 10px;
+    border-radius: 10px;
+    /* float: right; */
+    /* or in place using float we can do this also */
+    margin-left: auto;
+}
+.chat__writemsg{
+    border: 1px solid rgb(55, 192, 202);
+    display: flex;
+    padding: 5px;
+    align-items: center;
+    /* justify-content: space-between; */
+
+
+}
+.chat__writingms_input{
+    flex: 1;
+    display: flex;
+    align-items: center;
+    margin-left: 0.5vw;
+    margin-right: 0.5vw;
+
+
+
+    /* border: 1px solid rgb(55, 192, 202); */
+
+}
+.chat__writingms_input input{
+    border: none;
+    outline-width: 0;
+    padding: 10px;
+    border-radius: 20px;
+    flex: 1;
+}
+.chat__writingms_input form{
+    flex: 1;
+    display: flex;
+    /* border: 1px solid yellow; */
+}
+.chat__writingms_input button{
+    display: none;
+}
+
+
+

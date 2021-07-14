@@ -1,0 +1,67 @@
+<!-- NOW YAHA pe apn Css-Transition-styling-property k bareh meh dekhenge -->
+<!-- AS Css-Transition-styling-property se orr-baki applied styling-properties ko smoothly apply kiya ja skta hai, as smoothly-apply krne ka mtlb ki voh properties ek particular-time ek particular speed se dikhae degi. -->
+<!-- thus yeh styling-properties ko smoothly-apply krne k liyeh Css-transition-property meh mainly 5-functions hoteh hai jinseh apn yeh kaam kr skteh hai:
+
+    📓note-point:AS ek baar jo styling-properties applied hai voh toh website meh as it is apply hoti hai but jab voh styling-properties ki value on hover , on active etc change ki jati hai then uske liyeh yeh Css-TRANSITION-Property hai. mtlb yeh "Transition-Property" actual property-implement k baad meh uss property-ki-value change hoti hai uske k liyeh hai.
+ -->
+<!-- thus toh Css-Transition-styling-property meh yeh mainly 5-Properties hoteh hai:  -->
+<!--    
+        1.transition-delay  (as yeh Property se element pe applied-styling-properties ko apply hone meh delay kr deta hai, mtlb voh styling-properties ek particular time k baad meh dikhaee degi , but voh instanly hi dikhaee degi)
+        2.transition-duration  (ess Property se apn applied-styling-properties ko apply hone ka ek time-interval set kr skteh hai , thus mtlb ess time-interval voh applied-styling-propeties puri ki puri dikh jayegi)
+        3.transition-timing-function (ess ess Property se apn transition-duration meh transition hone ki speed set krteh hai. like:
+    
+            
+        apna khud ka transitio-duration equation bana skteh hai. and useh apply kr skteh hai.)
+        4.transition-property (ess Property meh apn element-applied-property specify krteh hai jispe apnko yeh Transition-effect apply krna hai mtlb dekhna hai ya dikhana hai. )
+
+
+        👍 Shorthand for Transition-Styling-property:
+        as apn enn sare functions() ki value ek function meh hi de skteh hai, thus mtlb apnko yeh itne sare functions baar baar call nhi karne padenge.. and ess function ko simply shorthand-function of all functions kaha jata hai. and that shorthand function ki "transitio()-fn" and the parameter-sequence of this shorthand-functions is:
+        transition( property  duration timingfunction-speed delay )
+
+        📓note-point: as Transition-effect tab start hoga jab transition k liyeh specified-style-property ki value dusri value assigned hogi, as mtlb toh Transition-effect start krvane k liyeh apn simply :hover-function meh uss specified-property ki dusri-value assign krteh hai , thus toh mtlb phir apna transition-effect dikhega.
+ -->
+
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Css-Transitions</title>
+     <style>
+         .divi{
+            border: 4px solid blue;
+            height: 100px;
+            /* transition-property: height 5s ; */
+            transition: width 5s;
+            /* as website-loading timeh yeh transition property skip hoti hai. mtlb phle baki styling-properties set ki jati hai. */
+
+            /* as like this apn ek saat multiple properties pe transition apply kr skteh hai. */
+            transition: width 5s , height 4s;
+            transform:  rotate(0deg);
+            /* as esseh koi bhi property apply krna ya nhi krna ek hi baat hai , thus ek acchi understanding k liyeh apnko hamesa esseh 0-value se apply kr hi dena hai. */
+
+
+            transition: width 5s ease 1s , height 4s , transform 5s;
+            width: 400px;
+            
+        }
+        .divi:hover{
+            width: 100px;
+            height: 600px;
+
+            /* 🔥 Transition + Transform */
+            transform:  rotate(250deg);
+            /* as apn ne yaha transform-apply kr diya hai , but apn ess transform-property pe transition effect laga skteh hai as simply in line-43 */
+
+
+        }
+     </style>
+ </head>
+ <body>
+    <div class="divi">
+        <h1>Aju Jangid</h1>
+    </div>
+     
+ </body>
+ </html>

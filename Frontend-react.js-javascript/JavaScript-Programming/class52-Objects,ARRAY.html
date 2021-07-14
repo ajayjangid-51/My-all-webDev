@@ -1,0 +1,85 @@
+<!-- APAN yaha pe javascript meh "OBJECTS" k bareh meh dekhenge: -->
+
+<!-- CONCEPT ko key-value pair:
+for.eg.   var age = 13; (toh yaha age is a variable's key and 13 is a key's value and simply both "key and its value" are called "key-value pair")  -->
+
+
+    <!-- 1.Primitive(or Simple) DATATYPES: jaise
+Primitive DATATYPE mtlb value ko jo datatype hai voh primitive hai mtlb jab yeh value print hogi tab simply sirf only yeh value print hogi with no-key, no coloring-effect , no new-line etc.
+some primitive-datatypes:
+           1.int(integer)
+           2.string
+           3.true or false
+           4.null
+           5.undefined
+TIP: JAVASCRIPT meh apanko phle se datatype ko declare krne ki jarurat nhi hoti voh javascript-compiler apane-aap hi samaj leta hai bt and OBECT-datatype ko bhi apnko bas simply curly-braces{} meh likna hota hai.             -->
+    
+<!-- 2.Reference(YA OBJECT) DATATYPES
+Object datatypes mtlb kisi variable ka jo datatype hai jo voh object hai mtlb phli baat toh yeh apan essmeh mutliple "key-value pair" daal skteh hai and jab yeh datatype(object-datatype) print hoga then ussmeh key-value dono print hogi and kuch coloring effect hoga ,sare key-value pairs new line meh honge etc.. mtlb ek decorated object ki print hoga and dikhega.
+TIP: toh apanko kabhi ase object ki tarah koi variable chahiyeh then we will simply choose object-DATATYPE for the variable.    
+
+OBEJECTS doo tarike k hoteh hai:
+       1.ek toh jo apan banateh hai  -->
+<!-- and    2.dusra jo language meh by-default created hotah hai and  by-default object meh uss object k liyeh kuch acchi short-cut PROPERTIES bhi added hoti hai toh enn properties ki help se apan apane object-data ko simply and shortly control or change kr skteh hai.
+but by-default created object meh "keys" phle se hi index.no-wise(means 0 to no.of defined values) set hoti hai toh apan keys ko edit nhi kr skteh. toh ase by by-default OBJECT ko short meh and specially "ARRAY" kaha jata hai.
+
+SOME properties of ARRAY:
+   1.[index.no]   (ess function(or property) se apan ARRAY meh kisi particular data ko extract(indirectly print)
+   kr skteh on basis of its respective index.no)
+   2.  .length function-property  (ess function se apna ARRAY ki length find-out kr skteh hai (length mtlb ARRAY meh no. of inputed-data) )
+   3.  .sort() function-property (ess function se apan ARRAY meh inputed-data ko no.wise sort kr skteh hai)
+   4.  .push("")  (ess function se apan ARRAY meh atlast extra-data daal skteh hai but voh same-time print nhi hoga-->
+
+<!-- NOTE-point: there is a one property also for OBJECTS(jo user create krta hai)
+    1.  .key  (ess function(or property) se apan OBJECT meh kisi particular data ko extract(indirectly print)
+   kr skteh simply by its key-name) 
+    2.  ['key']  (this function as same as upper function but jab kabhi key-name meh kuch whitespaces vagera ho then apan ".key" function ka use nhi kr skteh then esliy specifically apan ess function "['key']"  ka use krteh hai )-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OBJECTS(mainly ARRAYS) in javascript</title>
+</head>
+<body>
+    
+    <script>
+        let mobject={
+            resume:"allabout",name:"harry",
+            channel:"codewithharry",
+            "salary 2":"good"
+            // Note: agar apan kabhi key-name meh whitespaces vagera de rhe hai then vaha pe apan ko double-quote("") ka use krna hota hai.
+            }
+        console.log(mobject)
+        console.log(mobject.name)
+        console.log(mobject['channel'])
+
+        console.log(mobject['salary 2'])
+        // console.log(mobject.salary 2)
+
+        
+
+        // let newob = new (1,2,3,"string")
+        // console.log(newob)
+
+
+        let arrray=[2,'first string',3.43,true,null,undefined]
+        console.log(arrray)
+        let newar=new Array(2,'first string',3.43,45,26)
+        console.log(newar)
+        // console.log(newar.length)
+        // console.log(newar[2])
+        // newar = newar.push("additional data")
+        console.log(newar.push("additional data"))
+        console.log(newar)
+        console.log(newar.sort())
+        // console.log(newar.push("some additional data at the end"))
+
+        // this is a ARRAY containing 23 elements
+        let arr=new Array(23)
+        console.log(arr)
+
+    </script>
+</body>
+</html>

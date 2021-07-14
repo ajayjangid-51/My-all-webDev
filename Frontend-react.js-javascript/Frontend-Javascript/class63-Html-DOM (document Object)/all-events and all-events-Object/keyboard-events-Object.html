@@ -1,0 +1,68 @@
+<!-- NOw YAHA pe apn Keyboard-events and keyboard-event-Object k bareh meh dekhenge: -->
+<!-- Keyboard-events: -->
+<!-- As Keyboard-events mtlb keyboard se hone wale ya kiyeh jane events. jaise:jab kabhi koi Keyboard-button press kiyeh jateh hai toh vaha pe mtlb Keyboard Events hota hai and  -->
+
+<!-- KEYBOARD-EVENTS-Object: -->
+<!-- AS keyboard-Event-Object meh keyboard-events dedicated Functions and key-value-Pairs hoteh hai , mtlb yeh keyboard-event hone pr yeh key-functions-call hoteh hai and key-value ki values set hoti hai. jinseh apn unn keyboard se hone wale events pe kuch kaam kr skteh hai.jaise: agr apni website pe ctrl+c keyboard-event hota hai toh apn uss event k hone pr kuch orr kaam enn function and key-value-pairs se set krskteh hai. jaise copy ho jana , koi new pop-up show krva dena etc..etc.. -->
+
+<!-- Now phle apn kuch Keyboard-events dekhenge: and phir keyboard-events-dedicated-keyvalue-pairs and key-function dekhenge: 
+    1.onkeydown
+    2.onkeyup
+    3.onkeypress 
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>keyboard-events and keyboard-event-Object</title>
+</head>
+<body>
+    <div class="demi">
+
+        <button class="btn">click here to see the whther the keyboard event happend or not</button>
+        <input type="text" name="" id="inpi">
+        <div id="demo"></div>
+    </div>
+    <script>
+// <!-- just uncommnet this: form line: 30 to 32 -->
+        // document.getElementById("inpi").onkeyup = function(){ 
+        //     myfuni();
+        // }
+        document.getElementById("inpi").onkeyup = function(event){ 
+            myfuni();
+        }
+        // as yaha pe upar apnne inpi-id wale input-element pe onkeyup function set kiya, but yeh kaam apn vaha simply and directly ess tarah se bhi kr skteh hai.
+        // <input type="text" name="" id="inpi" onkeyup=" myfuni()" >
+        function myfuni(){
+            // document.getElementById("demo").innerHTML = "the keyboard up arrow key is pressed" yeh error show karega bcoz yeh keyboard-events sirf input-element pe hi kaam krta hai.
+            // document.getElementById("inpi").value = "the keyboard up arrow key is pressed"
+            document.getElementById("inpi").value = document.getElementById("inpi").value.toUpperCase()
+            // tip: as yeh getElementById()-fn bhi apna kaam krke uss object meh ek object hi banata hai thus isiliy apn aage .value-key use kr rhe hai ess Object ki jo getElemenById() ne banaya hai toh mtlb yeh concept hai ess format meh function ko use krne ka.
+
+            if(event.altKey){
+            document.getElementById("demo").innerHTML = "the alt is pressed" 
+                
+            }
+            // console(event.altKey)
+        }
+
+        
+    </script>
+</body>
+</html>
+<!-- 🎆🎆 Note-point: As alag-alag html-elements pe alag-alag events kaam krteh hai , mtlb kisi element k liyeh sbhi element kaam nhi krteh, jaise keyboard-event sirf input-html-element pe hi kaam krteh hai 🎆🎆 -->
+
+<!-- Now apn keyboard-event-object dekhenge mtlb apn keyboard-events-dedicated-keyvalue-pairs and key-function dekhenge , mtlb enko explore krenge ki kaise kaise kya kya functions hoteh hai and mtlb phir apn enn functions ka use krke kuch kaam kr skteh hai. 
+    
+    1.altKey ( ess key ki value hoti hai true or false mtlb ki keyevent hoteh time altKey-pressed tha ya nhi)
+    2.etc ..etc.. for more visit: https://www.w3schools.com/jsref/obj_keyboardevent.asp
+    
+    note-POINT: ass enn sbka apnne upar use kiya hai. so refer to uppar.
+-->
+
+
+<!-- for more keyboard-event-Object keys and functions:
+     visit:https://www.w3schools.com/jsref/obj_keyboardevent.asp  -->
+

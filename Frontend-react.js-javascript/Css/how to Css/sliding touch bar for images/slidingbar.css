@@ -1,0 +1,99 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Recursive', sans-serif;
+}
+body{
+    background: linear-gradient(#3f3f3f,#000);
+    /* thus toh linear-gradient se background linearly gradient-boxes ban jateh hai bs just apnko color dena hota hai uss linear-boxes k liyeh */
+
+    /* vh unit */
+    /* yaha pe 1vh ka mtlb hai 1% of height of viewport where viewport mtlb apne pc-screen k andar browser ki screen k andar wali actual screen. */
+    /* thus 100vh mtlb jitni screen ki height apnko dikh rhi hai voh utni puri cover hojayegi. */
+    /* vw unit */
+    /* yaha pe 1vw ka mtlb hai 1% of width of viewport where viewport mtlb apne pc-screen k andar browser ki screen k andar wali actual screen. */
+    /* thus 100vw mtlb jitni screen ki width apnko dikh rhi hai voh utni puri cover hojayegi. */
+}
+.main{
+    width: 350px;
+    height: 100vh;
+    /* border: 2px solid red; */
+    margin: 10px auto;
+    /* margin: in-vertical in-horizontal */
+    position: relative;
+    /* position relative aab jo bhi left, right, top, bottom define krenge eske main screen-parent k relative meh hogi. */
+    overflow: hidden;
+    /* overflow: hidden; ka mtlb hai eske andar orr koi elements aateh hai and voh elements ess div se bahar nikal jateh hai then voh overflow hidden hojayega */
+    background: white;
+}
+.header{
+    width: 100%;
+    padding: 10px 0px;
+    background:white;
+    position: relative;
+    box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.1);
+}
+.menuicon{
+    width: 20px;
+    position: absolute;
+    top: 10px;
+    left: 20px;
+    cursor: pointer;
+}
+.bellicon{
+    width: 20px;
+    position: absolute;
+    right:20px;
+    top: 10px;
+    cursor: pointer;
+}
+.header p{
+    color: aqua;
+    text-align: center;
+}
+.maintext{
+    width: 300px;
+    margin: 50px auto;
+    color: #777;
+}
+.maintext h3{
+    margin-bottom: 20px;
+}
+.footermenu{
+    width: 100%;
+    /* height: 30px; */
+    position: absolute;
+    /* position absolute aab jo bhi left, right, top, bottom define krenge eske just-parent k relative meh hogi. */
+    bottom: -10px;
+    /* border: 2px solid blue; */
+    padding: 14px 5px;
+    background: white;
+    box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.1);
+}
+.footermenu img{
+    width: 22px;
+    margin: 0 30px;
+    cursor: pointer;
+}
+.swiper-container{
+    height: 250px;
+    width: 250px;
+    margin: auto;
+}
+.swiper-wrapper{
+    align-items: center;
+}
+.swiper-slide{
+    height: 250px;
+    width: 250px;
+    border-radius: 8px;
+    margin: auto;
+
+}
+.swiper-slide img{
+    height: 250px;
+    width: 250px;
+    border-radius: 8px;
+    margin: auto;
+
+}

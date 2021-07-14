@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>/product_page</title>
+    <link rel="stylesheet" href="product_page.css">
+    <script src="product_page.js"></script>
+</head>
+
+<body>
+    <div class="navbar">
+
+    </div>
+    <div class="productpage">
+        <div class="productpage__left">
+            <div class="row">
+                <div class="column">
+                    <img class="demo cursor" src="images/Image-10.jpg" style="width:100%" onclick="currentSlide(1)"
+                        alt="The Woods">
+                </div>
+                <div class="column">
+                    <img class="demo cursor" src="images/product 6.jpg" style="width:100%" onclick="currentSlide(2)"
+                        alt="Cinque Terre">
+                </div>
+                <div class="column">
+                    <img class="demo cursor" src="images/product 5.jpg" style="width:100%" onclick="currentSlide(3)"
+                        alt="Mountains and fjords">
+                </div>
+                <div class="column">
+                    <img class="demo cursor" src="images/product 1.jpg" style="width:100%" onclick="currentSlide(4)"
+                        alt="Northern Lights">
+                </div>
+                <div class="column">
+                    <img class="demo cursor" src="images/product 2.jpg" style="width:100%" onclick="currentSlide(5)"
+                        alt="Nature and sunrise">
+                </div>
+                <div class="column">
+                    <img class="demo cursor" src="images/product 3.jpg" style="width:100%" onclick="currentSlide(6)"
+                        alt="Snowy Mountains">
+                </div>
+            </div>
+
+
+        </div>
+        <div class="productpage__medium">
+            <div class="imageslider">
+                <div class="slideshow-container">
+
+                    <div class="container">
+                        <div class="mySlides">
+                            <div class="numbertext">1 / 6</div>
+                            <img id="myimage" src="images/Image-10.jpg">
+                        </div>
+
+                        <div class="mySlides">
+                            <div class="numbertext">2 / 6</div>
+                            <img id="myimage" src="images/product 6.jpg" style="width:100%">
+                        </div>
+
+                        <div class="mySlides">
+                            <div class="numbertext">3 / 6</div>
+                            <img id="myimage" src="images/product 5.jpg">
+                        </div>
+
+                        <div class="mySlides">
+                            <div class="numbertext">4 / 6</div>
+                            <img id="myimage" src="images/product 1.jpg">
+                        </div>
+
+                        <div class="mySlides">
+                            <div class="numbertext">5 / 6</div>
+                            <img id="myimage" src="images/product 2.jpg">
+                        </div>
+
+                        <div class="mySlides">
+                            <div class="numbertext">6 / 6</div>
+                            <img id="myimage" src="images/product 3.jpg">
+                        </div>
+
+
+
+                        <a class="prev" onclick="plusSlides(-1)">❮</a>
+                        <a class="next" onclick="plusSlides(1)">❯</a>
+                        <br>
+
+                        <div style="text-align:cenx ter">
+                            <span class="dot" onclick="currentSlide(1)"></span>
+                            <span class="dot" onclick="currentSlide(2)"></span>
+                            <span class="dot" onclick="currentSlide(3)"></span>
+                            <span class="dot" onclick="currentSlide(4)"></span>
+                            <span class="dot" onclick="currentSlide(5)"></span>
+                            <span class="dot" onclick="currentSlide(6)"></span>
+                        </div>
+                        
+                    </div>
+
+                    <div class="caption-container">
+                        <p id="caption"></p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- <div class="img-zoom-container">
+           
+            <div id="myresult" class="img-zoom-result "></div>
+          </div> -->
+          <div class="img-zoom-result img-zoom-lens " id="myresult" >
+hi
+
+          </div>
+        <div class="productpage__right " >
+            <h1>Materity Full Panel iMac favorite computer</h1>
+            <h1>$545.00</h1>
+            <P>🌟🌟🌟🌟</P>
+            <hr>
+            <input type="radio" name="" id=""> color
+
+            <button> ^ +1</button><button>ADD TO BAG</button>
+
+            <div class="discription">
+                <a href="description">description</a>
+                <a href="description">details</a>
+                <a href="description">sizechart</a>
+            </div>
+        </div>
+
+
+        <script>
+            var slideIndex = 1;
+            showSlides(slideIndex);
+
+            function plusSlides(n) {
+                showSlides(slideIndex += n);
+            }
+
+            function currentSlide(n) {
+                showSlides(slideIndex = n);
+            }
+
+            function showSlides(n) {
+                var i;
+                var slides = document.getElementsByClassName("mySlides");
+                var dots = document.getElementsByClassName("demo");
+                var captionText = document.getElementById("caption");
+                if (n > slides.length) { slideIndex = 1 }
+                if (n < 1) { slideIndex = slides.length }
+                for (i = 0; i < slides.length; i++) {
+                    slides[i].style.display = "none";
+                }
+                for (i = 0; i < dots.length; i++) {
+                    dots[i].className = dots[i].className.replace(" active", "");
+                }
+                slides[slideIndex - 1].style.display = "block";
+                dots[slideIndex - 1].className += " active";
+                captionText.innerHTML = dots[slideIndex - 1].alt;
+            }
+
+
+            imageZoom("myimage", "myresult" , "productpage__right" , "discription" );
+
+
+            function imageZoom(imgID, resultID , im ,imm) {
+                var img, lens, result, cx, cy , img2;
+                img = document.getElementById(imgID);
+                img2 = document.getElementsByClassName(im);
+                result = document.getElementById(resultID);
+                // img2.style.display = "none"
+                /*create lens:*/
+                lens = document.createElement("DIV");
+                lens.setAttribute("class", "img-zoom-lens");
+                // lens.style.flex = "1"
+                /*insert lens:*/
+                imm.parentElement.insertBefore(lens, imm);
+                /*calculate the ratio between result DIV and lens:*/
+                cx = result.offsetWidth / lens.offsetWidth;
+                cy = result.offsetHeight / lens.offsetHeight;
+                /*set background properties for the result DIV:*/
+                result.style.backgroundImage = "url('" + img.src + "')";
+                result.style.backgroundSize = (img.width * cx) + "px " + (img.height * cy) + "px";
+                /*execute a function when someone moves the cursor over the image, or the lens:*/
+                lens.addEventListener("mousemove", moveLens);
+                img.addEventListener("mousemove", moveLens);
+                /*and also for touch screens:*/
+                lens.addEventListener("touchmove", moveLens);
+                img.addEventListener("touchmove", moveLens);
+                function moveLens(e) {
+                    
+                     
+                    var pos, x, y;
+                    /*prevent any other actions that may occur when moving over the image:*/
+                    e.preventDefault();
+                    /*get the cursor's x and y positions:*/
+                    pos = getCursorPos(e);
+                    /*calculate the position of the lens:*/
+                    x = pos.x - (lens.offsetWidth / 2);
+                    y = pos.y - (lens.offsetHeight / 2);
+                    /*prevent the lens from being positioned outside the image:*/
+                    if (x > img.width - lens.offsetWidth) { x = img.width - lens.offsetWidth; }
+                    if (x < 0) { x = 0; }
+                    if (y > img.height - lens.offsetHeight) { y = img.height - lens.offsetHeight; }
+                    if (y < 0) { y = 0; }
+                    /*set the position of the lens:*/
+                    lens.style.left = x + "px";
+                    lens.style.top = y + "px";
+                    /*display what the lens "sees":*/
+                    result.style.backgroundPosition = "-" + (x * cx) + "px -" + (y * cy) + "px";
+                    //  document.getElementsByClassName("img-zoom-result").style.display = "block"
+                }
+                function getCursorPos(e) {
+                    var a, x = 0, y = 0;
+                    e = e || window.event;
+                    /*get the x and y positions of the image:*/
+                    a = img.getBoundingClientRect();
+                    /*calculate the cursor's x and y coordinates, relative to the image:*/
+                    x = e.pageX - a.left;
+                    y = e.pageY - a.top;
+                    /*consider any page scrolling:*/
+                    x = x - window.pageXOffset;
+                    y = y - window.pageYOffset;
+                    // document.getElementsByClassName("productpage__right").style.display = "none"
+                    return { x: x, y: y };
+                }
+            }
+        </script>
+</body>
+
+</html>

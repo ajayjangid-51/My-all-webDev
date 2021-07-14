@@ -1,0 +1,93 @@
+<!-- YAHA pe apan elements k Transitions k bareh meh dekhenge. -->
+<!--As Transition se applied-property jaise border , background etc ..etc ko dheere-dheere apply kiya ja skta hai as per setting time-duration. thus Transition se simply applied ki time-durartion set ki ja skti hai. jaise apnnne border-appply kiya but apnne transition-delay 5s kr diya mtlb abb 5s-later voh border dikhee dega. and yeh Transition effect only Hover pe appicable hota hai. -->
+<!-- Transition of elements means "element ka apni ek form se dusri form meh convert hota hai(mtlb applied particular propety ki value ka change hote time) tab voh bich ki process (jaise red to blue,or size 200px to 400px means 200px to 400px meh conversion huaa hai toh voh kaise huaa means phle size 201px then 202px then 250px and so on upto 400px ) ko apan trasition-process ya simply "transition" bhi khte hai and agar apanko yeh transition dekhna ya dikhana ho then simply we type:
+           1.transition-property: property-name-or-style-name;
+and phir apan transition k attributes bhi set kr skte hai; like:
+           2.transition-duration: ;           
+           3.transition-timing-function: ;  (where ess timing-function se apn transition-process ki speed curve set kr skteh hai: 
+           some transition-timing-function:
+           tip: where ease mtlb simply slow
+            1.ease  (slow-start , fast-inmiddle , slow-end)   
+            2.linear (same speed from start to end)
+            3.ease-in (slow-start then default-speed)
+            4.ease-out (slow-end and for other is default-speed)
+            5.ease-in-out (slow start and slow-end and others meh deault-speed hoti hai.)
+            6.cubic-bezier(n, n,n ,n) (esseh apn apne khud k according speed decide kr skteh hai.)
+            )
+           4.transition-delay: ; and etc..
+note: SHORT-hand for transition is:
+           transition: (property-name) (duration) (timing-function) (delay);
+                     
+
+AT-LAST kis-kis property-change(for.eg. background-color,border,font-size and many-more.)  k liyeh TRANSITIONS dikhana hai and property-value meh kya changement krna voh sab apan  mainly "pseudo-selectors element:hover{} , element:active{} etc". meh set and active krte hai. -->
+
+<!-- NOTE: 
+"element:hover{} property and element:active{}" meh TRANSITION by default set hota hai, toh agar apanko default transiton-attributes(jaise transition-duration, Transition-timing-function etc) ko change krna hai then apan "Transition property" ka use krke ussmeh changement kr skte hai. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transitions of the ELEMENT</title>
+    <style>
+        .container{
+            width: 100%;
+            height: 500px;
+            background-color: cadetblue;
+            border: 4px solid brown;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index:1;
+        }
+        .box{
+            border: 6px solid black;
+            background-color: rgb(92, 33, 230);
+            border-radius: 10px;
+            width: 200px;
+            height: 200px;
+            z-index:2;
+            text-align: center;
+
+            /* transition-property: border; */
+            /* thus mtlb esseh sirf yeh border-style-property pe hi yeh defined transition effect apply honge and bakki propertied pe apply nhi honge. */
+            transition-property: all;
+            /* where all mtlb hover krne app hover-meh-defined sbhi style-properties pe yeh Transition apply krna hai. and apn kisi ek particular property ka name likhteh hai then uss particualar style-property pe hi Transition-effect hoga mtlb dikhaee dega. */
+            transition-duration: 10s;
+            /* transition-delay: 5s; */
+        } 
+        .box:hover{
+            border: 8px solid red;
+            background: yellow;
+        }
+        .box2{
+            border: 1px solid orange;
+            width: 100px;
+            height: 100px;
+            transition-property: width , height;
+            transition-duration: 5s;
+
+        } 
+        .box2:hover{
+            width: 600px;
+            height: 600px;
+        }
+
+        /* 🔥 Transition + Transform */
+        /*   transition: width 2s, height 2s, transform 2s; */
+        
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box">THIS is box
+        </div>
+    </div>  
+    
+    <div class="box2">
+        <h1>hello ji kaise ho ji</h1>
+    </div>
+</body>
+
+</html>

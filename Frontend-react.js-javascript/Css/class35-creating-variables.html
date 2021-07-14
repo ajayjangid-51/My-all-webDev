@@ -1,0 +1,73 @@
+<!-- APAN yaha CREATING VARIABLES in CSS k bareh meh dekhenge: and ennhi created VARIABLES ko apan CUSTOM PROPERTY ya CUSTOM-value PROPERTY bhi bol dete hai bcoz enn properties ki value CUSTOMIZED kr di jati hai , -->
+
+<!-- toh jaise apanko kabhi kuch elements k liyeh kisi property ki same-deto-value daal ni hoti hai tab apan simply uss particular property meh value ko set kr hai ya copy-paste kr dete hai but this takes time;
+toh eske liyeh apan ek local ya global variable create kr skte hai with its value( most-required ) and phir simply jis bhi property meh voh pre-set value daal ni ho uss meh apan created-variable ko target kr dete hai.  -->
+<!-- note:1. local variable (mtlb jis element meh voh create kiya gaya voh usi meh hi kaam karega ya usmeh hi target hoga),
+and  2.global variable means yeh created-VARIBALE sabhi elements meh kaam krta hai ya target ho jata hai. and esko create kr liyeh we simply type as:
+         :root{
+             --varible-name:value;
+         } -->
+
+<!-- for creating VARIABLE simply type as:
+                     --(variable-name):value; 
+
+NOTE POINT: variable-name apan kuch bhi de skte hai and value as per requirement apan set kr denge jaise it may be color,length-dimension,value of font-family etc.  -->
+
+<!-- CSS meh voh property "CUSTOM-property" khalati hai jiski value kisi ek variable meh set kr de gaee hai bcoz us propety ki value "customized" ho chuki hai.   -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>creating VARIABLES or CUSTOM PROPERTIS in CSS</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500&family=Lobster&family=Pacifico&display=swap" rel="stylesheet">
+    <style>
+
+        :root{
+            --var2:200px;
+            --fontfam: 'Lobster', cursive;
+            --fontfam2:'Pacifico', cursive;
+
+
+            /* --ft:font-family: 'Amatic SC', cursive; (note-point:variable declaration sirf property-value k liyeh hi hota hai not for both "property and its value") */
+        }
+        .container{
+            display: flex;
+        }
+        .box{
+            --varico:red;
+            border: 3px solid gray;
+            min-width: 100px;
+            height: var(--var2);
+            padding: 22px;
+            margin: 22px;
+            background-color: var(--varico);
+            text-align: center;
+            align-items: center;
+            justify-content: center;
+        }
+        #box-1{
+            font-family: var(--fontfam);
+        }
+        #box-2{
+            font-family: var(--fontfam2);
+        }
+        #box-4{
+            
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+     <div class="box" id="box-1">box-1 Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quo velit laborum asperiores nostrum dolor ipsam illum dolorem sunt vitae, nesciunt, praesentium possimus ab quasi enim ex dolores aliquam beatae sit veritatis non harum! Est.</div>
+     <div class="box" id="box-2">box-2 Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus quas laboriosam nulla sequi enim, laborum tempora reiciendis, quis, sapiente fugiat quam perferendis quos nostrum odio a labore alias facere quaerat accusantium asperiores.
+     </div>
+     <div class="box" id="box-3">box-3</div>
+     <div class="box" id="box-4">box-4 Lorem ipsum, dolor sit amet consectetur adipisicing elit. Qui magnam, quo, ex eveniet laudantium autem atque accusamus temporibus eius illum necessitatibus eum.</div>
+    </div>
+    
+</body>
+</html>

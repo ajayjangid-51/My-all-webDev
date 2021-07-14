@@ -1,0 +1,124 @@
+<!-- YAHA pe apan FUNCTIONS k bareh meh dekhenge: -->
+
+<!-- simply boleh toh function koi "kaam" krteh hai mtlb unmeh jo bhi "process set hai" simply voh process ho jati hai as soon as "input" is given and the result of process as shown as a "output".
+
+toh simply means function sabse phle toh "input" lega and phir fuction meh jo bhi process set hai voh process input ko leke activate ho jayegi and then complete and atlast result of the process voh as a "output" shown hoga.
+NOTE: input shoudld be "specific-input" mtlb input function ki process k accoding hona chahiyeh.   -->
+
+<!-- toh mtlb agar apanko kisi reapting kaam ko short-hand krna ho then we simple create a FUNCTION and mtlb aab voh kaam
+easily just simply function call ya tag krne se hojayega.
+
+toh agar apnko kabhi koi FUNCTION create krna ho then we simply write:
+function fn's-name(parameters) {
+    1.yaha pe apan koi variable define(create) kr skteh hai.
+    2.many of the function use kr skteh hai jo ki fn-parameters pe define honge.
+    3.function ki koi return-value daal skteh hai.
+
+} -->
+
+<!-- Concept of calling and inputing data into funtion:
+jab function ka use hoga tab jo bhi apan input denge voh inputs created-fn k "parameters" meh serials-wise pass ho jayenge and phir function apni process meh parameters ki jagah enn inputs ko le leta hai
+and thus ess concept ko dhan meh rkhteh huye  "created-fn" ka use kiya jata hai. -->
+
+<!-- NOW function two types k hoteh hai on the of its output:
+mtlb jab kabhi bhi apan directly console.log(fn(inputs)) krenge then vaha pe fn ki value mtlb uski "return-value" print hogi. mtlb agar function ki return set hai then voh print hojayegi otherwise vaha pe "undefined" print hoga.
+ -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FUNCTIONs in JAVASCRIPT</title>
+</head>
+
+<body>
+
+    <script>
+
+
+        let phy = 30;
+        let che = 40;
+        let mat = 50;
+        let eng = 50;
+        // console.log(phy)
+        // console.log(che)
+        // console.log(mat)
+        // console.log(eng)
+        // NOTE:toh jaise apanko upar-wale sabhi variables ko print krne k liyeh sabhi ko alag-alag print krna pad rha hai. toh ess k liyeh apan ek function create skteh hai jiska fucntion(mtlb jiska kaam) inputed-data ko print krna ho.
+
+        function printfn(p1) {
+            console.log(p1)
+
+        }
+        printfn(phy)
+        printfn(che)
+        // aab apan ne input meh "che" diya means abb apne created-fn(printfn) k parameter meh "che" pass ho jayega and phir yeh function "che" ko lekar apni process krega. 
+
+
+        // SOME more creted-functions:
+        function markspr(firstplace, secondplace, thirdplace = "hello ji") {
+            console.log(firstplace + " marks are between the 20 and 30")
+            console.log(secondplace + " marks are between the 30 and 40")
+            console.log(thirdplace + " marks are between the 40 and 50")
+
+            // firstplace.push("hello ji") yeh jo .push() function hai voh actually ARRAY-function hai that is why it is not responding.
+        }
+
+        markspr(phy, che, mat)
+        // NOTE: functions meh input ya toh apan koi variable daal skteh otherwise uss naam se koi variable creted nhi hai then simply apan uske name "string" daal dete hai.
+        markspr(phy, che)
+
+        let retrnval = markspr(phy, che)
+        console.log(retrnval)
+
+
+        console.log(markspr("fistplace"))
+        // NOTE:apan cretd-fn meh input koi string bhi daal hai means uss time inputed string fn k parameter meh pass ho jayegi.
+
+
+
+        // NOTE: user-created function ko apan call ya tag krke apan usko use kr skteh hai. means ki apan enn user-created function ka kisi data meh "." laga k call ya tag or use nhi kr skteh hai.
+
+
+        // FUNCTIONS with "return-value":
+        function sum(no1, no2, no3) {
+            let d = no1 + no2 + no3;
+            console.log(d)
+            // return d;
+            // console.log(no1 + " good morning ji")
+
+        }
+        // sum(1,3,3)
+        console.log(sum(1, 3, 3))
+        // log(sum(1,3,3)) means ki sum(1,3,3) ki jo value hai simply voh print hogi mtlb directly function ki return-value print hogi. 
+
+
+
+        function vrfn(p1) {
+            console.log(p1 + " is a good boy")
+            console.log(p1[1])
+            return "okay ji"
+
+        }
+        let v1 = "harry"
+        vrfn(v1)
+        console.log(vrfn(phy))
+        // mtlb ase kuch bhi input daal do return value "okay ji" hi rhegi.
+
+        function vrfn2(p1, p2, p3 = 4) {
+            let sub = p1 + p2 + p3
+            console.log(sub)
+            return sub;
+
+        }
+        let phyy = 2
+        let chee = 3
+        vrfn2(phyy, chee)
+        // and this also; vrfn2(1,1)
+
+        console.log(vrfn2(1, 2))
+    </script>
+</body>
+
+</html>

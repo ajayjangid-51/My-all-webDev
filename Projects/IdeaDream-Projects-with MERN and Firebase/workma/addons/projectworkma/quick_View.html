@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quick View</title>
+    <link rel="stylesheet" href="quick_View.css">
+</head>
+
+<body>
+    <div class="QuickView_main">
+        <div class="quickView_main_left">
+            <span> ✔ IN Stock </span>
+
+        </div>
+        <div class="quickviewmain_right">
+            <div id="closequickView">
+                <h1> Basic Electronics</h1>
+                <span>
+
+                    ❌
+                </span>
+            </div>
+            <h1>13.99</h1>
+            <h3>Quick OverView</h3>
+            <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum
+                tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante.Lorem Ipsum is simply dummy text of
+                the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever
+                since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen
+                book.</p>
+
+                <div class="all_btns">
+                    <div class="no_ofitems">
+
+                        <button id="decrease_btn" > ⏬ </button>
+                        <span class="items_no" > </span>
+                        <button id="increase_btn"> ⏫ </button>
+                    </div>
+                    <button> 📆 Add to Cart</button>
+    
+
+                </div>
+                
+            <h3>Topics Covered :</h3>
+            <p>Biographies & Autobiographies, Books for Young Adult‎, Children’s & Young Adult, City of Bones, Comics &
+                Graphic Novels, Divergent, E-Resources, My Life in Film, Self Help, The Hunger Games</p>
+
+        </div>
+
+    </div>
+    <script>
+        document.getElementById("closequickView").onclick = function () {
+            let class_QuickView_main = document.getElementsByClassName("QuickView_main")
+            class_QuickView_main[0].style.display = "none"
+
+        }
+            let x = document.getElementsByClassName("items_no")
+            x[0].innerHTML = 1
+        let i = 1;
+        document.getElementById("increase_btn").onclick = function(){
+            i++
+            x[0].innerHTML = i
+            if( i <= 0){
+                x[0].innerHTML = 1
+            }
+
+        }
+        document.getElementById("decrease_btn").onclick = function(){
+            i--
+            x[0].innerHTML = i
+            if( i <= 0){
+                x[0].innerHTML = 1
+            }
+
+        }
+
+    </script>
+</body>
+
+</html>

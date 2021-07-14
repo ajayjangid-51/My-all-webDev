@@ -1,0 +1,73 @@
+<!-- YAHA pe apan "TRANSFORM property in CSS" k bareh meh dekhenge: -->
+<!-- CSS meh TRANSFORM means kisi BOX-element ko different shape and size meh trasform krna(jaise BOX-element ko rotate krna,scale(bada ya chota) krna, skew(tilt) krna, etc). -->
+
+<!-- toh agar kabhi apanko kisi BOX-element ko TRANSFORM krna hai then in targeted-BOX-element we simply type:
+            1.transform: rotate(deg);    (esseh BOX rotate hota hai)
+            2.transform: skewX(deg);     (esseh BOX skew(tilt) hota hai)
+            3.transform: translateX(px); (esseh BOX x-direction meh move hoga)
+            4.transform: scale(2);       (esseh BOX ki size badi ya choti hogi)
+            etc.. 
+        -->
+<!-- NOTE: apan ransform-property targeted element meh daalte hai but jadatar "TRANSFORM"-property "transition" k saat mix krke element:hover{} meh daalte hai takki apni website kaphi attractive and acchi lage.        -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transform property in CSS</title>
+    <style>
+        *{
+            margin: 0px;
+            /* note: here we use *{} for applying particular-property to all the elements of body, */
+        }
+        .container{
+            height: 80vh;
+            width: 100%;
+            display: flex;
+            background-color: darkgray;
+            justify-content: center;
+            align-items: center;
+        }
+        .box{
+            width: 200px;
+            height: 200px;
+            background-color: darkolivegreen;
+            border: 3px solid black;
+            border-radius: 9px;
+            text-align: center;
+
+            /* Applying transform property to the BOX */
+        
+            /* transform: rotate(45deg); */
+            /* transform: skewX(20deg); */
+            /* transform: translateX(30px); */
+            /* transform: scale(2); */
+            /* transform: rotateX(150deg); */
+
+             transition: all 0.2s ease-in-out;
+             /* and agar apan transform k saat transition bhi set krte hai then transformation of element will seems to be attractive and nice bcoz apnko voh continous-changement-process dikhti hai.  */
+        }
+        .box:hover{
+            /* transform: rotatex(100deg) ; */
+            transform: scale(2);
+            transform: rotate(360deg);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="box">
+            <h2>THIS is a box</h2>
+            <p>we will transform this box</p>
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>

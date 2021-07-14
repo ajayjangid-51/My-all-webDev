@@ -1,0 +1,85 @@
+* {
+    margin: 0;
+    padding: 0px;
+    /* padding: 20px; */
+    /* border: 30px solid red; */
+    /* height: 100px; */
+    /* font-family: consolas; */
+    box-sizing: border-box;
+
+    /* box-sizing: border-box; krne se element height and widht meh hi border , padding inclue ho jati hai. as esseh mtlb content-portion(blue-portion) of the elemnent hat hi jata hai and phir jo height and widht apnne ess element-div ki define ki hai voh boder and padding ko included hoke hoti hai. */
+}
+body{
+    background: #000;
+}
+
+section {
+    width: 100%;
+    min-height: 100vh;
+
+    padding: 100px;
+    background: #000;
+}
+
+section h2 {
+    
+   color:blue;
+   margin-bottom: 20px;
+}
+
+section p {
+    font-size: 1.5cm;
+    color: rgb(201, 93, 93);
+}
+::-webkit-scrollbar{
+    width: 10px;
+}
+::-webkit-scrollbar-thumb{
+    background: #f00;
+    background: linear-gradient(transparent , #30ff00);
+    border-radius: 10px;
+}
+/*::-webkit-scrollbar-thumb; essmeh apnko scroll-bar thumb milta hai.  */
+::-webkit-scrollbar-corner{
+    background: rgb(161, 209, 50);}
+
+::-webkit-scrollbar-button{
+        background: rgb(233, 233, 16);
+        
+        
+    }
+/* ::-webkit-scrollbar-button; esseh apnko scroll-bar k liyeh up and down buttons milteh hai. */
+::-webkit-scrollbar-track-piece{
+        background: rgb(190, 65, 142);
+        
+    }
+    /* ::-webkit-scrollbar-track-piece; se apnko scroll-bar ka track milta hai.  */
+    
+::-webkit-scrollbar-track{
+        background: rgb(194, 39, 47);
+
+}
+    
+::-webkit-scrollbar-thumb:hover{
+    /* background: #f00; */
+    background: linear-gradient(transparent , #00c6ff);
+    border-radius: 10px;
+}
+.oli{
+    height: 300px;
+    width: 70%;
+    color: white;
+    margin: auto;
+    overflow: scroll;
+    border: 1px solid maroon;
+    position: relative;
+    top: 10px;
+
+   
+}
+.oli::-webkit-scrollbar{
+    width: 4px;
+}
+.oli::-webkit-scrollbar-thumb{
+    background: rgb(169, 168, 170);}
+

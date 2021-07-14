@@ -1,0 +1,99 @@
+<!-- YAHA pe apn Date and Date-Object k bareh meh dekhenge: -->
+ <!-- AS Actually boleh toh yeh Date-Object Object nhi hai yeh Actually ek Class hai jismeh Date-related-Object hai and functions hai. thus toh apnko yeh baat dhyan rkhni hai ki Date- ek Class hai. 
+thus toh kabhi apnko Date-class ki keys and functions ko use krna ho toh then phle apnko ess Date-class ki copy bana krke use krna hai. as like this:
+    let date_class_copy1 = new Date();    // agr koi kuch input dena ho ess Date() class k constructor then voh apn de skteh hai bcoz esseh toh sabhi keys-ki-value assigned but agr apn input-dena chahehteh toh de bhi skteh hai bcoz yeh optional hai.-->
+
+    <!-- for more visit this: https://www.w3schools.com/jsref/jsref_obj_date.asp -->
+<!-- Now aab apn Date-Object ki Properties( mtlb Keys ) and Date-Class-Functions dekhenge -->
+<!-- Date-Object keys:
+    1.constructor (ess key meh Date-class k constructor k bareh meh naam hota hai.
+    2.prototype ( esseh apn Date-Class meh orr bhi properties (mtlb Keys) and function add kr skteh hai. ) -->
+
+<!-- Date-Class-functions:
+    1.getDate()  (yeh function current Date return krta hai)
+    2.getDay()  (yeh function current day-no. return krta hai)
+    3.getFullYear() (yeh function current year return krta hai)
+    4.getYear() ( this function is deprecated mtlb eska virodh huaa hai , as yeh function same as getFullYear() ki hi tarah hai. )
+    4.getHours()  ( yeh function current time in hours return krta hai.)
+    4.getMilliseconds()
+    4.getMinutes() (return the current minutes)
+    4.getMonth() (return the current month-no. )
+    4.getTime() ( yeh function raat-k-12baje of jan 1 1970 se abhi current time tk ka total time in milisecond return krta hai.)
+    4.getSeconds() (yeh function apnko current time ki seconds return krta hai)
+    4.getTimezoneOffset() ( yeh function host-machine time-zone and universal-time-zone k bich ka difference in minutes return krta hai)
+    4.getUTCDate()  (yeh function universal-time ki current-date return krta hai mtlb host-machine ki curren-date return nhi krta as upar bina UTC wale functions ko host-machine ka time-return kr rhe thee.)
+    4.getUTCMinutes() (return univeral current time-minutes)
+    5.getUTCMilliseconds() ( return the milisecond of current-universal time)
+    5.getUTCHours()   ( yeh current-universal-time k hour return krta hai.)
+    5.getUTCFullYear() ( yeh current-universal-time year return krta hai.)
+    5.getUTCDay() ( yeh current-universal-time k day-no. return krta hai.)
+    5.getUTCDate() ( yeh current-universal-time ki date return krta hai.)
+    5.setDate() ( ess function se apn date-object meh date-key ki value set kr skteh hai. where esseh toh date-key ki value getDate()-fn se set hoti hai but setDate()-fn se apn khud set kr skteh hai. and phir apn copy_ofdateObject ko print krenge then apnko yeh setted-value hi apnko milegi  )
+    5.setFullYear() ( ess function se apn date-object meh date-key )
+    5.setMilliseconds()
+    5.setMinutes()
+    5.setMonth()
+    5.setSeconds()
+    5.setUTCDate() ( ess function se apn UTC-date set kr skteh hai jo ki apnko esseh toh nhi krni chahiyeh bcoz voh UTC value toh hamesa hi correct hoti hai.)
+    5.toJSON() ( yeh function date ko as a json-string meh covert kr deta hai and ess json-string ko return krta hai.)
+    6.toTimeString()	(Converts the time portion of a Date object to a string)
+
+    note-point: as yeh functions kafi acche se dimak laga krke banayeh jateh hai thus apnko ense bhi acche-acche functions banane hai.
+
+    for more visit this: https://www.w3schools.com/jsref/jsref_obj_date.asp
+
+
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Date-Object mtlb Date-Class</title>
+</head>
+<body>
+    <script>
+        // Prototype:
+//         Date.prototype.mystr =
+//  👍AS yeh Date toh ek alag hi Object hai jo andar newly defined keys ko uss Actual Date-Class meh daal deta hai. 
+//         // Date.prototype.myMet = function() {
+//   if (this.getMonth() == 0){this.myProp = "January"};
+//   if (this.getMonth() == 1){this.myProp = "February"};
+//   if (this.getMonth() == 2){this.myProp = "March"};
+//   if (this.getMonth() == 3){this.myProp = "April"};
+//   if (this.getMonth() == 4){this.myProp = "May"};
+//   if (this.getMonth() == 5){this.myProp = "June"};
+//   if (this.getMonth() == 6){this.myProp = "July"};
+//   if (this.getMonth() == 7){this.myProp = "August"};
+//   if (this.getMonth() == 8){this.myProp = "September"};
+//   if (this.getMonth() == 9){this.myProp = "October"};
+//   if (this.getMonth() == 10){this.myProp = "November"};
+//   if (this.getMonth() == 11){this.myProp = "December"};
+// };
+// where "this" mtlb ess class k functions, thus toh ess class k function ess class k object ki key-value meh use krna chahehteh then apnko "this" ka use krna hota hai bcoz ess Class k andar esi class ko specify kr deta hai.
+
+let date_class_copy1 = new Date();
+console.log(date_class_copy1)
+// thus toh yeh Object kuch ess tarah ka hota hai: 
+/* Tue Sep 08 2020 11:57:43 GMT+0530 (India Standard Time)
+    "date" : 08,
+    "day" : "tue",
+    "month" : "sep"
+
+    as yeh sabhi cheeze niche wale function ko run krne k baad set hoti hai. or otherwise apn directly constructor-run krteh time hi input deke set kr skteh hai.
+*/ 
+console.log(date_class_copy1.getDate())
+
+// console.log(Date.getDate()) // 📓: toh mtlb apn Date-class ko ess tarah use nhi kr skteh.
+
+console.log(date_class_copy1.getDay())
+console.log(date_class_copy1.getFullYear())
+console.log(date_class_copy1.getHours())
+
+console.log(date_class_copy1.getTime())
+// console.log(date_class_copy1.now())
+console.log(Date.now())
+console.log(date_class_copy1.getTimezoneOffset())
+    </script>
+</body>
+</html>

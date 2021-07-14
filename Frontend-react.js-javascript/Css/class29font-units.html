@@ -1,0 +1,63 @@
+<!-- NOW yaha pe apan "RESPONSIVE-design" AND s"ome types of FONT-units and their uses" k bareh meh dekhenge: -->
+<!-- #USES
+alag alag FONT-untis ka use apan mainly website ko RESPONSIVE-design dene k liyeh krteh hai,
+#RESPONSIVE-DESIGN yani mtbl jaise apan website banateh hai and phir elements ki aligning krte hai(mtlb website ki designing krte hai) toh voh designing two types ki hoti on the basis of respondness of the website to the different screen's resolution : (respondeness of the website ka mtlb jis tarah se apan webpage k elements ko align kiya hai same ussi tarah sabhi screens meh show hona)
+
+1.non-responsive-design  (agar website meh design responsive nahi hai voh phir different resolution of screen meh diffrently show hogi as per the non-responsive-design for.e.g use padding,margin etc for the alignment of elements instead of use of display:inline-block,margin:auto,FLEX-BOX properties,FONT-units and )
+
+2.responsive-design (agar website ki designs RESPONSIVE-design ho then voh website the screen of any resolution meh same ussi tarah show hogi jis tarah apane design ki hai )
+note:toh apan website ki design ko RESPINSIVE bana skte hai simply just by using FLEX-BOX properties, dedicated FONT-units and Media-Queries(esse apan kuch special design daal skte hai jo ki jab screen size re-size hogi tab voh design acitvate hogi)  etc..
+and apan reponsive-ness of wesite by the e.g se samaj skte hai kaphi acchi tarah se:
+simple simultaneously open the any website(eg. pixabay) on the desktop and on the phone and then compare the desktop website view by inspecting tool with the phone view then we can understand what is the role of responsive-design in the website(mtlb koi si bhi screen meh chalavo voh apne aap set ho k apan ko screen meh dikha e degi). -->
+
+<!-- FONT-units types:
+font-units mainly 5 types ki hoti hai:
+1.px (1px equal to 1/96 of the inch)
+2.em (font-size:10em; ka mtlb hota hai ki injected-element ki font-size ko "10 times" of the font size of just parent element) kr do
+3.rem (font-size:10rem: means "10 times" of the "font size of HTML")
+note: 2nd and 3rd unit ka use apan website ko responsive banane k liyeh use krte hai. 
+
+4.vh (height:100vh; means take 100% of the viewport-height )
+5.vw  (widht:100vw; means take 100% of the viewport-width) 
+note: above 4th and 5th unit ka use apan tab krte hai jb apnko border ki height and width ko pure viewport k equal krni ho -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FONT units</title>
+    <style>
+        html{
+            font-size: 10px;
+        }
+        .box{
+            font-size: 10px;
+            text-align: center;
+            border: 2px solid maroon;
+
+            /* height: 300px; */
+            height: 100vh;
+
+            /* width: 334px; */
+            width: 100vw;
+
+        }
+        #box1{
+            font-size: 10em; 
+        }
+        #box2{
+            font-size: 5rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <h1 class="hed" id="box1">This is first heading</h1>
+        <h1 class="hed" id="box2">This is second heading</h1>
+        <h1 class="hed" id="box3">This is third heading</h1>
+    </div>
+    
+</body>
+</html>

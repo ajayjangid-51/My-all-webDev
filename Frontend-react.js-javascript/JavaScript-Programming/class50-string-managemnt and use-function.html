@@ -1,0 +1,86 @@
+<!-- YAHA pe apan kuch "FUNCTIONS" for STRING-Managing k bareh meh dekhenge and these functions are commonly can be called "STRING-FUNCTIONS": -->
+<!-- (STRING-Managing ka mtlb STRING meh kisi sub-string ka index.no find-out krna, kisi sub-string ko string meh se extract krna, string ko uppercase ya lowercase meh convert vagera..vageraa enn sareh kaamo ko apan STRING-managing krna bolteh hai and yeh sareh kaam ya yeh sari fuctioning apan respective STRING-FUNCTION ka use krke kr skteh hai.) -->
+
+<!-- kuch STRING-FUNCTIONS: -->
+<!-- 1.for-Indexing of string:
+    1.indexof()  (ess function ka kaam hai ki yeh input-substring k phle letter ka main-string meh first-time occurence ka index-no. show krta hai)
+    2.lastindexof( yeh function bhi input-substring k phle letter ka main-string meh index-no hi show krta hai but yeh main-string meh last-time repeated input-substring k phle letter ka index-no. show krta hai)
+
+2.for Slicing of string: (slicing of string means string k tukde krna ya main-string meh se particular ssub-string ko select krna):
+    1.slice(start,end) (yeh slicing-way contains the inputs in -(minus) also)
+    2.substring(start the slicing ,end the slicing before this index.no)
+    3.substr(start the slicing,no. of letter that this slice will contain) 
+    acc
+    4.[] 
+
+3.for Replacement of string: 
+     1.replace("replace this"," by this") (ess function se apan string meh kisi sub-string ko kisi aur sub-string se replace kr skteh hai)
+
+4.for uppercasing and loweracasing of string:
+     1.toUpperCase(no input need) ( yeh function puri string ko CAPITAL kr deta hai ya apan ese bhi kheh skteh hai ki ess function se apan puri string ko CAPITAL-letter meh kr skteh hai )
+     2.toLowerCase(no input need) ( yeh function puri string ko small-letter kr deta hai )
+
+5.for concating of string:(concating mtlb ek string meh dusri string jodna)
+      1.concat("") (yeh function inputed-string ko jis string meh yeh apply kiya hai usmeh add ya jod deta hai )
+
+6.for triming of whitespaces in string:
+     1.trim() ( yeh function string k starting and ending meh whitespaces ko trim ya hata deta hai)
+
+7.for extracting a letter from the string:
+     1.charAt(index no.)  (yeh funtion string k sub-string-letters ko as per the input-index.no show krta hai )
+     2.charCodeAt(3)   (yeh funtion string k substring-letter k character-code ko show krta hai) -->
+
+ 
+
+
+<!-- NOTE: variable.function() ka mtlb hai ki ess variable meh yeh fuction laga do takki ess funtion ka jo bhi kaam ya function hai voh kaam yeh FUNCTION ess variable meh kr dega.
+and agar apnko kabhi kisi variable meh kuch funtion krvana hai then vaha uss variable k aageh . laga k (according to design of JS-language) required FUNCTION apply kr denge.
+    jaise for.eg  console.log() (where log() is FUNCTION and eska kaam hai input ko print krna toh allover console.log() means console meh yeh chhez print kr do)
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FUNCTIONs for STRING-Management</title>
+</head>
+<body>
+
+
+    <script>
+var strng="hello ji this is a string"
+console.log(strng.indexOf("is"))
+// NOTE-point: agar apan input meh bhi koi string ya sub-string daal rhe hai then usseh bhi apnko double-quote("") meh rkhna hoga.
+// Indexing hamesa zero se start hoti hai.
+
+console.log(strng.lastIndexOf("is"))
+console.log(strng.lastIndexOf("t"))
+
+console.log(strng.slice(2,6))
+console.log(strng.substring(2,7))
+console.log(strng.substr(2,10))
+// and
+console.log(strng[4])
+
+console.log(strng.replace("string","good"))
+
+console.log(strng.toUpperCase())
+console.log(strng.toUpperCase("this"))
+console.log(strng.toLowerCase("th"))
+
+console.log(strng.concat(" and this is good also"))
+
+var strwithwhitespaces="     this is hello       ji     soo    okay              "
+console.log(strwithwhitespaces)
+console.log(strwithwhitespaces.trim())
+
+var newstr="okay ji sab okay hai ji"
+console.log(newstr.charAt(3))
+console.log(newstr.charCodeAt(3))
+
+// JAVASCRIPT meh apan kisi pe koi function lagate ya apply krteh then voh apan "." laga k krte hai and phir uss funtion input rkhte hai and then apan uss input meh bhi fuction apply kr skteh hai as in the same way. and toh code-line meh sabse andar wala function sabse execute hoga phir uske bahar wala and then phir uske bahar wala and this carry-on upto sabse bahar wala fuction.
+
+
+    </script>
+</body>
+</html>

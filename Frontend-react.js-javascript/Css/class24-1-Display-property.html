@@ -1,0 +1,75 @@
+<!-- YAHA apan DISPLAY PROPERTY in CSS ki working and uses dekhenge:
+jaise apan jante hai ki elements two types( on the basis of DISPLAY)k hoteh
+1.INLINE element(means yeh jitni content ki size hai utni hi size cover hoga and inline element ki sirf left and right margin hi define hoti hai) and 
+2.BLOCK element(mtlb yeh element puri line cover krte hai and jaise koi block element meh kuch showing text hai then voh showing text utna hi element nhi hota hai actually voh pura including empty space bhi element hi hai(so that is block element) thus toh jaise apan koi bhi style property (jaise padding,margin and border) daale toh voh uss showing text k according set nhi hoti actully pure block k according set hogi isiley jab apan kisi block element centre meh krna chaheh then we simply use "margin:auto;" property but esseh block element centre meh nhi ayega bcoz block element meh pura block cover hota hai 
+
+Note: jo bhi padding,margin and border of elements define hote hai voh w.r.t allover block se define hoteh hai and actully block elements bhi w.r.t parent element( block element) se define hoteh hai.)
+
+toh then agar apanko block element ko inline element ya inline element ko block element meh convert krna hai then we use the "DISPLAY style property"  -->
+                  <!-- display:block; -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TRIALS</title>
+    <style>
+        h2{
+            margin: 32px;
+    border: 2px solid red;
+    padding-left: 524px;
+        }
+        #span1{
+            border: 2px solid black;
+    margin: 32px;
+    display: block;
+    padding-left: 613px;
+    
+}
+div{
+    border: 2px solid black;
+    border-radius: 32px;
+    margin-left: 568px;
+    margin-right: 506px;
+}
+img{
+    width: 30px;
+    height: 28px;
+
+    padding-left: 125px;
+    /* note krenge: agar apan parent element ki style due to some reason change kre toh if kisi element ki style baad meh add kri ho(parent element ki style k baad) toh voh element parent element se bahar bhi nikal skta 
+    toh esse confuse nhi hona hai ki jo margin, padding, and border voh phle ya by default w.r.t parent element se hi define hote hai. */   
+}
+#span2{
+border: 2px solid red;
+/* margin-left: 23px; */
+margin-right: 595px;
+    margin-left: 639px;
+    margin-top: 37px;
+    /* padding: 32px; */
+    display: block;
+}
+
+    </style>
+</head>
+<body>
+    
+    <h2>HELLLO JI KAISE HO </h2>
+    <!-- note krenge: heading ki margin phle se hi pre-defined hoti hai which is with respect to parent element(eg. div element thus toh phir heading ki padding and border w.r.t margin hi define hogi) -->
+    <span id="span1">hello hi kaise ho</span>
+        <div class="div1">
+            <img src="https://www.codewithharry.com/static/common/img/photo.png" alt="">
+            <h3 style="    margin-left: 6px;" >WELCOME TO MY WEBSITE</h3>
+        </div>
+
+        <!-- NOW YAHA pe apan inline elements(one with some text) ko bina block element banayeh with border centre meh layenge -->
+<span id="span2">
+    <img src="https://www.codewithharry.com/static/common/img/photo.png" style="margin-left: -84px; 
+    display: block;" alt="">
+    <!-- toh apan ko yaha pe inline element(img) ko block element meh phle convert krna hi hoga by using "display property" otherwise yeh img and text in the middle of page set ya align nhi ho skte bcoz of some default property-->
+    hello hi kaise ho
+</span>
+    
+
+</body>
+</html>

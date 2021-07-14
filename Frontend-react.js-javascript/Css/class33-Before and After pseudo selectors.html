@@ -1,0 +1,100 @@
+<!-- YAHA pe apan kuch orr pseudo selectors: (BEFORE and AFTER pseudo selectors) k bareh meh dekhenge: -->
+<!-- TOH agar apnko kabhi kisi element k andar kuch content phle(mtlb upar) ya baad(mtlb niche) add krna ho then tab apan BEFORE and AFTER PSEUDO selectors use krte hai as like:
+                         element::before{content:""; and content k liyeh kuch STYLE PROPERTIES}  
+           NOTE: "YEH STYLE-PROPERTIES specifically sirf esi before-after content meh hi add hoti hai".
+         Isiliyeh apan enn BEFORE and AFTER PSEUDO SELECTORS ka use apan mainly and specially background image ki opacity ko kaam krne k liyeh use krte hai takki apna markup readable and accha dikhe  -->
+                        
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=
+    , initial-scale=1.0">
+    <title>BEFORE and AFTER PSEUDO SELECTORS</title>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
+    <style>
+        body{
+           margin: 0px;
+        }
+        ul{
+            display: flex;
+            flex-direction: row;
+            list-style: none;
+        }
+        a{
+            text-decoration: none;
+            color: black;
+            font-family: 'Fredoka One', cursive;
+        }
+        li{
+            margin: 4px;
+            padding: 3px;
+        }
+        section{
+            display: flex;
+            flex-direction: column;
+            /* border: 2px solid red; */
+            text-align: center;
+            height: 214px;
+            width: 70%;
+            justify-content: center;
+            margin: auto;
+        }
+        h2{
+            font-family: 'Fredoka One', cursive;
+        }
+
+        section::before{
+            content:"before content";   
+        }
+        section::after{
+            content:"after content";
+            /* color: red;
+            border: 2px solid black; */
+        }
+        section::after{
+            content: "seconf after content";
+        }
+        
+
+        /* USE OF BEFORE PSEUDO SELECTORS for the main reason to down the opacity of background image */
+        div::before{
+            content:"";
+            background: url(https://images.unsplash.com/photo-1585140314941-6c9b6a5a6a02?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80);
+            position: absolute;
+            top: 0px;
+            height: 100%;
+            width: 100%;
+            opacity: 0.4;
+            z-index: -1;
+        
+        }
+
+    </style>
+</head>
+<body>
+    <div>
+    <header>
+        <nav class="navbar">
+            <ul>
+                <li class="navlist"><a href="http://google.com" target="_blank">Home</a></li>
+                <li class="navlist"><a href="http://pixabay.com" target="_blank">Images</a></li>
+                <li class="navlist"><a href="http://facebook.com" target="_blank">Vedios</a></li>
+                <li class="navlist"><a href="http://lasvegas.com" target="_blank">Contact us</a></li>
+            </ul>
+        </nav>
+        
+    </header>
+    <section>
+        <h2>welcome to the HUB of code</h2>
+        <p style="font-family: 'Fredoka One', cursive;"> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores assumenda voluptas possimus in deserunt eius. Voluptate voluptates voluptas facilis. Vero ut excepturi itaque.</p>
+        <!-- <p>thanks to all</p> -->
+        
+    </section>
+    <hr>
+</div>
+    
+</body>
+</html>

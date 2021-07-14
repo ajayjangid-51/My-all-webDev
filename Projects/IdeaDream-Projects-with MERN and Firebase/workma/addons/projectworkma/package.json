@@ -1,0 +1,21 @@
+{
+  "name": "workma",
+  "version": "1.0.0",
+  "description": "site for student-study guide and material",
+  "main": "workmaserver.js",
+  "scripts": {
+    "test": "good"
+  },
+  "keywords": [
+    "awesome"
+  ],
+  "author": "physicsfeel",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "fs": "0.0.1-security",
+    "nodemon": "^2.0.4",
+    "path": "^0.12.7",
+    "pug": "^3.0.0"
+  }
+}

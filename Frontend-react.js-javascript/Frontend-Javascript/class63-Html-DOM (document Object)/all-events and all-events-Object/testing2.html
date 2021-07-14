@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="cordinates">Hi Hello ji kaise ho ji</h1>
+    <input type="text" name="" id="inputs">
+    
+    <script>
+        document.getElementsByTagName("BODY")[0].onclick = function (){
+            showCordinates()
+        }
+
+        function showCordinates(){
+
+            let x = event.pageX;
+            // yeh "pageX" event-library-file ka function hai. mtlb and yeh function tab execute hota hai jab Dom-webpage meh koi MOuse-event hota hai. thus now yeh pageX()-fn mouse-pointer ka X-cordinate return krta hai w.r.t document. jaha pe voh mouse-event haa hai vaha ka X-cordinate
+            // console.log(event.pageX)
+    
+            let y = event.pageY
+    
+            // 🎆Tip: Javascript meh Strings and variables ko ess tarah add krteh hai:
+            // var coor = "string1 " + variable-name + "string2" +  varialbe-name ;
+            var coor = "X coordinate is:  " + x + " and  Y coordinate is: " + y;
+            console.log(event.pageX)
+            
+            document.getElementById("inputs").value = coor
+            // as actually hota kya hai ki yeh sbse phle outer-function run hota hai and phir voh pause hoke uske just andar wala function execute hota and esske andar bhi koi function hai then yeh pause hojayega and voh function execute hoga as like jaise-jaise functios ki return aati rhegi vase hi inner-to-outer function resume hoteh rhenge and atlast meh main-function apna kaam kr dega.
+
+            // note-points: document-library-file meh document related , dedicated functions hoteh hai mtlb hai hi. and jaise hi apnne kisi function meh input diya mtlb voh ek alag function hai and uske aage wala koi alag function hai.
+            // As yaha pe value()-fn Dom-element-dedicated function hi hai. and dedicated function ko apn esseh hi apply krke run kr skteh hai. 
+            // tip-point: as apn esseh maan skteh hai ki Html-webpage-elements ek Structure ki tarah hoteh hai jinke keys ko apn as like as C-programming ki tarah retrieve kr skteh hai and vase hi retrieve krteh hai.
+            // As toh yaha pe Document bhi ek Structure hi hai , but ess structure k liyeh apnee pass ek function hota hai jisseh apn document meh key-element retrieve kr skteh hai. toh mtlb yeh getElementById() bhi ess document-STRUCTURE ka key-element hi  and phir yeh value bhi ess getElementById()-STRUCTURE ki key hi hai. toh ess tarah apn kisi STRUCTURE k key-element and agr voh key-element bhi koi Structure hai then unke key-elements ko apn essi tarah retrieve mtlb access krteh hai.
+            // 🔥note-point: Javascript meh kisi Strucuture k key-elements ko access krne k liyeh kuch functions hai: jaise:
+            /*  1.getElementById
+                2.getElementByClass (ess function se apn key-element ko uske class-name se retrieve ya access kr skteh hai)
+                3. and many more STURTURE-dedicated-functions*/
+            // thuss esseh apne corrdinates ess inputs meh fetch hojayenge.
+        }
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+//- inheritance ka mtlb ko cheez jo kisi ko di gayi ho ya mili ho kisi k jane k baad
+//- thus template inheritance ka mtlb voh template jo kisi mainfile k liyeh inheritance hai mtlb voh template jo kisi event pe ess fle ko inherited ki gayi ho
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  title Document
+  style
+    include ../staticsfls/cssfile2.css
+  ink(rel="stylesheet", href="https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap")
+body
+    nav#navbar
+            ul
+                div#logo
+                    img(src="staticsfls/mnlogo.png", alt="zz")
+                    | MDC
+                li #[a(href="/") Home]
+                li #[a(href="/") About]
+                li #[a(href="/contactus") Contact us]
+                li #[a(href="/") Services]
+
+    form(action='/contactus/hhhhtb' method='POST')
+        h2(style='position: relative; left: 14px;') Join us now:
+        input.inp(type='text' name='Name' id='' placeholder='Enter your Name')
+        input.inp(type='text' name='age' id='' placeholder='Enter your age')
+        input.inp(type='text' name='ph' id='' placeholder='Enter your phone no.')
+        input.inp(type='text' name='email' id='' placeholder='Enter your e-mail')
+        input.inp(type='text' name='address' id='' placeholder='Enter your address')
+        button.sbbt Submit

@@ -1,0 +1,181 @@
+<!-- YAHA pe apan ek Choti si Website banayenge on the newly opened GYM banayenge:
+phir ess website ki advertising krenge, -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FIT-GYM.COM</title>
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Bhai+2:wght@600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0px;
+            background: url('img/adult-1850925_1280.jpg ');
+            color: white;
+            height: 1000px;
+            font-size: 20px;
+            font-family: 'Baloo Bhai 2', cursive;
+            ;
+        }
+        
+        #div1 {
+            /* border: 2px solid red; */
+            /* first make a BOX(means div.) then uska border define kr do taki kaam krte time and kaam k baad meh bhi kaisi bhi ovelapping na ho and then border ko comment out kr do. */
+            width: 148px;
+            display: inline-block;
+            position: absolute;
+            /* note: position property lagane se uss element ki initial jagaj phir uski nhi rhti eski vajah se dusre elements usse cover kr skte hai agar apan ne uski top or left etc position define nhi ki toh. */
+            left: 37px;
+            top: 23px;
+        }
+        
+        #div2 {
+            /* border: 2px solid rgb(87, 54, 235); */
+            width: 515px;
+            margin: auto;
+            margin-top: 23px;
+            /* display: inline-block;
+            position: absolute;
+    left: 629px;
+    top: 23px; */
+        }
+        
+        #div3 {
+            /* border: 2px solid rgb(218, 59, 178); */
+            width: 122px;
+            display: inline-block;
+            position: absolute;
+            right: 37px;
+            top: 23px;
+        }
+        
+        #div4 {
+            /* border: 2px solid rgb(179, 255, 0); */
+            width: 349px;
+            height: 377px;
+            /* note: agar kabhi div k andar ka content bahar nikal jata hai(bcoz of height and width) then fir voh content as a watermark ki tarah behave krta hai  */
+            display: inline-block;
+            position: absolute;
+            top: 244px;
+            left: 73px;
+        }
+        
+        .nav {
+            display: inline-block;
+            padding: 22px;
+            font-size: 20px;
+        }
+        
+        .nav a {
+            text-decoration: none;
+            color: white;
+        }
+        
+        .nav a:hover,
+        .nav a:active {
+            color: gray;
+        }
+        
+        ul {
+            margin: 0px;
+        }
+        
+        .rbut {
+            padding: 5px 5px 5px 5px;
+            margin: 2px;
+            border: 2px solid black;
+            border-radius: 10px;
+            background-color: brown;
+            color: wheat;
+            font-family: 'Baloo Bhai 2', cursive;
+        }
+        
+        .rbut:hover {
+            cursor: pointer;
+            color: reds;
+            background-color: khaki;
+        }
+        
+        #hh1 {
+            margin: auto;
+            color: rgb(159, 175, 13);
+        }
+        
+        #logo {
+            width: 90px;
+            height: 88px;
+            filter: invert(100%);
+            margin: auto;
+            display: block;
+        }
+        
+        .inp {
+            display: block;
+            margin: 13px;
+            padding: 4px;
+            width: 300px;
+            font-family: 'Baloo Bhai 2', cursive;
+            border-radius: 10px;
+            background-color: rgb(248, 245, 245);
+            border: black;
+            color: indigo;
+        }
+        
+        .sbbt {
+            display: block;
+            margin: 13px;
+            padding: 4px;
+            width: 309px;
+            font-family: 'Baloo Bhai 2', cursive;
+            background-color: lightseagreen;
+            border: black;
+            border-radius: 10px;
+        }
+        
+        .sbbt:hover {
+            color: green;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="class" id="div1">
+        <img src="img/silhouette-3276824_1280.png" id="logo" alt="img">
+        <h1 id="hh1">FIT-GYM</h1>
+
+    </div>
+    <div class="class" id="div2">
+        <nav>
+            <ul>
+                <li class="nav"><a href="project1.html">Home</a></li>
+                <li class="nav"><a href="https:/google.com">Menu</a></li>
+                <li class="nav"><a href="#">Gym-kit</a></li>
+                <li class="nav"><a href="#">Contact us</a></li>
+            </ul>
+        </nav>
+    </div>
+    <div class="class" id="div3">
+        <button class="rbut">Log in</button>
+        <!-- button mtlb "sirf text hi" but  uske saat border pre-added ata hai with background-color:white -->
+        <button class="rbut">Sign up</button>
+
+
+    </div>
+    <div class="class" id="div4">
+        <form action="beckend.php">
+            <h2 style="position: relative; left: 14px;">Join us now:</h2>
+            <input type="text" name="" id="" class="inp" placeholder="Enter your Name">
+            <input type="text" name="" id="" class="inp" placeholder="Enter your age">
+            <input type="text" name="" id="" class="inp" placeholder="Enter your phone no.">
+            <input type="text" name="" id="" class="inp" placeholder="Enter your e-mail">
+            <input type="text" name="" id="" class="inp" placeholder="Enter your addreas">
+            <button type="submit" class="sbbt">Submit</button>
+        </form>
+
+    </div>
+
+
+</body>
+
+</html>

@@ -1,0 +1,82 @@
+ <!-- NOW yaha pe BUTTON ki designing and some PSEUDO SELECTORS k bareh meh dekhenge,
+toh sabse phli baat apan "button element( with id and class)" se kisi bhi name ka button create kr skte hai and and agar apan 
+a(anchor) element ka use krte hai toh voh bhi button ki tarah hi dekhega but usske piche koi link juuda hota hai and button meh koi link nhi hota bs diretly 'beckend' se connection hota hai,
+and NOW created button ko apan  designing de skteh hai simply by adding border,background-color,padding,width,height,cursor etc by tagging button or anchor by its ID or CLASS in css style. 
+  -->
+
+ <!-- "PSEUDO SELECTORS" mainly 3 types k hoteh hai:
+ 1.element:hover{} (jab cursor button k upar ya over button hoga tab jo styles(jaise color,background-color etc) dikhni chahiyeh voh apan ess selector meh daalenge)
+ 2.element:visited{} (if agar linked website ek baar visited ho gayi hai then uske baad jo styles apan ko button pe dekhti hai voh styles apan esmeh add krte hai )
+ 3.element:active{} (jaise hi apan button pe click krenge tab jo styles apan ko dikhti hai voh styles apan essmeh add krte hai) -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BUTTON DESIGNING and PSEUDO SELECTORS</title>
+    <style>
+#but{
+    border: 3px solid blue;
+    border-radius: 32px;
+    background-color: yellow;
+    cursor: pointer;
+    padding: 2px;
+    width: 100px;
+    height: 30px;
+    font-weight: bold;
+
+}
+a{
+    border:blue 3px solid;
+    border-radius: 32px;
+    background-color: yellow;
+    padding: 2px;
+    width: 100px;
+    text-decoration: none;
+    color: tomato;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-style:italic;
+    font-weight: bold;
+}
+a:hover{
+    color: dimgray;
+    background-color: teal;
+}
+a:visited{
+    background-color: rgb(34, 185, 128);
+}
+a:active{
+    background-color: rgb(109, 50, 205);
+}
+#but:hover{
+    background-color: white;
+}
+
+        .container{
+            border: 4px solid rgb(105, 5, 5);
+            background-color: rosybrown;
+            border-radius: 59px;
+            padding: 82px;
+    margin: 171px;
+            margin-top: 71px;
+    padding-top: 36px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container" id="cont1">
+        <h3 style="text-decoration-color: rgb(6, 122, 56);" >HELLO JI KAISE HO</h3>
+        <P>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Saepe voluptas magni consectetur nisi, aperiam
+            beatae vel earum adipisci architecto fugit sunt quasi quibusdam, cum ab numquam repellendus eligendi nemo
+            voluptatum! Provident iste dolore amet!</P>
+
+            <a href="https://google.com">show more</a>
+            <button class="23" id="but">Sign in</button>
+
+    </div>
+
+</body>
+
+</html>

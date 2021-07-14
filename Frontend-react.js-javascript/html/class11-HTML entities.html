@@ -1,0 +1,34 @@
+<!-- now abb yaha pe apan HTML ENTITIES k bareh meh janege
+jaise HTML lanuguage meh kafi sare reserve characters hote hai like sabhi "tags" inke "attributes" toh mtlb ki apan actually inhe apne webpage pe as it is print nhi krva skte as eg. jaise apan <p> nhi kr skte, but apan HTML ENTITIES ka use krke yeh print krva skte hai.
+and jaise keyboard meh bohat sare special characters ya sign nhi hote (as eg. pound sign, copyright, blank space, and many more logos,signs,characters) toh enn absent characters ko bhi HTML ENTITIES k help se print kiya jata hai..
+## toh bs simply apan ko uss particular "tag, attribute ya absent character" ki corresponding HTML ENTITY likni hai and then simply it will be printed
+
+some HTML ENTITIES are listed below and for more just google "html entities reference"
+1.for "<" is &lt;
+2.for ">" is &gt; so with the help of 1 and 2 apan  webpage meh <p> print kr skte hai (toh simply apan bol skte hai ki HTML ENTITITES special characters ko webpage pe print krne k liyeh hi use hote hai.)
+3.for "pound" is &pound;
+4.for "copyright" is &copy;
+5.for "white space" is &nbsp;
+6.for "empty text" is &#8203; -->
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML ENTITIES</title>
+</head>
+<body>
+    <!-- tip: here we created a one div with a ID and CLASS so here apan bohat sare paras dal skte hai and at the time of styling apan sirf ess div ko eski ID ya CLASS se load krke sare paras apne aap styling add ho jayegi -->
+    <div class="paras" id="imp">
+        <p>here we can print paragraph tag i.e &lt;p&gt; </p>
+        <p>the symbol of pound is &pound; </p>
+        <p>the symbol of copyright is &copy; </p>
+        <P>there is emptyy message &#8203; </P>
+        <p>this para contains &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; five whitespaces</p>
+    </div>
+    
+</body>
+</html>

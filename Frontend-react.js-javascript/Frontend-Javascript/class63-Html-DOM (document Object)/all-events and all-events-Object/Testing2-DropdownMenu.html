@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Testing-DropdownMenu</title>
+    <style>
+        .dropbtn {
+            background-color: #4CAF50;
+            color: orangered;
+            padding: 16px;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+        }
+
+        .dropbtn:hover {
+            background-color: #3e8e41;
+        }
+
+        .dropbtn:focus {
+            background-color: blue;
+/* where yaha focus mtlb last click uss element pe kiya gaya thus mtlb voh element abhi tk foucused-hai . */
+        }
+
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: wheat;
+            min-width: 160px;
+            overflow: auto;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        }
+
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+        .dropdown-content a:hover {background-color: red}
+
+        .showi {
+            display: inline;
+            display: block; 
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Here We will show Dropdown Menu</h2>
+    <p>Click on the button to open the dropdown menu.</p>
+
+    <div class="dropdown">
+        <button id="myBtn" class="dropbtn">Dropdown</button>
+        <div id="myDropdown" class="dropdown-content">
+            <a href="#home">Home-menu</a>
+            <a href="#about">About-menu</a>
+            <a href="#contact">Contact-menu</a>
+        </div>
+    </div>
+    <script>
+        let btni = document.getElementById('myBtn').onclick = function () {
+            dropdownfunction()
+        }
+
+        /* myFunction toggles between adding and removing the show class, which is used to hide and show the dropdown content */
+        function dropdownfunction() {
+           
+
+            document.getElementById("myDropdown").classList.toggle("showi")
+            // mtlb ek baar click hoga toh yeh toggle()-fn usko unshow kr dega and ek aur baar click hota hai toh yeh toggle()-fn vapis se show kr dega. toh apn Ess tarah drop-down menu show krvateh hai.
+        }
+    </script>
+</body>
+
+</html>

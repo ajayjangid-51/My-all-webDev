@@ -1,0 +1,52 @@
+<!-- html-DOM(webpage) ATTRIBUTE-OBJECT(attr-object)-keys and respective-functions -->
+<!-- Yaha pe apn Webpage k liyeh Attributes( style-property) hoteh hai na, unn Attributes k liyeh dekhenge: -->
+<!-- As apn janteh hai ki Attributes toh html-dom(webpage)-Elements k liyeh hi define hoteh hai. thus toh agr kabhi apnko yeh ess Attribute-Object-ki-Keys ko access krna hai then apnko phle uss respective dom-Element ko specify krke phir enn attriubte-object-ki-keys ko access krna hai ... otherwise apnko voh error milega: "cannot get undefined attribute at null at file-name . thus toh mtlb apnko voh Dom-element krna hota hai.-->
+<!-- Attributes-Object-keys and its respective function bcoz har key k naam se hi ek function bhi hota jo apni return value apni respective object-key meh store kr deta hai. -->
+<!-- AS mtlb har html-dom-Element k liyeh uska khuda ka attribute-Object hota hai. thus toh apnko yeh baat dyan meh rkhke ess attribute-object k elements ko access krne hai. -->
+
+<!-- Now apn kuch Attribute-Object Functions dekhenge as mtlb voh hi bcoz yeh function hi apni key-k andar apni return value store krteh hai:
+    1.attributes[ index-of-attribute-bcoz yeh bhi ek Object hai bcoz sabhi attributes essi meh store hai ].isId (ess "isId" meh true or false store hota hai on the basis ki attribute ki 
+    note-point: dono baat ka ek hi mtlb hai ,but bs apn jab esseh use krteh then Ojbect-key wala actual-concept hi dhyan meh rkhna hai.)
+    2.attr.name (esseh attribute-name store hota hai )
+    3.attr.value (esseh attribute ki value store hoti hai )
+    4.nodemap.removeNamedItem( attribute-name ) (yeh function specified attribute ko remove kr deta hai.)
+  -->
+<!-- for more Attribute-Objects-Keys or their respective functions--
+    visit:  https://www.w3schools.com/jsref/dom_obj_attributes.asp -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attributes-Object-keys and its respective function</title>
+</head>
+<body>
+    <p id="demo">hi click on the under-button to view where there is id is there or not there</p>  
+    <button id="btn">id buttno</button>
+    <button> this is button[1]</button>
+    <button id="btii" onclick="funcii()"> this is button[2]</button>
+
+    <script>
+        // 🔥 attr.isId
+        document.getElementById("btn").onclick = function (){ myidfunction()}
+        function myidfunction(){
+            let x = document.getElementById("demo")
+            console.log(x.attributes[0].isId)
+        }
+
+        // 🔥 attr.name
+        // document.getElementsByTagName("BUTTON")[2].onclick = funcii()
+        function funcii(){
+        let xw = document.getElementsByTagName("BUTTON")[2]
+            // let x = document.getElementById("btii").attributes[0].name
+            let x = xw.attributes[0].name
+            let y = xw.attributes[1].name
+            console.log(x, y)
+
+        }
+    </script>
+
+    
+</body>
+</html>

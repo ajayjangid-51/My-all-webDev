@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign-Up form</title>
+    <link rel="stylesheet" href="signup.css">
+
+</head>
+
+<body>
+    <h2>Sign up with us</h2>
+    <button class="btni" onclick="opensignpage()" >Sign up</button>
+    <div id="id01" class="modal">
+<span class="close" onclick="closesignpage()" title="Close Form">Close</span>
+<form action="/thank you page" class="modal-content">
+    <div class="container">
+        <h1>Sign up</h1>
+        <p>Please fill the correct details</p>
+        <hr>
+        <label for="Email"><b>email</b></label>
+        <input type="email" name="Email" id="" required placeholder="Enter Email">
+        <label for="pass"><b>Password</b></label>
+        <input type="password" name="pass" placeholder="Enter Password" required id="">
+        <label for="repass"><b>Password</b></label>
+        <input type="password" name="repass" placeholder="Repeat Password" required id="">
+        <label for="">
+
+            <input type="checkbox" checked="checked" name="remember" id=""> Remember me
+        </label>
+        <p>By creating account you agree to our <a href="/agreement"> Terms & privacy</a></p>
+        <button type="buttn" class="cancelbtn" onclick="closesignpage()">Cancel</button>
+        <button type="submiti" class="signupbtn" >Sign Up</button>
+
+
+    </div>
+</form>
+    </div>
+    <script>
+        function opensignpage(){
+            document.getElementById("id01").style.display = "block"
+
+        }
+        function closesignpage(){
+            document.getElementById("id01").style.display = "none"
+        }
+
+        var closi = document.getElementById("id01")
+        
+        closi.onclick = function(){
+            if(event.target == closi){
+                closi.style.display = "none"
+            }
+        }
+
+    </script>
+</body>
+</html>

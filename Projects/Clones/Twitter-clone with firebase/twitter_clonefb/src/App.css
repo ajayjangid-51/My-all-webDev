@@ -1,0 +1,10 @@
+.app{
+  display: flex;
+  /* border: 1px dotted red; */
+  max-width: 90%;
+  margin: auto;
+}
+body{
+  --twittercolor : #50b7f5;
+  --twitterbackgroundcolor: #e6ecf0;
+}

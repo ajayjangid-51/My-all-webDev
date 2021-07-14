@@ -1,0 +1,75 @@
+<!-- YAHA PE apn apne Webpage meh Google-Maps add krna dekhenge:  -->
+<!-- and as yeh kaam apn front-end-JavaScript (jiska compiler+moduleBag Browser hota hai) uske google class k maps function Maps-class se krteh hai. -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Motorbus.com</title>
+    <style>
+        #googlemap{
+            height: 500px;
+            width: 500px;
+            border: 3px solid red;
+        }
+    </style>
+</head>
+<body>
+    <h2>Visit Google-Maps</h2>
+    <div id="googlemap">
+        hi i am google maps
+
+
+    </div>
+    <button id="seeonmap">See Map</button>
+    <script>
+        document.getElementById("seeonmap").onclick = ()=>{
+            if( document.getElementById("googlemap").style.display = "none"){
+
+            document.getElementById("googlemap").style.display = "block"
+            }
+            else{
+
+            document.getElementById("googlemap").style.display = "none"
+            }
+
+        }
+    //  as JavaScript meh functions 2 type k hoteh hai:
+    // 1.anonymsn-function (mtlb voh function jiska koi naam nhi hota , as mtlb voh function jo apn kisi variable meh banateh and assign krteh hai.)
+    // 2.named-function (mtlb voh function jiska name hota hai. mtlb voh function jo apn function-keyword ka use krke define krteh hai mtlb banteh hai.)
+    function gmap(){
+        let mapCanvas_or_mapdiv = document.getElementById("googlemap")
+        // yaha ess mapoptions-Object meh apn map ki properties define krenge hai.
+        let mapoptions = {
+            centre: new google.maps.LatLng(51.5, -0.2),
+            // yaha centre-key meh apn apne-map ka centre set krteh hai mtlb simpy latitude and longitude daalteh hai and thus mtlb phir uss lat and lng pe jo bhi area hota hai voh apne div-container meh ek-dam centre pe aa jata hai mtlb ek dam centre pe dikhaee deta hai. 
+            // toh bas particular-area ka lat and lng pata hona chahiyeh thus, toh apn apne webpage pe exactly google-map-container meh uss area ho ki dikha payenge.
+
+            // 💁‍♂️🌹Tip: as apn kisi bhi area ka latitude and longitude easily find out kr skteh hai, thus eskeliy simply visit google-map and left-click on the required area , thus toh apnko ek popup show hoga and usmeh uss pointed-area ka latitude and longitude hoga. and then uss lat and lng ko copy-paste kr skteh hai.
+            centre: new google.maps.LatLng(21.167658, 72.784981),
+            zoom : 10
+        }
+
+        // let googlemapi = new google.maps.Map( p1_mapCanvas , p2_mapOptions)
+        let googlemapi = new google.maps.Map( mapCanvas_or_mapdiv , mapoptions)
+        // or apn directly esseh bhi kr skteh hai:
+        // let googlemapi = new google.maps.Map(document.getElementById("googlemap") , mapoptions)
+    }
+    </script>
+    <!-- As API simply ek program hota haii jismeh kafi sare function hoteh hai and kuch tools bhi hotehh. -->
+    <!-- // as now aab apn apne ess code meh Google-API add kr denge. as mtlb yeh API aab Google -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBu-916DdpKAjTmJNIgngS6HL_kDIKU0aU&callback=myMap"></script>
+    <!-- as but phle apnko google se google-maps k API ki key leni hogi jo ki ek dam free hai.  -->
+    <!-- so getting GoogleMap-API key visit this:
+         👍 https://developers.google.com/maps/documentation/javascript/get-api-key  or
+          follow this youtube-Vedio: 👍 https://www.youtube.com/watch?v=1JNwpp5L4vM and 2nd-vedio-also -->
+
+         <!-- as now our google-mapApi-Key is : 🎆 AIzaSyC9tUj6NkO1B4sQY9lsabfkLdI81XfEN-4 🎆 -->
+         <!-- our googlemapAPI-account : https://console.cloud.google.com/google/maps-apis/metrics?project=supple-tracker-290712 -->
+</body>
+</html>
+
+
+

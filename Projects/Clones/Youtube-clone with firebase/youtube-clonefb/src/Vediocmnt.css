@@ -1,0 +1,42 @@
+.vediocmnt{
+    /* border: 1px solid red; */
+    flex: .239;
+    height: 42vh;
+    margin-bottom: 0;
+    /* object-fit: contain; */
+    /* display: ; */
+    
+}
+.vediocmnt__info{
+    display: flex;
+    /* border: 1px dotted green; */
+    /* flex: .8; */
+    padding: 5px;
+    /* align-items: center; */
+}
+
+.vediocmnt__vedio img{
+    width: 100%;
+/* object-fit: contain; */
+    height: 100%;
+    /* position: center; */
+
+    /* border: 1px solid brown; */
+}
+
+.vediocmnt__vedio{
+    /* border: 1px solid gray; */
+    height: 50%;
+    width: 100%;
+}
+.vediocmnt__info_names{
+    margin-left: 1vw;
+}
+.avi{
+
+    margin-top: 8px;
+}
+.vediocmnt__info_names h4{
+    margin-top: 8px;
+    margin-bottom: 10px;
+}

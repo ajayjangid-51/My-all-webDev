@@ -1,0 +1,3 @@
+-- thus toh kafi-kuch major database k kafi kuch concepts sikh liyeh hai and now aab apn Lab-Session krenge mtlb yaha apn kuch real-world database lenge, mtlb unheh banayenge , unheh manage krenge.
+
+-- 🍯🍯AS SQL tb kaam aati hai apn apne application ko apne database se connect kr dete hai , then phir vaha pe phir connection krne k baad apnko SQL language ka use krke hi database meh insert krna hota hai ,thus toh SQL-language bhi kafi important hai , worthy hai , and kafi acchi hai..

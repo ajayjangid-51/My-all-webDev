@@ -1,0 +1,31 @@
+<!-- Yaha pe apan "FONTS" k bareh meh janege.
+FONT ka mtlb hota hai "text image" mtlb text kaisa dekh rha hai(jaise uski writing style, size, weight etc) toh eske basis pe there are some properties of fonts:
+1.font-family (by this property we can change writing style of the font)
+on the basis of avaibility "FONTS-family" 2 types ki hoti hai:
+     1."web safe fonts" (voh fonts jo apne os meh inbuilt ya saved hote hai jinhe agar apan ko webpage text meh apply krna ho toh google se link ya download na krna pde) 
+     2."web fonts" (voh fonts jo apan ko link, import ya download krni padenge (jo apan website "google font" se apne webpage meh head element meh link krte hai and then style of property "font" ki value bhi paste krdenge and yaha note point krenge ki jab bhi font value dete toh value block meh apan 3-4 value dete hai taki jo font phle available hogi voh apply ho jayeh and ess process ko apan "font stacking" bolte hai))
+
+     2.line-height (esse apan 2 text line k bich meh gap set kr skte hai and eski unit em hoti hai for.eg. 4em is equal to 4times of the default text soo this much gap will be applied)
+     3.font-weight (by this we can make the text bold,light etc )
+     4.font-style (by this we can make text italic,simple etc )
+     5.font-size and etc vs-code suggest automatically when we type font in property block (by it we can change size of the font or text, and eski unit px(pixel hoti hai and 1px=1/96 of the inch) and orr bhi kaphi sari unit hoti hai voh apan ko vs-code meh suggest ho jayegi jb apan value block meh value put krenge)
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS FONTS</title>
+    <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@700&display=swap" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@700&family=Pacifico&display=swap" rel="stylesheet">
+    <style>
+        p,h2{font-family: 'Comic Neue', cursive;}
+        span{font-family:'Pacifico', cursive;}
+        span{font-size: 45px; font-weight: bold;} 
+    </style>
+</head>
+<body>
+    <h2>HERE WE WILL INTRODUCE STYLE IN CSS THAT IS FONT OF the text</h2>
+    <p>toh kaise ho aap sab log</p>
+    <span>okay we use inlne css and imported a font style from "google font"</span>
+</body>
+</html>

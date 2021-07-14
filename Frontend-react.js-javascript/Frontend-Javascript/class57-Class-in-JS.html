@@ -1,0 +1,154 @@
+<!-- YAHA pe apn Class k bareh meh dekhenge: -->
+<!-- JavaScript-class introduction -->
+<!-- JavaScript-class simply ek object and ek function( specially called constructor) ka combination hota hai and esi function apn ess class k object ki keys banateh hai and phir esse function ka use krke enn object-keys meh value bhi assign kr skteh hai and krteh bhi hai -->
+
+<!-- Yaha this-keyword se apn ne ess class-Object meh yeh ek key-create kr di hai and thus jab kabhi bhi ess function ko call krenge and input dalenge voh ess object-key meh jake assign mtlb store hojayega and note-point: Note:apn class-object ki sbhi keys esske constructor-function meh hi banateh hai . Simply by using this-keyword   -->
+<!-- And phir baad meh apn ess class k object ko access bhi kr skteh hai and mtlb krteh hai: as like:
+Class_name.objct_keyname; -->
+<!-- And note-point: apn new-keyword se enn Class ki duplicates bhi bana skteh hai bcoz yeh ek tarah se code-reusibility hai -->
+
+<!-- Class is combination of Object , ek-constructor-function and functions -->
+<!-- Where object ki key-value pairs toh constructor-function meh hi define hoti hai -->
+<!-- Extends-keywords ka mtlb abhi jo  class bana rhe hai uss class meh yeh class add kr rhe hai mtlb ess newly-created-class meh apn ess included class k sare functions use kr skteh hai easily -->
+<!-- Super()-fn ko call krne ka mtlb hai parent-class-k-constructor-function ko call krna and usmeh input de kr uss parent-class k object keys meh voh input-value assign krna -->
+<!-- Where extended-class meh "this"-keyword parent class ko represent krta hai mtlb this ki jagah parent-class-name aaja ta hai -->
+<!-- static-keyword se defined function ko apn uss class k alava usko kisi orr copy-class meh nhi kr skteh. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+<script>
+    class myclass{
+        constructor(p1 , p2 , p3){
+            this.name = p1
+            this.last_name = p2
+            this.phone_number = 7877945307
+            this.id = 11
+            this.p3 = p3
+            this.fathers_name = "Radheshyam"
+            this.mothters_name = "sharda"
+            this.some_function = ()=>{
+                return (this.id + this.fathers_name) 
+            }
+
+
+        }
+        class_function (){
+            console.log("hey hello i am the return value of class_function-function which is a function of myclass-class")
+        }
+        class_function2(para1){
+            console.log(para1)
+            console.log(` is a good boy`)
+            // return console.log($param1 + "is a good boy")
+
+
+        }
+        // thus toh ess tarah apnne Class meh Object-bana diya mtlb Object-Key-value-pairs bana di hai.
+        static statifun(){
+            console.log("i am static function so you can't access me in any copy of my Class-parent as but you update me in the Extending method")
+            return "me statifun"
+        }
+    }
+
+    let copy_of_myclass = new myclass("aju" , "jangid", "this is p3")
+    copy_of_myclass.class_function();
+    // thus mtlb apnne myclass-class k class_function()-namak function() call kr diya hai.
+    copy_of_myclass.class_function2("heli");
+
+    console.log( copy_of_myclass.fathers_name)
+    console.log(copy_of_myclass.id)
+    console.log(copy_of_myclass.last_name)
+    console.log(copy_of_myclass.mothters_name)
+    console.log(copy_of_myclass.some_function)
+
+    // AS toh ess tarah apn class ki copy bana krke uske Object-key-value-pairs and functions use kr skteh hai.
+
+    // 🍀🍀 Exteding-class or Including-Class in a Class , as bxoz Extending of Class ka mtlb hai ki apn kisi class meh koi orr dusri Class ko include kr rhe hai, thus Include krne se mtlb jis class ko apn Include kr rhe hai uss class k functions ess class( class jismeh apnne yeh clas include ki hai) meh yeh functions as a inherit milteh mtlb as a virasat milteh hai mtlb ess class included-class k functions ko easily use kiya ja skta hai jaise apn C-programming meh files ko include krke apni code-file uske functions jaise printf , scanf etc ko use krteh hai. thus toh yeh esa Classes meh bhi hota hai mtlb ek class kuch orr class ko add or include krke uske functions ko use krna.
+    // and Actually apn uss included-class( also called as super-class or parent-class ) ko super() namak function se uss super-class or included-class k Object-keys ki values change kr skteh hai,and where yeh super()-fn super-class-k-Contructor-fn ko denote krta hai mtlb as super ki jagah constructor aa jata hai.yeh changement actual class meh reflect nhi krega and reflect krne ka koi mtlb bhi nhi hai. and uss super-class k functions ko use krhi skteh hai thus toh mtlb apn ek tarah se uss included-Class ko Extend and update  kr rhe hai . 🍀🍀
+
+    class class2_whichwillincludeother_class extends myclass{
+
+        constructor(p11 , p22 , p33){
+
+            super( p11 , p22 , p33)
+            // toh esseh krne se apn ne super-class k constructor ko call krke usmeh yeh parameter uske Objects-keys meh assign kr di hai.
+            // note-point: as apnko super()-fn ka phle use krke uss parent class meh value update , change etc kuch bhi krva ke phle super-class k contructor ko assign krna hota hai otherwise apn super-class phle assign nhi krteh then apnko error show hoga . bcoz apnne super-class ko extend kiya toh mtlb apnko ek baar specify krna hota hai ki extend kiya hai mtlb voh phle wali values rhkni hai ya nhi rhkni hai.  
+
+            this.last_name = "mansuri"
+            this.mothters_name = "sharda devi"
+            // thus toh yeh super-class object-keys meh assigned values sirf tabhi hi reflect kregi jab ess actual-class-jisko apnne extending krke banaya hai ki copy banayenge and phir yeh Object-keys access krenge tab.
+            this.class2_key1 = "key1"
+            this.class2_key2 = "key2"
+            this.class2_key3 = "key3"
+            this.class2_key4 = "key4"
+            this.p11 = p11
+            this.p22 = p22
+           
+            
+
+            // and agr apnko ess class-Object meh functions bhi daalne ho toh voh as jaise function add krteh constructor()-fn se bahar toh vase hi apn class-Object functions add krteh hai. and as keys and function ko access krne ka tarika toh ek hi hai.
+
+
+        }
+        class_function2(){
+            console.log("hey this is upadated function which is actually function of super-class named myclass")
+        }
+        // as mtlb apn super-class k function update krteh hai mtlb voh updation fully updation hota hai. 
+        // 📓:note-point: agr super-class ka koi function static-function hai then tab apn uss function ko update ya change nhi kr skteh. as like jaise yeh stati_fun() ek static-function hai super-class meh thus toh apn esseh update ya change nhi kr skteh.
+
+        // statifun(){
+        //     console.log("i am updated static function in this exteded new class")
+        //     return "its okay babe"
+        // }
+        function1 (){
+            console.log("i am function11")
+            return "i am return value of function1"
+
+        }
+        function2(param1){
+            console.log(param1)
+            console.log("i am function2")
+            return "i am return value of function1"
+            
+        }
+
+    }
+    // class2_whichwillincludeother_class(p11: any, p22: any, p33: any): where yaha any ka mtlb yeh ki function k inputing-parameter-data ko datatype specify mtlb apn ess function koi sa bhi type of data input daal skteh hai.
+    let copy_of_newextendedClass = new class2_whichwillincludeother_class("i am p11" ,"i am p22" ,"i am p33" )
+    console.log(copy_of_newextendedClass.mothters_name)
+    console.log(myclass.mothters_name)
+    // eski value apnko undefined milegi mtlb apn ess Class k Object-keys ko ess Class ki Copy meh hi use kr skteh hai.
+    myclass.id = 32;
+    // note-point: apn Class-Object ki keys ko esseh bahar se bhi update and assign kr skteh hai.
+    console.log(myclass.id)
+    console.log(copy_of_newextendedClass.last_name)
+    console.log(copy_of_newextendedClass.class2_key1)
+    console.log(copy_of_newextendedClass.class2_key3)
+    console.log(copy_of_newextendedClass.class2_key4)
+    console.log(copy_of_newextendedClass.p3)
+    console.log(copy_of_newextendedClass.p22)
+    console.log(copy_of_newextendedClass.some_function)
+    console.log(copy_of_newextendedClass.p11)
+    copy_of_newextendedClass.class_function2()
+    copy_of_newextendedClass.function1()
+    copy_of_newextendedClass.function2("me function2")
+
+    // copy_of_newextendedClass.statifun()
+     // 📓: AS apn static function kisi copy-class meh acces nhi kr skteh. voh sirf usi class k duvra access kiya ja skta hai . as like this:
+    myclass.statifun()
+
+    // toh mtlb Actually Extends-keyword krna mtlb apn kisi Class ko Extend kr rhe hai, ya newly creting Class meh uss Clas ko as it is inClude kr rhe hai and include krne k baad apn uss class ko update and usmeh kuch chagement bhi kr skteh hai.
+
+</script>
+</body>
+</html>
+
+
+

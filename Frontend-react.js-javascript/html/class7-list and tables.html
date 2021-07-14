@@ -1,0 +1,78 @@
+<!-- yaha apan apne webpage pe list(mtlb line upon line text list) and table(mtlb rows and column) banana sikhenge -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>list and tables</title>
+</head>
+
+<body>
+    <!-- firstly apan note krenge ki list two types ki hoti hai
+    1.ordered list(ol) mtlb list line ordered number meh ayenge and
+    2.unordered list(ul) mtlb list line ordered number meh nhi ayenge
+    note point ol and ul tag k respective attribute hote hai attribute mtlb yeh respective tag meh kuch properties ya design add kr dete hai,
+
+    toh simply apan phle toh ol tag ya ul tag ka use krke phle list ko specify krenge mtlb jo list line ayegi voh ordered meh hogi ya unordered hogi
+    and yaha pe jb bhi apan kisi text ko <li></li> tag meh likhenge toh yeh text list meh ayegi mtlb text k phle 1 2 3 ya spot lag jayega
+ -->
+    <ul square>
+        <li>yaha likha huaa text list meh ayega mtlb text k aage numbering ya indexing hojayeh gi</li>
+        <li>yes this is list</li>
+        <li>yes this is second list</li>
+        <ol>
+            <li>first</li>
+            <li>second</li>
+            <li>third</li>
+        </ol>
+    </ul>
+
+    <ol type="A">
+        <li>this is first ordered list</li>
+        <li>this is second list</li>
+        <ul circle>
+            <li>second one is good</li>
+            <li>second is amazing</li>
+        </ul>
+        <li>this is third</li>
+    </ol>
+
+    <!-- now aab apan table baneynge
+toh simply table banane k liyeh apan <table></table> tag ka use krte hai
+aab table tag meh doo tag hote hai
+1.thead tag.. yeh simply apan jab <tr></tr> tag se ek row create krenge tab yeh row first row or uppermost row hoti hai jismeh table heading aati hai, toh mtlb apantable table row meh heading <th></th> tag se dete hai or jitne <th></th> tag use krenge utni heading ban jati hai (mtlb voh phir column crete krne ka tarika hota hai)
+
+2.tbody tag..phir yaha simply apan jb <tr></tr> tag se row crete krenge tb usmeh as according heading row k niche <td></td> tag se data fill kr denge
+
+aur ase bar bar <tr></tr> tag data k liyeh <td></td> tag use krke ek kaisi bhi table create kr skte hai  -->
+
+<table>
+    <thead>
+        <tr>
+            <th>serial no.</th>
+            <th>maths</th>
+            <th>physics</th>
+            <th>chemistry</th>
+        </tr>
+
+    </thead>
+    <tbody>
+        <tr>
+            <td>1</td>
+            <td>90</td>
+            <td>90</td>
+            <td>76</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>98</td>
+            <td>87</td>
+            <td>92</td>
+        </tr>
+    </tbody>
+</table>
+
+</body>
+
+</html>

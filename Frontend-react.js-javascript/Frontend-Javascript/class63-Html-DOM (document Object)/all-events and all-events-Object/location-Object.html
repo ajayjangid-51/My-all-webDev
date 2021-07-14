@@ -1,0 +1,43 @@
+<!-- Location-Object -->
+<!-- AS Location-Object meh current-Webpage URL related "keys" and "functions" hoteh hai: jinka apn use kisi event hone pr apply krke kuch aur aache kaam kr skteh hai:
+note-point: location-object is a part of window-object thus esko access apn esseh bhi kr skteh hai;
+                 window.location-key-0r-function -->
+
+<!-- AS Location-Object meh current-Webpage URL-Infos dedicated Functions and key-value-Pairs hoteh hai , mtlb webpage-url-load hone pr yeh key-functions-call hoteh hai and key-value ki values set hoti hai. -->
+
+<!-- thus NOW apn Location-Object mtlb Location-Object k keys and key-functions  k bareh meh dekhenge: 
+    1.host (ess key meh host-name and host-port-number hota hai.)
+    2.hash
+    1.assign()  ( ess function se apn new webpage load kr skteh hai)
+    2.reload() (ess function se apn current webpage ko reload kr skteh hai)
+    3.replace() ( ess function se apn curren webpage ko kisi orr webpage se replace kr skteh hai mtlb kisi dusre webpage ko load kr skteh hai.)
+    
+    for: more: visit this: https://www.w3schools.com/jsref/obj_location.asp
+-->
+<!-- jaise: -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>location-Object-keys and functions</title>
+</head>
+<body>
+    <div class="domi">
+        <button class="btn" onclick="myloadfunction()">go to shabdkosh</button>
+        <p id="demo"></p>
+    </div>
+
+    <script>
+function myloadfunction(){
+    // location.assign("https://www.shabdkosh.com/dictionary/english-hindi/grid/grid-meaning-in-hindi")
+    // var x = location.host
+    var x = location.host
+    document.getElementById("demo").innerHTML = x
+    // console.log(x)
+}
+    </script>
+</body>
+</html>
+
+<!-- mtlb aab event-Object k alava baki sareh Objects hai voh apn apni website ki functionality badhane  k liyeh hai mtlb apn event pe bhi yeh bakki object k functions ko apply kr skteh hai. and esseh bhi kr skteh hai. -->

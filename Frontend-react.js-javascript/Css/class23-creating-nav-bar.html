@@ -1,0 +1,72 @@
+<!-- YAHA pe apan NAVIGATION MENU create krna and uski styling krna dekhenge: -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NAVINGATION MENU</title>
+    <style>
+        #nav1 {
+            background-color: #121313;
+            border-radius: 32px;
+            /* border: 8px solid dimgrey; */
+            overflow: auto;
+            /* here we used style OVERFLOW:auto; property for the all list of class nav1 */
+            /* padding: 12px; */
+            padding: 0px;
+            box-sizing: border-box;
+        }
+
+        #nav1 li {
+            float: left;
+            list-style: none;
+            padding: 1px;
+            margin: 12px;
+
+        }
+        #nav1 li:hover{
+            color: red;
+        }
+
+        #nav1 ul {
+            margin: 32px;
+            color: white;
+            margin-top: -1px;
+        }
+
+        #search {
+            border: oldlace;
+            border-radius: 21px;
+            float: right;
+            margin-right: 23px;
+            margin-left: -4px;
+            margin-bottom: 11px;
+            margin-top: -18px;
+
+        }
+        
+
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav id="nav1">
+            <ul>
+                <li><a href="#">HOME</a></li>
+                <li><a href="#">BIO</a></li>
+                <li><a href="#">MENU</a></li>
+                <li><a href="#">SIGN UP</a></li>
+                <li><a href="#">LOG OUT</a></li>
+            </ul>
+            <div>
+         <input id="search" type="text" placeholder="type to search" style="padding:2px" >
+        </div>
+        </nav>
+    </header>
+
+</body>
+
+</html>

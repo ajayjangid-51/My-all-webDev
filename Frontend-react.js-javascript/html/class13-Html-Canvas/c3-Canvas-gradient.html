@@ -1,0 +1,64 @@
+<!-- AS Now YAHA pe apn Canvas meh gradient insert krna dekhenge: -->
+<!-- AS apn apne Canvas ki drawing meh 2-types k gradient add kr skteh hai:
+    1.linear-gradient:
+        linear-gradient apn createLinearGradient()-fn se krteh hai.
+    2.radial-gradient ()
+        radial-gradient apn createRadialGradient()-fn se krteh hai.
+ -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>inserting a Gradient in the Canvas-Drawing</title>
+    <style>
+        #cns{
+            border: 1px solid green;
+        }
+    </style>
+</head>
+<body>
+    <!-- hello bros -->
+    <canvas id="cns" height="300" width="300" ></canvas>
+    <script>
+        ourcanvas = document.getElementById("cns")
+        console.log(ourcanvas.getContext("2d"))
+
+        ourdrawing_object = ourcanvas.getContext("2d")
+        // ourdrawing_object.
+
+        // As apni kisi bhi drawing meh gradient-insert krne k liyeh phle apnko gradient banana hoga. and then voh gradient apnko fillStyle meh assign krna hota hai , as bcoz jo bhi cheez apn draw krteh hai usmeh yeh fillStyle ki value hi fill hoti hai. thus toh apnko ess baat ka dhyn rkna hai.
+
+        // mygradient = ourdrawing_object.createLinearGradient( 20 , 30 , 0 , 10)
+        // mygradient = ourdrawing_object.createLinearGradient( 0 , 0 , 200 , 0)
+        // mygradient.addColorStop( 0 , "red")
+        // mygradient.addColorStop(1 , "yellow")  
+        // as addColorStop()-fn meh parameter1 color ki position set hoti hai.
+
+        // ourdrawing_object.fillStyle = mygradient
+        // ourdrawing_object.fillRect( 10 , 10 , 300 , 200)
+
+        // 🎆 Inserting radial-Gradient 🎆
+        // radialgradient = ourdrawing_object.createRadialGradient( 10 , 10 , 20 ,  100 , 50  , 100)
+        radialgradient = ourdrawing_object.createRadialGradient( 75 , 70 , 10 ,  75 , 70  , 200)
+        // yaha ess meh r0 mtlb inner-radius and r1 mtlb outer-radius
+        // ourdrawing_object.createRadialGradient(x0 , y0 , r0 , x1 , y1 , r1)
+        // x0 , y0 mtlb inner-radius circle's center-cordinates
+        // x1 , y1 mtlb outer-radius circle's center-cordinates
+        // r0 mtlb inner-radius of circle  , r1 mtlb outer-radius of circle
+        // as r1 define hota hai ekdam outermost circle k liyeh and inner-circle and outer-circle k bich meh toh apn kitne bhi cirle-add kr skteh hai. and gradient toh apne-app hi set hota hai .
+        radialgradient.addColorStop( 0 , "blue")
+        radialgradient.addColorStop(.1 , "yellow")
+        radialgradient.addColorStop(.2 , "green")
+        radialgradient.addColorStop(.3 , "red")
+        radialgradient.addColorStop(.4 , "orange")
+        ourdrawing_object.fillStyle = radialgradient
+        ourdrawing_object.fillRect( 10 , 11 , 200 , 200)
+        // ourdrawing_object.stroke()
+
+
+
+    </script>
+</body>
+</html>

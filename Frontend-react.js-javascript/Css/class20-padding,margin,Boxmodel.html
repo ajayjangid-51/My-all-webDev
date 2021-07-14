@@ -1,0 +1,68 @@
+<!-- YAHA apan PADDING ,MARGIN and BOX MODEL k bareh meh dekhenge, -->
+<!-- toh phale "PADDING" yani jo text k charo taraf khali jagah hoti usse simply apan padding kh skte hai and
+phir eske baad aata hai "BORDER" mtlb text likhe k uske around padding baad border draw hota hai
+and last meh "MARGIN" mtlb jo border meh (padding and text hai) voh page meh kha lie krega (mtlb bich meh, side meh,upar, niche etc) voh apan margin ki value put krke set kr skte hai -->
+<!-- yeh "TEXT,PADDING,BORDER,MARGIN"  sab ki webpage meh placing apan BOX MODEL dekh k bhi samaj skte hai
+NOTE POINT: har element ka apna BOX MODEL define hota hai mtlb, phle text phir uske charo taraf padding and uske charo taraf border and phir eske charo taraf margin(jo ki define hogi with respect ko uss element k parent element se)  -->
+
+<!-- jaise apanko kisi "text" K charo taraf PADDING,BORDER AND MARGIN add krni ho toh apan simply css property pading use kr lenge
+and note krne wali baat ki jaise apan kisi text ko PADDING,BORDER AND MARGIN denge toh voh kis tarah se dikhaee degi voh apan ko BOX MODEL batata hai -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MARGIN, PADDING and BOX MODEL</title>
+    <style>
+        *{
+            padding: 43px;
+            margin:11px;
+        }
+
+        /* toh yeh yaha pe UNIVERSAL SELECTOR hai mtlb agar hum esmeh styles add krte hai then voh styles pure markup meh add ho jati hai, */
+
+        /* NOTE: agar apan ko puri body(body mtlb jo pure webpage ka jo pichla hissa hai) meh style add krni hai then we will "body SELECTOR" */
+        body{
+            background-color: rgb(57, 241, 180);
+            border: saddlebrown 78px solid;
+        }
+        .paras {
+            border: 20px solid rgb(32, 76, 10);
+            border-radius: 75px;
+            background-color: rgb(67, 87, 98);
+            padding: 103px;
+            padding-top: 20px;
+            /* apan directly text k charo taraf alag alag padding and margin de skte hai: */
+            /* "padding: 43px 33px 44px 98px;" */
+            margin: 34px 34px 66px 34px;
+            /* ya phir apan margin ase individually bhi de skte hai, */
+            /* margin-left: 120px;
+            margin-right: 43px;                 
+            margin-left: 33px;
+            margin-bottom: 55px; */
+
+            /* AND now agar apan WIDTH AND HEIGHT of BORDER and BACKGROUND( means BOX SIZE) phle se hi set kr de and phir padding and margin apply kr then jo pre-set BOX SIZE "HEIGHT AND WIDTH " voh follow nhi hogi means BOX-SIZE fixed nhi rhegi but "TEXT VIEW fixed rahega" (CHAGGES vary krenge as per applied padding and margin value) bcoz apan samajte hai ki padding and margin is a "empty space" hai toh usko set krne k chakar meh pre-set BOX's HEIGHT AND WIDTH follow nhi ho paati then agar apan ko BOX-SIZE fixed rkni ho then we will use the property named "box-sizing" but isse phir text-size vary hogi as applied padding and margin.
+                                 "box-sizing: border-box;" */
+        }
+    </style>
+</head>
+
+<body>
+    <h5>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate deserunt tempore consectetur nulla minima
+        dicta in, fugit harum sint eligendi eius explicabo voluptatum est voluptates incidunt ad non quia nisi.</h5>
+
+    <P id="para1" class="paras">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto minus id libero vitae
+        quis accusantium dolor sapiente iste quibusdam asperiores.</P>
+
+    <div>
+        <P id="para2" class="paras">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto minus id libero
+            vitae quis accusantium dolor sapiente iste quibusdam asperiores.</P>
+
+    </div>
+
+
+
+</body>
+
+</html>

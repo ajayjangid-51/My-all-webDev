@@ -1,0 +1,20 @@
+{
+  "name": "servinghtmlvia-pug",
+  "version": "1.0.0",
+  "description": "in this software apan html files ko serve krenge pug-templates meh takki apna webpage behave dynamically",
+  "main": "indi.js",
+  "scripts": {
+    "test": "good"
+  },
+  "keywords": [
+    "awesome"
+  ],
+  "author": "aju",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "fs": "0.0.1-security",
+    "path": "^0.12.7",
+    "pug": "^3.0.0"
+  }
+}

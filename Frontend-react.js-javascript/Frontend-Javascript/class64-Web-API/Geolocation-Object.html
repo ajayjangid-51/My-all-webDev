@@ -1,0 +1,51 @@
+<!-- Geolocation-Object: -->
+<!-- Geolocation-Object meh user or visitor ki Location-related keys and functions hoteh hai, toh mtlb apn Geolocation-Object ka use krke user or visitor ki infos find out kr skteh hai.-->
+<!-- visit: https://www.w3schools.com/jsref/api_geolocation.asp -->
+
+<!-- Note1:jab bhi geolocation-Object ki keys ya functions execute hoteh hai then phle by-default user or visitor pe paas ek confirm-prompt jati hai ki this-website-will-trace-your location, thus agr user yes krta hai then hi yeh geoloaction-Object k functions and keys execute hoti hai otherwise execute nhi hoti. -->
+<!-- Note2: Geolocation se location kafi accurate aati hai for devices with good GPS jaise iPhones ka jps bohat accha hota hai , mtlb toh esske Gps se kafi accurately location trace hoti hai. -->
+
+<!-- 🔥 Geolocation-Object-keys: 
+    1.coordinates (ess key ki value user/visitor-device ki position and altitude hota hai wrt mtlb on the Earth )
+    2.position  (essmeh visitor-device ki position hoti hai.)
+    3.positionError  (essmeh error-cause hota hai, agr geolocating krteh time koi error aa jati hai then voh error esseh meh store hoti hai.)
+    4.positionOptions ( )
+
+-->
+<!-- 🔥 Geolocation-Object-Functions:
+    1.getCurrentPosition() (yeh function device ki current-position return krta hai.)
+    2.
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Location-Tracing and geoloaction-Object</title>
+</head>
+<body>
+    <h1>Location-Tracing and Geolocation-Object</h1>
+    <button onclick="getlocatn()" >Get position</button>
+    <span id="imk"></span>
+    <script>
+        // console.log(navigator.geolocation.getCurrentPosition()) -fn ko ess tarah hi use krteh hai: otherwise apnko error ya undefined-value milegi.
+        function getlocatn(){
+            // let lo = navigator.geolocation.positio
+            if(navigator.geolocation){
+                navigator.geolocation.getCurrentPosition(funi)
+            }
+            else{
+                console.log("sorry you din't allow us or orr Gps is not working")
+            }
+            function funi(posit){
+                console.log(posit.coords.latitude)
+            }
+            // document.getElementById("imk").innerHTML = navigator.geolocation.coordinates
+            console.log("hey bor")
+        }
+                console.log(navigator.geolocation.positionError)
+                console.log(navigator.geolocation.positionOptions)
+        
+    </script>
+</body>
+</html>

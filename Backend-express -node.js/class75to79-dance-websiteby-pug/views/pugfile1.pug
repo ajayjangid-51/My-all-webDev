@@ -1,0 +1,67 @@
+doctype html
+html
+    head
+        style
+            include ../staticsfls/cssfile1.css
+            //- yeh .css file apan ne static-FOLDER meh rhkhi hai bcoz jo mainfile.js hai (jis meh apan apne pure server and website ko control kr rhe hai) usmeh apanne ess static-folder meh files ko staticly serve krvaya hai and phir ess pugfile ko bhi server krvaya and esmeh apanne cssfile.css ko include kiya hai toh mltb yeh cssfile as its is statically include hogi takki yeh cssfile apna kaam kre mtlb browser samaj esse ske.
+            //- NOTE: apan apni HTML likhne k liyeh yeh pug use kr rhe bcoz essmeh html likhna easy hai as like as writing python. and pug meh apne dono kaam phela ki apni template bhi ban rhi hai and html write krna easy and fast ho rha hai.
+        link(rel="stylesheet", href="https://fonts.googleapis.com/css2?family=Concert+One&display=swap")
+
+    body
+        nav#navbar
+            ul
+                div#logo
+                    img(src="staticsfls/mnlogo.png", alt="zz")
+                    | MDC
+                li #[a(href="/") Home]
+                li #[a(href="/") About]
+                li #[a(href="/contactus") Contact us]
+                li #[a(href="/") Services]
+        section#sec1
+            div.headn Welcome to Malang Dance Club
+            div.small learn DANCE live DANCE
+
+        section#mission
+            h2 Our Mission
+            .card
+                h3 Dance as you want
+                .pic
+                    .img
+                        img(src="staticsfls/1.png", alt="")
+                    .content
+                        p Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laboriosam asperio
+            .card
+                h3 Dance as you want
+                .pic
+                    .img
+                        img(src="staticsfls/2.png", alt="")
+                    .content
+                        p Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laboriosam asperio
+            .card
+                h3 Dance as you want
+                .pic
+                    .img
+                        img(src="staticsfls/3.png", alt="")
+                    .content
+                        p Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laboriosam asperio
+
+        section#sec2
+            h2 Our Sponsors
+            #sponsorlogo
+                img(src="staticsfls/logo1.png", alt="")
+                img(src="staticsfls/logo2.png", alt="")
+                img(src="staticsfls/logo3.png", alt="")
+                img(src="staticsfls/logo4.png", alt="")
+
+
+        section#sec3
+            | this is section-3
+        
+        footer#foot
+            | Copyright 2020 Malang Dance Club   |   all rights reserved
+
+        
+            
+
+        script
+            include ../staticsfls/frontendjsfile.js

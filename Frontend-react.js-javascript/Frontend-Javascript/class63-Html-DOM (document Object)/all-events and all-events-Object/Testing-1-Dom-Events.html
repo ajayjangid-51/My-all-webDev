@@ -1,0 +1,140 @@
+<!-- Testing-event listeners and exploring Css-Effects -->
+<!-- Yaha pe apn DOM-Events k bareh meh dekhenge:
+where-dom events ka mtlb ki html-webpage pe mouse , ya , keyboard se kiyeh jane wale chote-chote kaam-or-events jaise: mouse se click knra , double-click krna  , drag  krna etc.etc..
+ now thus apn enn Events k hone pr kuch Functions set kr skteh hai: mtlb phir enn Events k hone pr yeh setted-Functions call mtlb run hojayenge. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Testing</title>
+    <style>
+        .contextmenu{
+            border: 2px solid black;
+            height: 100px;
+            background: blue;
+            width: 40%;
+        }
+    </style>
+</head>
+<body>
+    <!-- // some DOM-Events Examples:
+    Now-Events bhi different-Categories meh Categorized hai: jaise:
+    1.Mouse-Events:
+            1.click
+            2.dblclick
+            3.contextmenu (yeh event user element pe right-click krega then yeh event hota hai and phir context-menu open ho jata hai)
+            4.mouseenter ( mtlb jab mouse-poiter uss element pe move hota hai toh)
+            5.mouseleave (yeh event tab hota hai jab mouse-pointer uss element k upar se vapis bahar aa jata hai)
+            6.mouseup ( jab mouse-pointer release hota hai toh.)
+
+            8. 🔥 for more Mouse-Events visit: https://www.w3schools.com/jsref/obj_mouseevent.asp
+     -->
+    <div class="contextmenu" oncontextmenu="myfunction1()"  onclick="onclickfunction()" onclick="inputtakerfun(this , 'orange' )" contextmenu="mymenu" id="conti" >
+        <!-- as contextmenu toh only firefox meh hi supported hai. -->
+        <!-- 🎁Tip-point: as apn yaha on-- likhenge then apnko sare most the Dom-events suggest hojayenge -->
+        <h1>Hi hello ji fine bro</h1>
+    </div>
+
+    <!-- note-point: apn directly esseh bhi kr skteh hai mtlb apn function ko call bhi kr skteh ya phir yaha esehi meh apni-script likh skteh hai as like this: -->
+    <button onclick="getElementById('demo').innerHTML = Date()">Check Time and DAte now</button>
+
+
+    <!-- 🔥🔥  yeh sirf firefox meh supported hai.-->
+    <!-- <menu type="context" id="mymenu">
+        <menuitem label="Refresh" onclick="window.location.reload();" icon="ico_reload.png"></menuitem>
+        <menu label="Share on...">
+        <menuitem label="Twitter" icon="ico_twitter.png" onclick="window.open('//twitter.com/intent/tweet?text=' + window.location.href);"></menuitem>
+        <menuitem label="Facebook" icon="ico_facebook.png" onclick="window.open('//facebook.com/sharer/sharer.php?u=' + window.location.href);"></menuitem>
+        </menu>
+        <menuitem label="Email This Page" onclick="window.location='mailto:?body='+window.location.href;"></menuitem>
+      </menu> -->
+    <!-- <element oncontextmenu="myscript"> -->
+        <!-- 🔥🔥 -->
+        <p id="demo"></p>
+        <p id="demoi"></p>
+
+    
+    <!-- 🔥🔥🔥 For Coping input-text of block to other input-Block 🔥🔥🔥  -->
+    <div id="Inputs">
+       <input type="text" name="" id="input1">
+       <input type="text" name="" id="input2">
+        <button id="copyinputs">copy input-value of block1</button>
+    </div>
+
+
+        
+       
+        
+
+    <script>
+        
+// M1:
+    function myfunction1() {
+        var x = document.getElementById("demo")
+        // as yaha pe apn ne ess x-container meh uss html-element ko store kr liya hai , mtlb apn esseh bol skteh hai ki aab yeh x apna vohi html-element hai.
+        x.innerHTML = "you have right-clicked on the blue-div"
+        x.style.fontSize = "50px"
+        
+
+        // toh Esseh tarah apn HTML-element ko leke esseh uske andar Html-content daal skteh hai and uspe bohat sari Css-styles etc..etc.. apply kr skteh hai.
+        
+    }
+    function onclickfunction(){
+        var x = document.getElementById("demoi")
+        x.innerHTML = "hi hello YOU just CLICKED on this Blue-div"
+        x.style.background = "blue"
+
+        console.log(document.getElementById("conti").value )
+    }
+    
+    //🔥 M2: note-point: and yeh kaam apn ess tarah bhi kr skteh hai mtlb dono tarike sahi hai. but bas apnko pata hone chahiyeh.
+    var divi = document.querySelector(".contextmenu")
+        divi.addEventListener("contextmenu" , ()=>{
+            var x = document.getElementById("demo")
+        // as yaha pe apn ne ess x-container meh uss html-element ko store kr liya hai , mtlb apn esseh bol skteh hai ki aab yeh x apna vohi html-element hai.
+        x.innerHTML = "you have right-clicked on the blue-div and this is by other method"
+        x.style.fontSize = "50px"
+        x.style.border = "10px solid red"
+        // and many more styles..
+        })
+
+    // 🔥M3:apn esseh bhi kr skteh hai:  ( for onclick event)
+    // document.getElementById("conti").onclick = function(){
+    //     onclickfunction()
+    // }
+    // function onclickfunction(){
+    //    document.getElementById("demoi").innerHTML = "okay fine biro"
+    // }
+
+    function inputtakerfun( p1_domelement , p2_color){
+        p1_domelement.style.background = p2_color
+        // thus toh esseh krne se apnko voh dom-element phle ek variable banake and phir usmeh getelementbyId use krke uss dom-element ko retrieve nhi krna padega. mtlb esseh apn directly bhi kr skteh hai.
+    }
+
+    // window.onclick = myFunctioni
+    // window.onclick = myFunctioni() agr apn esseh krteh hai then mtlb yeh function called hogaya hai. notice: upar apnne toh function-ka-name likha hai isiliy vaha yeh () lagaya hai.
+    // thus toh mtlb aab jab bhi browser-window pe click hoga then yeh function call hojayega and run hojayega.
+    function myFunctioni() {
+          document.getElementsByTagName("BODY")[0].style.backgroundColor = "pink";
+        //   as getElementByTagName() se apn dom-element ko unke TagName se retrieve kr skteh hai.
+        
+        }
+
+    // 🔥🔥🔥 For Coping input-text of block to other input-Block 🔥🔥🔥
+    document.getElementById("copyinputs").onclick =  function(){
+        mycopyinputfunction()
+    }
+    function  mycopyinputfunction(){
+        document.getElementById("input2").value = document.getElementById("input1").value
+    }
+    
+
+
+
+    
+    
+  
+    </script>
+</body>
+</html>

@@ -1,0 +1,86 @@
+<!-- DOCUMENT-OBJECT -->
+<!-- yaha pe apn Document-Object k keys and unke respective-same-naming function k bareh meh dekhenge:  -->
+<!-- As Jaise hi apna Webpage load hota hai mtlb html-dom-file load hoti hai toh then ess Dom mtlb webpage k sbhi elements ess Document-Object meh load ho jateh hai, mtlb yeh code-file Browser meh hi hoti hai , and uss code-file meh diff-diff Objects hoteh hai toh , vaha Document-object meh Webpage k sare elements as a Object-key-value-Pair create ho jateh hai. jaise:
+suppose yeh Document Object hai:
+
+    
+    let document-object={
+            domain:"allabout",name:"harry",
+            URL: "url-of-curren-webpage",
+            cookie: { key1: "cookie1value " , key2: "cookie2value" , },
+            embeds: 
+            body-elements: {h1-elements: {h1:{} , },
+                            p-elements: { p1:{} , p2:{} , },
+
+                            
+                            
+                            }
+            etc: "etc"
+           
+            }
+
+    -->
+    <!-- Note-point: ess document-Object meh orr koi kuch Functions hi hoteh hai jinheh call krne pr hi voh execute hoteh as bakki toh apne hi call hoteh hai, thus toh enn functions ko apnko call krna hoga and call krne k baad yeh function apnko apni respective value return kr deteh hai. -->
+
+    <!-- and toh now aab ess document-Object ki keys( already-called-function and non-called-function) as already-called-function ki return value uske respective key meh store hoti jati hai toh phir unn keys ko toh apn directly hi use krteh hai. but ess document-object kuch functions bhi hoteh hai jinheh apn call krke unki return-value ko use krteh hai.-->
+
+    <!-- 🔥🔥 Note-point: yeh document-object keys kisi element-object k liyeh nhi hoteh hai. toh mtlb enka use apn kisi element ko retrieve krke usspe nhi yeh funciton apply krenge. mtlb apn directly hi enka use krteh hai  as like this: -->
+
+    <!-- as now apn ess tarah ess document-Object ki keys and key-function ko use krteh hai:
+     let x = document.key-name;
+    or let y = document.key-function-name;
+ -->
+
+
+<!-- AS mtlb html-Dom(mtlb webpage) browser meh load hota hai toh vaha yeh Document-Object dedicated functions  apne aap hi call ho jateh hai and apni return-value enn object-Keys meh store kr deteh hai. or kuch functions esseh hoteh jinheh apnko specially call krna hota hai. -->
+<!-- now-apn yahi kuch orr documents-Objects ki keys dekhenge:
+    1.URL (yeh complete URL of current-webpage ka return krta hai and etc..etc..)
+    2.cookie (yeh cookie-key Object k andar Object hai jismeh sbhi cookies store hoti hai.)
+    3.domain (yeh server se linked domain-name return krta hai.)
+    4.getElementByClassName( "class-name") ( yeh function sbhi-html-elements ko point krta hai and in the return yeh element ko return kr deta hai. )
+    4.getElementByName(" name-name")
+    4.getElementByTagName(" tag-name ")
+    4.getElementById( "id-name")
+    4.etc..etc..
+ -->
+<!-- for-more document-Object key and respective functions 
+    visit: https://www.w3schools.com/jsref/dom_obj_document.asp -->
+
+<!-- And now ess Document-object -->
+<!-- As mtlb jab apna Webpage load hota hai browser meh , then vaha pe uss Browser meh bhi ek -javaScript-file banti hai , thus voh javascript meh yeh sab kuch document-Object , attributes-object hoti hai , and unke respective functions bhi hoteh hai thus toh apn enhi functions ko dekh rhe hai and phir enka use bhi karenge. -->
+<!-- for: examples of using document-object keys-values and key-functions -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>document-Object key-value and key-functions</title>
+</head>
+<body>
+    <p>click on the down button to see the complete Url of this page</p>
+    <button class="btn" onclick="myfunction()" >click me to see the Url of this page</button>
+    <p id="demo"></p>
+
+    <script>
+        // document.getElementsByClassName("btn").onclick = ()=>{
+        //     document.getElementById("demo").innerHTML = document.URL
+        // }
+        // document.getElementsByClassName("btn").onclick = function(){myfunction()}
+        
+        function myfunction(){
+            document.getElementById("demo").innerHTML = document.URL
+            console.log(document.URL)
+            console.log(document.scripts)
+            console.log(document.head)
+            console.log(document.title)
+            // console.log(document.write("hi hello good "))
+            console.log(document.getElementById("demo"))
+
+            // as  like apn orr bhi document-object se website-related diff-diff kr skteh hai.
+            // so visit this:https://www.w3schools.com/jsref/dom_obj_document.asp   ,  and explore more cheeze jo apn apne website pe kr skteh hai:
+        }
+    </script>
+</body>
+</html>
+
+<!-- Dom-attribute-object , event-object yeh sab dom-element k liyeh define hoteh hai. -->

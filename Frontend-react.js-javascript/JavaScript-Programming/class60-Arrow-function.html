@@ -1,0 +1,118 @@
+<!-- YAHA pe apan ARROW-function k bareh meh dekhenge: -->
+<!--IMP-baat- simply ARROW-function is a shortcut for creating a FUNCTION(without name): -->
+<!-- 
+toh mainly ARROW-function ka use as "shortcut" for creating a function and for the lexical-this k liyeh use hota hai. -->
+<!-- mtlb jaise apan ko kabhi koi function shortcutly(mtlb phle function and phir function-name likhe bina fn create krna ) banana ho then simply we use the ARROW-function.
+or simply jab apanko function ko koi naam nn dena ho and directly koi function create krna ho then vaha pe apan simply ARROW-function apply krenge. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ARROW-function in JS</title>
+</head>
+<body>
+    <div class="container">
+        <h1>This is a ARROW-function tutorial</h1>
+    </div>
+
+    <script>
+function nwfn(){
+    console.log("hello ji kaise ho ji")
+    return 10
+}
+nwfn()
+console.log(nwfn)
+
+// now agar apan upar wale fn ko shortcutly banana chahteh hai then
+nwfna=() => {
+    console.log("this is funtion creted by using arrow-function")
+   
+} 
+nwfna()
+// NOTE: toh apan basically most of the time ARROW-function ka use "SetTimeout and SetInterval functions" meh apply krteh because vaha jo functions inputed hoteh hai voh sirf most of time sirf enn SetTimeout and SetInterval functions meh hi kaam aateh hai isliy apan directly and shortly ARROW-function ka use kr lete hai.
+
+setTimeout(() => {
+    console.log("function created shorcutly")
+}, 3000);
+// NOTE: SetTimeout and SetInterval function meh inputed-function ko apan call bhi krna pdta mtlb voh directly set-timeinterval baad run ho jayega.
+
+sum=()=>{
+    console.log("sum function hai ji")
+    return "2 is my return value"
+}
+sum()
+console.log(sum)
+
+// ALL-over shortcut:
+sumst=()=>console.log("okay okay");
+sumst()
+
+// some more SHORTCUTS of ARROW-function
+// one-step shortcut of ARROW-function
+sum2=(a,b)=>a+b;
+console.log(sum2(3,4))
+// two-step shortcut of ARROW-function
+sum3=a=>a/2;
+console.log(sum3(3))
+
+
+let objj={
+    name: ["ayan","saurav","azhar","khemo","prafull"],
+    // name: "ayan",
+    hobby: "web developing",
+    grocery: " apple and banana",
+    // this niche wala is not valid bcoz obj meh jo bhi input-data hota hai voh apne-aap memory meh store ho jata hai isiley phir se usse store karane ki jarurat nhi hai and agar apan phir bhi store krvateh hai then vaha pe error shown hogi, ( // let imm=fnn1(){
+    //     console.(this.name + "is a good progrmmer")
+    // })
+
+    // fnn=function fnn1() {
+    //     console.log("xxxxxxxxxxxxxxxxxxx")
+    // } eska mtlb hai ki apan ek variable meh variable create kr rhe hai and uska koi mtlb nhi hota
+
+
+    fnn(paramtr){
+        console.log("xxxxxxxxxxxxxxxxxxx")
+        console.log(this.name + "is a good")
+        // NOTE: yaha this.name ka mtlb hai ki ess OBJECT k "name" ko lena hai
+        // console.log(()=>{
+        //     this.name.forEach(this.name){
+        //         console.log(this.name + "is okkkkkkkkkk")
+        //     }
+        // })
+        // console.log(foreach(this.name){
+        //     console.log(this.name)
+        // })
+        // let name=["1","2"] esseh fnn-function k andar wala name select hoga otherwise; this.name se OBJECT wala name select ya uthaya jayega.
+        this.name.forEach(function zz(ele){
+            console.log(ele + " is okkkkkkkkkk")
+        })
+        
+        this.name.forEach((elem)=>{
+            console.log( elem + " supperrr okay" + this.grocery)
+        })
+
+        this.name.forEach(function zz(elmt){
+            console.log(elmt + " is okkkkkkkkkk" + this.grocery)
+        })
+        // so here this will show elmt is okkkkkkkkkk undefined bcoz non-arrow-fn this.variable or 
+        // "lexical- this" ko access nhi krteh as ki yeh non-arrow-fn sirf khud k andar ess grocery-variable ko dundhega and whereas arrow-fn apne OBJECT meh jake dundhega and agar voh variable present hoga toh usse point and manipulate bhi kr leta hai.
+    },
+    
+
+
+}
+// fnn1() is a function defined in a particular object
+// let jj="good"
+objj.fnn()
+
+fnnout=function fnn1() {
+        console.log("fnnout-function")
+    }
+    fnnout()
+
+    </script> 
+      <!--return value of fn ka mtlb hai ki jab apan function ko console meh print krvayenge then voh apnko kya print krke dega-  -->
+</body>
+</html>

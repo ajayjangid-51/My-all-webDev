@@ -1,0 +1,84 @@
+<!-- YAHA pe apan JAVASCRIPT(language) meh STRING k bareh meh and some METHODS jisse apan string ko acchi tarah se likh skteh hai(acchi tarah mtlb jaise JAVASCRIPT meh kuch KEY-WORDS bhi hoteh hai toh unn KEY-WORDS type krne k liyeh apan enn METHODS ka use krke voh type kr skteh hai.) -->
+
+<!-- "STRING" yani ek Sentence ya Paragraph jis meh alphabet words,numbers,special character(jaise @,#,%,& etc) etc hoteh ho. -->
+
+<!--
+M1. NOW JAVASCRIPT meh STRING ko likhne three ways hai:
+   1."STRING" (eska use apan tab krteh hai jab apanko apni string-para meh single-quote('') ka use krna ho )
+   2.'STRING' (and eska use tab krte hai jab apanko SRING-para meh quotes("") ka use krna ho)
+   3.`STRING` (and agar apnko STRING-para meh "" and '' dono use krna hai then we take help of back-quote(``)) 
+notice-point:
+APAN STRING ko string-CONSTRUCTOR se bhi bana skteh hai: as like
+                 var a=new string("   ") 
+tip: but most of time apan string banane k liyeh STRING-CONSTRUCTOR ka use nhi krenge.
+
+
+M2.TEMPLATE-litrl: (this means ki agar apanko bohat badi string likhni ho then apan bich bich meh ${var-name} ka use krke kisi bhi variable-int,string etc ko insert kr skteh hai as like:
+                 var temp=`${a} and ${b} and also ${c} all are the string`
+        jaha pe a,b and c are pre-creted variables
+)
+
+
+M3.ESCAPE SEQUENCE-CHARACTER:(yeh aslike HTML-entities ki jaise hi hoti hai) and enka use apan "reserved KEY-WORDS" ko print krne k liyeh and HTML-ELEMENT KO dynamically likhne k liyeh krteh hai
+    1.\n (yeh new-line character hai and esseh apan text ko new-line meh shift kr skteh hai)
+    2.\t
+    3.\b
+    4.\\ (esseh only \ print hoga  (toh fir apan eska use \n print krvane k liyeh use krteh hais) ) -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>STRING and its writing-METHODS</title>
+    <script>
+        var a = "this is a string"
+        var b = 'this is a another string'
+        var c = `this is also a string`
+        // and or:
+        var stconstructor = new String("hello ji")
+
+
+        console.log(a)
+        console.log(b)
+        console.log(c)
+        console.log(stconstructor)
+
+
+        // this is a template litrl
+        var te = `${a} and ${b} and also ${c} all are the string`
+        // or
+        console.log(`${a} and ${b}`)
+        // note:(var tem="${a} and ${b} and also ${c} all are the string") is not template-litrl bcoz temp-litrl hamesa back-quote(` `) meh likha jata hai toh esseh toh as-it-is yahi print hoga.   
+
+        console.log(a.length)
+        // toh now agar apan ko kabhi kisi string,variable ya koi any other ki length(means no. of letters) find-out krni hai then apan simply uss variable k aage "." ka use krke length function laga denge bcoz apan jante hai ki JAVASCRIPT meh agar apan ko kisi bhi variable pe koi function lagana hai then apan "." ka use krke voh function lagate hai. 
+
+        console.log("this is \b good thing \n okay \t ji")
+        // yaha upar \b, \n, \t are the ESCAPE-SEQUENCE-CHARACTERS.
+
+
+        // MAIN-imp:
+        // DYANAMICALLY inserting an element in HTML-DOM
+        // toh yaha pe jo ELEMENT hai voh javascript meh initally ek STRING tha (isiley string methods important hai bcoz apanko javascript meh pura ELEMENT-syntax likhna hota hai toh apan string methods ki help se koi bhi kaisa bhi ELEMENT-syntax likh skteh hai and phir apan usseh DOM meh insert kr denge as like:) 
+        document.getElementById('content').innerHTML = '<h2>hello jiii</h2>'
+
+
+    </script>
+</head>
+
+<body>
+    <div class="container">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium quibusdam eligendi in. Quas.</p>
+        <div class="box" id="content">
+
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa praesentium hic quae maxime! Incidunt,
+                reprehenderit minima, sit dicta cupiditate qui molestias ipsum repudiandae voluptatum iure eligendi
+                excepturi, magni numquam. Eius, debitis nulla beatae libero et ullam ducimus, dignissimos, architecto
+                quos repellendus dolorum error laboriosam.</p>
+        </div>
+    </div>
+</body>
+
+</html>

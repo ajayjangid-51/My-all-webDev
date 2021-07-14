@@ -1,0 +1,135 @@
+<!-- YAHA pe apan use of MEDIA-QUERIES with GRID k bareh meh dekhenge: -->
+<!-- with the help of GRID apan apni website ka layout and sub-layout design krte and by the use of MEDIA-QUERIES with GIRD se apan apni ko easily and acchi tarah se resoponsive bana bana skteh hai.  -->
+<!-- kisi cheez ko ek baar dekh k hi usse samajna and apply krna actually uss topic k base ko and usski chhezi kaise kaam krti hai(means uske piche ka alogirthm and programming) acchi tarah samajana hota hai -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Using MEDIA-quries with GRID-properties</title>
+    <style>
+        body {
+            color: black;
+        }
+
+        .container {
+            display: grid;
+            grid-gap: 4px;
+            grid-template-areas:
+                'navbar navbar navbar navbar'
+                'section section section aside'
+                'footer footer footer footer'
+            ;
+        }
+
+        .gitems {
+            background-color: rgb(83, 82, 82);
+            border: 2px solid black;
+            padding: 10px;
+        }
+
+        a {
+            text-decoration: none;
+            color: black;
+        }
+
+        #navbar {
+            grid-area: navbar;
+        }
+
+        #section {
+            grid-area: section;
+        }
+
+        #aside {
+            grid-area: aside;
+        }
+
+        #footer {
+            grid-area: footer;
+        }
+
+        ul {
+            display: grid;
+            grid-gap: 13px;
+            grid-template-columns: 50px 50px 50px 100px 100px;
+            text-decoration: none;
+            list-style: none;
+            /* NOTE: ul ki display flex krne se ul k child-element as a flex-items honge and yahi child-elements row-wise,column-wise align honge
+        asehi agar apan li ki display flex kre then li k andar elements(mtlb li k child-element) voh as a flex-items honge. */
+        }
+        #search{
+            position: absolute;
+            right: 10px;
+
+        }
+
+        li {
+            padding: 5px;
+        }
+        @media (min-width: 200px) and (max-width: 400px) {
+            body{
+                background-color: coral;
+            }     
+        }
+        @media (min-width: 400px) and (max-width:600px) {
+        body{
+            background-color: cyan;
+        }
+        }
+
+        @media (min-width: 600px) and (max-width: 800px) {
+            body {
+                background-color: chartreuse;
+            }
+
+            .container {
+                grid-template-areas:
+                    'navbar navbar navbar navbar'
+                    'section section section section'
+                    'aside aside aside aside'
+                    'footer footer footer footer'
+                ;
+
+            }
+        }
+        /* TIP: toh ess tarah yaha pe apan ne @media queries ka use krke apni website ko responsively behave krva liya hai,(means jab bhi apnko website ki layout and responsiveness banani hai toh simply apan GRID and MEDIA-QUERIES ka use hi krenge */
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="gitems" id="navbar">
+            <ul>
+                <li><a href="http://google.com" target="_blank">Home</a></li>
+                <li><a href="http://facebook.com" target="_blank">Info</a></li>
+                <li><a href="http://codewithharry.com" target="_blank">Servies</a></li>
+                <li><a href="http://google.com" target="_blank">Contact us</a></li>
+                <li id="search"><span>SEARCH: &nbsp &nbsp</span><input type="text" placeholder="Searh for more:"> </li>
+            </ul>
+        </div>
+        <div class="gitems" id="section">
+            <h1>Welcome to CODE-HUB</h1>
+            <P>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed doloribus, voluptate fugit consectetur
+                deleniti iste dolore a maxime harum, officia debitis possimus ex saepe nobis? Neque, aperiam vero? Dolor
+                sint sit impedit quod?</P>
+        </div>
+        <div class="gitems" id="aside">
+            <h3>Suggested for you</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos quibusdam, aliquid facilis ut
+                aliquam alias magni voluptas error laudantium quos. Reprehenderit, optio? Consectetur tenetur quidem
+                libero, atque voluptatem minus repudiandae odit eligendi incidunt voluptatibus. Quod velit at reiciendis
+                nemo ad, harum sed tenetur, et voluptatibus, earum vel sint?</p>
+        </div>
+        <div class="gitems" id="footer">
+            <h3>Summary</h3>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Saepe excepturi beatae repudiandae? Fugiat sunt
+                aperiam nam impedit quod eaque labore rerum ex?</p>
+        </div>
+    </div>
+    <hr>
+    <!-- <p>toh abb yaha pe apan ne GRID ki help se jldi se layout toh bana di but this website is not responsive yet now toh responsive banane k liyeh apan GRID- k meh @MEDIA-QUERIES queries ka use kr skte hai and esika hi use krenge.</p> -->
+</body>
+
+</html>

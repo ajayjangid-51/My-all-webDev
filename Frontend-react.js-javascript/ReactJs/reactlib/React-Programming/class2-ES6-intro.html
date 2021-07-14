@@ -1,0 +1,257 @@
+<!-- AS toh now YAHA pe apn ES6-language mtlb EcmaScript-language k bareh meh dekhenge:  -->
+<!-- as simply bolteh toh JavaScript-language meh newly added-Features ko EcmaScript-language bolteh hai.
+thus ES6-language Actually Javascript-language hi hai but mtlb JavaScript meh newly added Features ko EcmaScript-language bol deteh hai. thus now apn EcmaScript-language k bareh meh dekhenge mtlb JavaScript-language k new features ko dekhenge. as EcmaScript meh yeh-yeh Features defined huyeh hai:
+    1. Class
+    2. arrow-function
+    3. let-variable and const-variable
+
+thus mtlb "EcmaScript" JavaScript-language ko standard-language banati hai mtlb ek aadarsh, acchi language banateh ..mtlb javascript ko ek mast level ki language bana deti hai. as bcoz EcmaScript se phle JavaScript meh Classes , arrow-functions , let and const-variable-Containers define nhi hoteh thee. but aab JavaScript meh EcmaScript-language-compiler add krne k baad yeh saab kaam apn JavaScript meh apn yeh kaam kr skteh hai. thus mtlb apni JavaScript-Language ek kafi acchi Language ban gayi hai.
+
+📓note-point: jaha Compiler hota hai toh vaha uske related, dedicated ek language-syntax bhi hoti hai jisko voh Compile krta hai mtlb machine-level-instruction meh covert krke voh particular kaam krva deta hai.
+
+As mtlb ES6-language javascript language hi hai mtlb javascript-language meh newly added feature ko EcmaScript bolteh hai. as mtlb javascript meh pre-setted-instructions meh kuch orr pre-set-instructions add kiyeh jayeh hai. and aur mtlb eska syntax and jo compilation- k compiler banta hai voh alag se baad meh banaya mtlb set kiya gaya hai...thus mtlb esliy esseh ES6 bola jata hai.. as eska compiler-alag hai ,diff hai . But eske compiler ko javascript compiler k saat joda gaya hai collabrate kiya gaya hai.. as bcoz yeh ES6 mainly javascript k kiyeh banayi gayi hai. And eska compiler bhi kuch jada bada nhi bs voh sirf Some ES6 k features k liyeh hi hai...jaise arrow-function , class , and let and const -variable-container. and apn esseh bhi bol skteh hai ki Javascript+(new version of javascript mtlb eski ko hi apn ES6 bolteh hai) thus ES6-langugae meh classes , arrow-function and variable like let,const,var  add kiyeh gayeh hai..mtlb yeh sab Es6 or new-version of javascript k features hai...mtlb yeh yeh kaam apn aab JavaScript meh kr skteh hai but yeh kaam apn phle old-version of JavaScript-language jismeh EcmaScript nhi thi , usmeh apn yeh arrow-fucntions , classes , let and const variables-conatainers define nhi bana skteh thee. but javascript with EcmaScript-version meh apn yeh kaam kr skteh hai thus mtlb simply javascript-compiler ko vapis se banaya gaya hai and usmeh yeh arrow-functions , classes k syntax-instructions , syntax-converting-instructions and machine-level-instructions set kiyeh gayeh hai.  -->
+
+<!-- Thus now aab apn one-by-one ES6 k features mtlb JavaScript k new-features k bareh meh dekhenge:
+🌟🌟1.Class: 
+As like as python "Class" ek function ki tarah hi hoti hai jiseh apn Object banateh hai where this Object can contain functions , variable , sub-Objects etc.etc. and as phir ess "Class" ki kahi pr bhi copy banake eske Object ki , properties(mtlb key-value-pairs) , functions ko use kr skteh hai. toh mtlb yeh Class ek mast baat hai and esshi k liyeh Class bananee gayi hai.
+
+📓notepoint: as EcmaScript mtlb JavaScript meh "Class" ko Python se thode alag syntax meh initiate and define ki jati hai.
+👍1. as JavaScrip meh Class ko Constructor function hota hai voh Constructor-naam se hi hota hai, where as apnko pata hai ki Constructor-fn meh hi Object-define hota hai and as we know ki yeh Constructor-fn tab call hota hai jab Class ki copy-create ki jati hai. 
+👍2. as JavaScript meh "Class" ki copy new-keyword ka use krke create ki jati hai as like this:
+👍3. and orr baki sari bateh same hi hai jaise for inheritance , calling-constructor-fn in inheritance etc..etc.
+
+📓:As class is combination of One-main-object and Functions, jiski phir copy bana krke unn Object and functions ka use kiya ja skta hai..
+
+As now aab apn Class banayenge: as like this:
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class Class_1{
+  constructor( param1 , param2 , param3){
+    this.key1 = param1
+    this.key2 = param2
+    this.key3 = param3
+  }
+
+  class_2fun1(p1){
+
+    console.log("i am fun1 of Class1")
+    let msg1 = "hey bro kaisa hai"
+    return msg1;
+  }
+}
+class Class_2{
+  constructor(){
+    this.name_key = "aju bhai"
+  }
+}
+
+// now making copy-of this class.
+let copy_of_class1 = new Class_1( "value1" , "value2" , "value3")
+console.log(copy_of_class1.key1)
+console.log(copy_of_class1.key2)
+console.log(copy_of_class1.key3)
+// copy_of_class1.class_2fun1("value1")
+copy_of_class1.class_2fun1()
+
+let copy_of_class2 = new Class_2()
+console.log(copy_of_class2.name_key)
+
+// Now aab apn Class-Inheritance dekhenge, mtlb kisi class ko koi Class as a inheritance meh provide krenge. and JavaScript meh yeh kaam apn extends-keyword se krteh hai , whereas in Python meh apn yeh kaam simply class ko define krteh time usko input meh de dete hai. 
+
+
+class Class3_with_inheritaceofOtherclass extends Class_1 {
+  // 📓imp-notepoint: as agr apn ess inherited-class meh constructor-fn define nhi krteh then class ki copy create krteh time eski parent-class ka constructor-fn call hoga.
+  //and as apn ne essmeh constructor function define kr diya toh mtlb eski Parent-class ka constructor-fn kaam nhi karega mtlb class-copy create krteh time yeh parent-class ka constructor-fn call nhi hoga thus toh mtlb phir parent-class k object-properties ki value assign nhi hogi. thus toh eske liyeh baby-class k constructor-fn meh uss parent-class k constructor-fn ko call krke usmeh values bhi input krni hogi and yeh apn simply super()-fn se krteh hai , where yeh super()-fn uss parent-class k contructor-fn ko hi point krta hai. as like this:
+} 
+
+// let copyof_class3 = new Class3_with_inheritaceofOtherclass()
+// console.log(copyof_class3.key1)
+// as aabhi toh ess inherited class k Parent-class ka contructor-fn hi call ho raha hai. and apnne usmeh koi input bhi pass nhi krvaya esiliy yaha apnko key1 ki value undefined mil rahi hai.
+
+let copyof_class3 = new Class3_with_inheritaceofOtherclass("1" , "value2" , "value3")
+console.log(copyof_class3.key1)
+
+// class Class3_with_inheritaceofOtherclass2 extends Class_1 {
+//   constructor(p1 , p2){
+//     this.phone = p1
+//     this.company = p2
+//   }
+// }
+
+// let copyof_class32 = new Class3_with_inheritaceofOtherclass2( "iphon7" , "apple")
+// console.log(copyof_class32.phone)
+// console.log(copyof_class32.key1)
+// thus toh apnko yaha warning milegi k phle aap super()-fn ko call kare..
+
+
+class Class3_with_inheritaceofOtherclass3 extends Class_1 {
+  constructor(p1 , p2){
+    super(p1 , p2 , "GOOD")
+    super.key1 = "awesome"
+    // as super parent-class k contructor-fn ko denote krta hai.
+    this.phone = p1
+    this.company = p2
+  }
+}
+
+let copyof_class33 = new Class3_with_inheritaceofOtherclass3( "iphon7" , "apple")
+console.log(copyof_class33.phone)
+console.log(copyof_class33.key1)
+console.log(copyof_class33.key3)
+
+    </script>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="demo">
+
+    </div>
+    <button id="btn">
+click me
+    </button>
+    <script>
+    //    🌟🌟 2.Arrow-function:
+
+// Inside the variable-container assiging and defining function is as like this:
+
+let hello = function(){
+  console.log("helo world kaise ho")
+  return "alright m fine"
+}
+// Thus now aab ess variable meh eske andar Function ki return value store nhi hai, as apn ne yaha function ko call thodi kiya hai,yaha pe toh apn ne Function ko define kiya hai... Thus mtlb ess variable-container meh yeh ess function-defination as string ki tarah stored ho jayega..
+
+// 📓note: as React meh apnko har variable ko let , const ya var se define krna hota hai , mtlb apn directly unheh as in html ki tarah declare nhi kr skteh hai.
+
+
+// Now agr apn ess variable-container k andar defined Function ko call krna chahteh hai.. then voh apn ess tarah krteh hai...
+// VariableContainerName() as like this:
+
+hello()
+// Thus mtlb enn parenthesis ko dekh kr control-cursor samaj jata hai ki ess variable-container k andar defined Function ko call krna hai thus toh mtlb voh Function call ho jata hai..
+
+// and
+// And agr apn simply:
+//      VariableContainer
+// likteh hai then vaha yeh simply string ko denote krega na..
+
+// 🎆🎆 As now apn ess variable k andar defined function ko arrowly bhi define kr skteh hai.. And as kisi function ko arrowly define ess tarah kiya jata hai...mtlb ess format ya syntax meh kiya jata hai..
+/*
+VariableContainer = ()=>{
+                            Workbox
+                          }
+*/
+// And then apn ess arrow-function ko bhi call same like VariableContainer-function ki tarah hi krteh hai..
+// thus simply ess tarah se define kareh huyeh function ko arrowly definined function bolteh hai ya directly short meh arrow-function bhi bolteh hai.
+
+// phle yeh identifiers(mtlb name) light esliy rhteh hai bcoz yeh abhi unused hai , mtlb enka abhi use nhi huaa hai.
+let containerwith_arrowfn = ()=>{
+  let aw  = "awesome means super-good"
+  console.log(aw)
+  return "hey everything is awesome"
+}
+containerwith_arrowfn()
+
+// 🌟Syntax-Tips for arrow-functions: 
+// now apn kuch arrow-function k liyeh kuch Syntax-Tips, mtlb enn Syntax-Tips se Arrow-function ko aur shortly define kr skteh hai.
+/*
+🎆Tip1: as agr apne arrow-function meh sirf ek hi statment hai and vohi return-able statement hai then vaha apn unn curly-braces ko and return-keyword ko hata skteh hai as like this: 
+
+                          VariableContainer = ()=> "hello bro"
+or: this q ki dono ka mtlb same hi hota hai mtlb yeh vice-versa hai mtlb chaheh esse likho chahe vase likho.
+
+VariableContainer = ()=> {
+return "hello bro"
+}
+
+👿but yeh same nhi hai:
+let container_forarrowfntip1 = ()=> {
+  "awesome idea brother"
+}
+// mtlb yeh phir "awesome idea brother" eski return value nhi hai.
+
+
+👿📓Imp-note: as apn only tabhi hi curly-braces ko hata skteh hai jab apnne pass ek-hi statement ho, and agr apnne pass more than 1-statement hai then vaha apnko curly-braces lagane hi hai... Otherwise apnko error milega
+*/
+// let container_forarrowfntip1 = ()=> "awesome idea brother"
+let container_forarrowfntip1 = ()=> {
+  "awesome idea brother"
+}
+// let container_forarrowfntip1 = ()=> {
+//   return "awesome idea brother"
+// }
+console.log(container_forarrowfntip1())
+
+
+/*🎆Tip2:
+As apne arrow-function meh pseudo-values hai mtlb parameters hai then voh parameters apn simply parenthesis meh daal skteh hai.. but agr apne arrow-function meh ek hi parameter hai then apn unn parenthesis ko bhi haata skteh hai.. as like this:
+*/
+let containerfn1= (p1 , p2 , p3)=> p2+p3
+let containerfn3 = (p1 , p2 , p3)=> {
+  let key1 = p1
+  let key2 = p2
+  let key3 = p3
+}
+
+let containerfn11 = p1 => p1
+let containerfn2 = p1 => {
+  let key1 = p1
+  return key1
+}
+containerfn1("1" , "2" , "3")
+containerfn11("i m return awesome")
+containerfn2()
+containerfn3()
+
+// 👍 Meaning of "this"-keyword 
+// document.getElementById("btn").onclick = ()=> console.log("awesome!!")
+        // document.getElementById("btn").onclick = ()=> console.log(this)
+        document.getElementById("btn").onclick = function(){ console.log(this)}
+        // console.log(document.getElementById("btn").onclick)
+
+        let funi = function(){
+            console.log('hi bro kaisa hai')
+        }
+        // or this as dono ek hi baat hai.
+        funi = function(){
+            console.log('hi bro kaisa hai')
+        }
+        // console.log(funi)
+        funi()
+
+        a= 5
+        // as apn JavaScript meh bhi as like Python Variables ko directly without specifying k define kr skteh hai.
+        console.log(a)
+
+    </script>
+</body>
+</html>
+
+<!--    3.let and const-variable:
+As ES6 se phle Javascript meh variables ko sirf "var" -keyword se define kr skteh thee but ess var-keyword se define hone wale variables ka scope function scope hota hai.. na ki block scope
+
+As function-scope ka mtlb ki agr apn uss
+
+software-tip: make a graphical-interface of react-app toh mtlb apn easily apni website ko bana skee
+-->
+
+<!-- Python-package mtlb ek folder jo ki kisi particular module ki sari dependency files contain krta ho.. thus uss module k respect meh voh uska package khlata hai..
+
+As thus mtlb package simply ek single module-file bhi ho skta hai and module-file + module-depencies .
+
+Where dependencies mtlb module k andar included or imported modules.. -->

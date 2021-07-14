@@ -1,0 +1,42 @@
+<!-- NOW YAHA pe apn 3D-Transform k bareh meh dekhenge: -->
+<!-- as 3D-transform ka mtlb element plane k in andar move hoga. -->
+<!-- 3D-transformation meh yeh 3-functions hoteh hai:
+        1.rotateX() ( as 2D-transform meh sirf rotate()-fn hota hai but 3D-transform meh rotateX()-fn hota hai as yeh roatateX()-function se element X-axis k around rotate mtlb ghumta hai.)
+        1.rotateY() (ess functions se element Y-axis k around rotate mtlb ghumta hai.)
+        1.rotateZ()  (ess functions se element z-axis k around rotate mtlb ghumta hai.)
+
+       📓note-POint: as yeh X, Y and Z axis uss har element k centre se define hoti hai.
+    -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D-transformation</title>
+    <style>
+        .divi{
+            border: 4px solid blue;
+            height: 100px;
+            width: 100px;
+            transform: rotateY(50deg);
+
+            /* transform: translateX(200px); */
+            /* transform: translate(50px, 100px); */
+            /* as agr apn esseh transfrom daalteh hai then apnko yeh targeted mtlb applied div. transfrom huaa milega. thus isiliy apn :hover krne pr yeh transform-Property daalteh hai. */
+        }
+        .divi:hover{
+            /* transform: rotateY(50deg); */
+            /* transform: rotateZ(20deg); */
+            /* transform: translateX(200px); */
+            /* transform: rotateY(320deg); */
+
+        }
+
+    </style>
+</head>
+<body>
+    <div class="divi">
+        <h1>Aju Jangid</h1>
+    </div>
+</body>
+</html>

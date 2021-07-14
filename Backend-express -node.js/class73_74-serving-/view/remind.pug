@@ -1,0 +1,23 @@
+<!-- YAHA apan .pug-template-FILE meh HTML-FILE, CSS-FILE and VARIABLE-arguments-KEYS ko kaise include kiya jata hai ess k bareh meh dekhenge:  -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>#{title}</title>
+    style include ../cssfile/usinginpg.css
+</head>
+
+<body>
+    <!-- | #{content} -->
+    <p>
+        | #{content} </p>
+    <h1>This HMTL-page is written in the template and it is render as template bcoz yaha pe apan ess WEBPAGE meh kuch variables bhi pass krvana chaheteh hai jo aage jake dynamically change honge</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae hic itaque error provident veniam, dicta laudantium. Facere, quam? Voluptatibus consectetur natus, eveniet quam iure a placeat nemo reiciendis?</p>
+</body>
+
+</html>
+
+<link href="https://fonts.googleapis.com/css2?family=Baloo+Bhai+2:wght@600&display=swap" rel="stylesheet">
+<!-- and now agar apan ess pug-template meh koi css file include krna chahteh hai then simply we do as like this: -->

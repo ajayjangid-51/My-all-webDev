@@ -1,0 +1,25 @@
+.whatshpns{
+    padding: 10px 15px;
+    border-top: 1px solid var(--twitterbackgroundcolor);
+    border-bottom: 1px solid var(--twitterbackgroundcolor);
+    display: flex;
+    justify-content: space-between;
+    /* height: 80px; */
+    /* align-items: center; */
+    
+}
+
+.whatshpns__info{
+    flex: .87;
+    /* border: 1px dotted red; */
+}
+.whatshpns__info h4{
+    margin: 0;
+    padding: 0;
+}
+.whatshpns__img .whatshpns__imgAvi{
+    height: 70px;
+    width: 70px;
+    /* border: 1px solid red; */
+    border-radius: 15px;
+}

@@ -1,0 +1,69 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+.header{
+    background-color: black;
+    display: flex;
+    align-items: center;  /* align-items se flex-box k elements vertically set hoteh hai flex-box meh*/
+    position: sticky;
+    top: 0;
+    z-index: 100; /*z-index mtlb jaise agr apne page meh 4-5 layer hoti hai toh sbse upar konsi dikhae degi toh voh actullay jiska z-index jda hoga vohi sbse upar dikhega.*/
+}
+.header__logo{
+    width:100px ;  
+    /* height: 50px;  */
+    /* flex: 1; */
+    object-fit: contain;  /*esseh ess div ka aspect-ratio maintain rhegi */
+    margin: 18px 20px 0px 20px;
+    /* display: flex; */
+    
+}
+.header__search{
+    display: flex;
+    flex: 1;  /* flex:1; se yeh jo flex box hai yeh apne parent meh jitni free-space hai utni lelega. */
+
+}
+.header__searchIcon{
+    background-color: #cd9042;
+    height: 22px;
+    padding: 4.27px;
+
+}
+.header__option{
+    display: flex;
+    flex-direction: column;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.header__searchinput{
+    height: 12px;
+    padding: 10px;
+    border: none;
+    width: 100%;
+}
+.header__nav{
+    display: flex;
+    justify-content: space-evenly;
+
+}
+.header__link{
+    color: white;
+    text-decoration: none;
+}
+.header__optionLineOne{
+    font-size: 10px;
+}
+.header__optionLinetwo{
+    font-size: 13px;
+    font-weight: 700;
+}
+.header__optionBasket{
+    display: flex;
+    align-items: center;
+    
+}
+.headerbasket__count{
+    margin-left: 10px;
+    margin-right: 10px;
+}

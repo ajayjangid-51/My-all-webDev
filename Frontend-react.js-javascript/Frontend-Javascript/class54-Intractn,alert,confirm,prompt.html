@@ -1,0 +1,54 @@
+<!-- YAHA pe apan some INTRACTION-function in JAVASCRIPT  k bareh meh dekhenge and INTRACTION mtlb communicating some importnt or non-importnt meassagess with website-user: -->
+
+<!-- mtlb jab bhi hame "apni website ko user se" modalely-INTRACTION krvana ho then uss time simply apan enn INTRACTION-function in JS ka use krteh hai and modalely-INTRACTION means ki apna jo bhi INTRACTION-message hoga voh "modale-box" meh shown(ya pop-up) hoga:
+Note: modale-box means ki apnko phle ess-box se deal krna hoga and phir hi apan kisi dusri cheez pe ja skteh hai. -->
+
+<!-- some INTRACTION-functions of JAVASCRIPT: -->
+    <!-- 
+    1.alert("")         (ess function ka use apan tab krteh hai jab apanko simply user ko kisi cheez ya kisi event k bareh sirf alert krna hoga mtlb vaha pe apan ko koi kisi data ko print ya store nhi krvana ho and apan yeh bhi note krenge ki alert-fn ki koi return value nhi hoti(mtlb undefined hoti hai))
+
+    2.prompt("" , "default-line")        (ess function ka use apan tab krteh hai jab apnko(as a website-owner) user se koi question puchna ho and saat hi meh user se answer bhi input krvana ho then simply apan prompt-intraction-funtion ka use krenge bcoz ess function se modale-box meh question-string + answer-input bhi aata hai,
+    and agar apan ess function ko variable banayeh then ess variable ki value will be "the answer inputed by the user" in modale-box,
+    thus simply apan ess function ka ek variable create kr denge and phir user jo bhi answer input dalega voh simply ess variable k naam se memory meh store ho jayega)
+
+    3.confirm("") (confirm-function ka use apan user k kisi event ko double-check krvane k liyeh use krteh hai.
+    note: confirm-function ki return true ya false hoti hai mtbl apn eske liyeh bhi variable bana k true or false value store krva skteh hai and then ess value ka apan apne alogorithm meh use kr skteh hai.) -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>INTRACTION with user by using JS-functions(alert,confirm and prompt)</title>
+</head>
+<body>
+    <div class="cont"><h2>
+    hello ji kaise ho
+    </h2></div>
+    <script>
+alert("this website will trace your location")
+// alert-fn meh input "string" hoti hai and phir yeh string ek modale-box meh khulegi and "modale-box" ka mtlb hai phlle apnko ess box se nipatna padega and then eske baad meh hi requested website khulegi. 
+// 
+
+prompt("are you 18+","yes") 
+console.log(prompt)
+
+let a=confirm("are you sure you want to dlt this post")
+console.log(a)
+if (a) {
+    console.log("your post has been deleted successfully")
+    // note:kisi function ki return-value "true" ka mtlb voh fucntion hai ya uss function ka use huaa hai. and kisi function ki return value "false and null" ka mtlb voh function hai hi nhi(ya uss function ka use huaa hi nhi hai)
+    
+    // toh thus if(a) ka mtlb agar function hai toh
+    // and niche else ka mtlb agar yeh function nhi hai toh
+}
+else{
+console.log("your post has not deleted")
+}
+// confirm-intrc-fn ka use apan user k duvara kiyeh gayeh kisi event ko  double-check krne k liyeh use krteh hai.
+// note:confirm-intraction-function return value(true or false) deta hai mtlb apan confirm-function k liye ek variable bana skteh hai and phir uss variable meh function ki return value store ho jayegi.
+
+
+
+    </script>
+</body>
+</html>

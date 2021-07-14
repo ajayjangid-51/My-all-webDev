@@ -1,0 +1,39 @@
+<!-- Screen-Object -->
+<!-- AS Screen-Object meh website-Visitor-Screen ki information related "keys" and "functions" hoteh hai: jinka apn use krek Visitor-Screen-infos ko acces kr skteh haii:
+-->
+
+<!-- AS Screen-Object meh Visitor-Screen-infos dedicated Functions and key-value-Pairs hoteh hai , website-load  hone pr yeh key-functions-call hoteh hai and key-value ki values set hoti hai. -->
+
+<!-- thus NOW apn Screen-Object mtlb Screen-Object k keys and key-functions  k bareh meh dekhenge: 
+    1.availHeight (ess key ki value visitor-screen-height excluding taskbar-height hoti hai)
+    2.availWidth (ess key ki value visitor-screen-widht excluding taskbar-widht hoti hai)
+    3.colorDepth ( essmeh broser ki language hoti hai. ki browser konsi language meh dikh rha hai.)
+    3.height  ( return total height of scree)
+    3.widht  ( return total width of screen)
+    
+    
+    for: more: visit this: https://www.w3schools.com/jsref/obj_screen.asp
+-->
+<!-- jaise: -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Screen-Object</title>
+</head>
+<body>
+    <h1 onclick="myscreenfunction()">Hi heelo bro</h1>
+    <p id="demo"></p>
+    <script>
+    function myscreenfunction(){
+        let x = screen.availHeight
+        console.log(x)
+        console.log(screen.availWidth)
+        console.log(screen.height)
+        console.log(screen.orientation)
+        console.log(screen.colorDepth)
+    }
+    </script>
+</body>
+</html>

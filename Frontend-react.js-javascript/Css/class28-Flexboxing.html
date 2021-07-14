@@ -1,0 +1,136 @@
+<!-- NOW yaha pe apan FLEXBOX and eske types k bareh meh dekhenge:
+FLEX-TASK ka use apan elements ka easy and fast way meh Layout banane k liyeh use krte hai(simply means elements ki aligning, arranging and bina kisi bhi type ki elements ki overlapping and overflow na ho in a particular BOX  k liyeh use krte hai 
+(toh FLEXBOX kO use krne k liyeh firstly box is Converted into FLEXBOX and then we apply TASKS(flex-properties) to its elements(means FLEX-ITEMS)) ) -->
+
+<!-- note:apan elements ki aligning and unki arranging by the position,float, and display property se bhi kr skte hai but esmeh time lagta hai toh isiley we use the FLEXBOXing property. -->
+
+<!-- TOH simply phle apan BOX ko FLEXBOX meh convert krenge and then phir jis tarah se apanko elements(FLEX-ITEMS)
+ko align ya arrange krna hai voh apan simply "FLEX-TASK:value;" meh value daal denge.
+FLEX-(TASK) yani fLEX-items ko particular TASK obey krvana hai.
+  Some tasks for e.g.
+
+# FLEXBOX(Container) properties: (mtlb agar apanko FLEXBOX k sabhi ELEMENTS(flex-items) ko similar tarike se align ya arrange krna ho then we apply Container properties..toh sabhi items ek saat hi similar way meh align ho jayenge) types of Container(BOX) properties:
+
+1.flex-direction:row; (flex items ko kisi specific direction meh arrange krna ho then for this we use this,)
+  attributes ya sub-property of flex-direction are:
+        1.flex-direction: row; (esseh sare flex-elements ek hi row meh arrange ho jayenge toh means apnko koi phle display:inline-block and then set width and phir margin:auto; yeh sara kaam nahi krna padega thus we simply use flex-property esse kaam ko krne k liyeh.)
+        2.flex-direction: column; (esseh sare flex-elemets ek column meh arrange ho jayenge )
+        3.flex-direction: row-reverse; (esseh sare flex-items or flex-elements from the right-side reverse order meh arragne ho janyenge in a row.)
+        4.flex-direction: column-reverse;s(esseh sare flex-elements vertically from the end of the box reverse dirn meh arrange ho janyenge.)
+         
+2.flex-wrap:wrap;  (flex items ko wrap(mtlb element-box ki size choti nhi honi chahiyeh as per the screen size)  kravana(for responsive) hai then for this we use this property,)
+   attributes ya sub-property of flex-wrap are:
+        1.flex-wrap: wrap; 
+        2. flex-wrap: wrap-reverse;
+3.justify-content:  ;  (agar apnko horizontally elements k bich meh space dena ho ya elements ko horizontally  centre krna ho then we apply this property )
+    attributes ya sub-property of justify-content are:
+        1.justify-content: center; (esseh sare flex-elements horizontally centre meh ho jayenge)
+        2.justify-content: space-between; (esseh elements k dono taraf ya unke bich meh equal space create ho jati hai execpt first and last element jo ki FLEXBOX se touched hoteh hai)
+        3.justify-content: space-evenly; (esseh sare elements including first and last elements k dono taraf equal space create hoti hai) 
+        4.justify-content: space-around; (esseh sabhi elemets k dono taraf equal margin create hoti hai)
+
+4.align-items:    ; (ess property se flex-elements vertically arrange hoteh hai)
+     attributes ya sub-property of align-items are:
+       1.align-items: center; (esseh flex-elements BOX meh vertically centre ho jateh hai )
+       2.align-items: flex-end; (esseh flex-elements vertically BOX k end meh set ho jateh hai)
+       3.align-items: flex-start; (esseh flex-elements vertically BOX k starting meh set ho jateh hai)
+       4.align-items: stretch;
+-->
+
+<!-- # FLEX-item properties: (agar apanko FLEX-BOX meh kisi ek specific flex-item ko align krna ho then we apply flex-item property to that particular flex-element mtlb yeh FLEX-ITEM property apan parent container meh nahi balki target daughter container meh dalenge)  some types of FLEX-item properties:
+
+1.order: ; (agar apnko kabhi kisi element ko kisi dusre element k baad meh order krna ho then we use order proeperty.)
+2.flex-grow: ; (toh jaise kabhi kabar screen ki size badi hoti hai tab agar apan ko kisi element ko relatively(as per importance) grow krvana ho then we use this property simply by giving a "number" as its value to the comparing elements )
+3.flex-shrink:  ; (and agar kabhi screen choti hoti hai then agar apnko kisi element ko uski importance k basis par jada shrink krvana ho then we use this property. )
+NOTE: jiski item ki "number value" higher hogi uska order,grow and shrink higher hoga
+4.flex-basis:44px; (agar apanko kisi element-box ki height and width ko change krni ho then we directly apply this property,
+NOTE point: agar "flex-direction is row" then by above flex-basis property se element-box ki width change hogi
+and agar "flex-direction is column" then above flex-basis property se element-box ki height change hogi.)
+
+SHORTHAND(mtlb directly apan yeh 3 properties ki value ek saat hi set kr skte hai) for 2,3 and 4 property is:
+                      flex:grow shrink basis;
+
+5.align-self:center,flex-end,flex-start (means agar apanko kisi ek particular element ko vertically BOX meh set krna ho tab we use this property)
+
+        align-self: flex-end; (esseh flex-element BOX k end meh set ho jayega)
+        align-self: flex-start; (esseh flex-element BOXs k starting meh set ho jayega)
+        align-self: center; (esseh particular element centre meh set ho jayega)
+-->
+
+<!-- NOTE: toh apanko kabhi bhi kisi div meh sub-div ko set,arrange ya align krna ho then apan FLEXBOX property and its attributes ska use hi krenge bcoz ess property se  sub-div easily and fastly set ho jateh hai. -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FLEXBOXing</title>
+    <style>
+        .container{
+            border: 4px solid black;
+            height: 657px;
+            width: 90%;
+            display: flex;
+            /* flex-direction: column; */
+            /* NOTE POINT: FLEXBOX k elements flexible hoteh hai isley voh defined BOX size meh apne aap fit ho jateh hai bina overlapping and bahar nikle huea. mtlb flex-elements apni aap hi khud ko set kr lete hai ess property ko apply krne k baad  */
+            /* flex-direction: row-reverse; */
+            /* flex-direction: column-reverse; */
+
+            /* flex-wrap: wrap; */
+            /* flex-wrap: wrap-reverse; */
+
+            /* justify-content: center;
+            justify-content: space-between;
+            justify-content: space-evenly;
+            justify-content: space-around; */
+
+            /* align-items: center;
+            align-items: flex-end;
+            align-items: flex-start; */
+            /* align-items: stretch; */
+        }
+        .box{
+            border: 2px solid rgb(214, 21, 21);
+            width:100px;
+            height: 100px;
+            /* display: inline-block;
+            margin: 22px; */
+        }
+        #box1{
+            order: 4;
+            /* flex-grow: 2; */
+            /* flex-shrink: 3; */
+            /* flex-basis: 32px; */
+            /* align-self: center; */
+        }
+        #box2{
+            order: 3;
+            /* align-self: flex-end; */
+            /* align-self: flex-start; */
+            /* align-self: center; */
+
+        }
+        #box3{
+            /* flex-grow: 4; */
+            flex-basis: 333px;
+        }
+        #box4{
+            flex-shrink: 5;
+        }
+        #box5{
+            order: 1;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box" id="box1">first box</div>
+        <div class="box" id="box2">second box</div>
+        <div class="box" id="box3">third box</div>
+        <div class="box" id="box4">fourth box</div>
+        <div class="box" id="box5">fifth box</div>
+    </div>
+    
+</body>
+</html>

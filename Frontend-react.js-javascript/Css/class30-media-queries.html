@@ -1,0 +1,49 @@
+<!-- TOH yaha pe apan MEDIA-QUERIES k bareh meh dekhenge:(means MEDIA-QUERIES kya hoti hai and apan eska kab use krt hai) -->
+<!-- toh jaise jab kabhi screen ki re-sizing hoti hai toh uss time agar apnko kisi particular width ya height pe koi(koi bhi) special STYLE ya design inject(ya ADD) krvani ho then we always take the help of "MEDIA-QUERIES style properties" ki help li jati hai,
+ya phir apan ase bhi khh skate ki @media (  ){  } meh daali gayi style properties uss pre-set width and height pe hi inject and active hogi.
+
+toh then simply apnko jo bhi style kisi particular width pe hi active krvani ho then simply inject the styles in as follows:
+                    @media (min-width:__px) and (max-widht:__px) {element{property:value;}} -->
+
+<!-- toh we can say that apan MEDIA-QUERIES mainly website ko responsive banane k liyeh hi use krte hai ya use hota hai. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MEDIA-QUERIES in CSS</title>
+<style>
+    .mainbx{
+        border: 2px solid rgb(33, 35, 37);
+        background-color: thistle;
+        text-align: center;
+    }
+    @media (max-width: 300px) and (min-width: 200px) {
+        #box1{
+            background-color: yellow;
+            font-style: italic;
+            font-weight: bolder;
+            font-size: 220px;
+            
+            /* and many more styles we can add here for that width and height */
+        }
+        #box2{
+            color: violet;
+            font-family: 'Times New Roman', Times, serif;
+        }
+        
+    }
+
+</style>
+
+</head>
+<body>
+<div class="mainbx">
+    <div class="box" id="box1">iphone</div>
+    <div class="box" id="box2">tablet</div>
+    <div class="box" id="box3">laptop</div>
+    <div class="box" id="box4">cinema screen</div>
+</div>
+    
+</body>
+</html>

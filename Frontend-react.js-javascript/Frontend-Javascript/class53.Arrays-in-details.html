@@ -1,0 +1,153 @@
+<!-- YAHA pe apn Array and "Array-Object" k bareh meh dekhenge: where yeh Array-Object toh actually already created toh hota hai bs voh compilation k time file meh same-array's-name se usi array se individual-dedicated fetch ho jata hai. thus toh mtlb apn ess Array-Object ko dekhenge ki mtlb esmeh kaise-kaise keys and functions hai jinka apn use kr skteh hai. -->
+
+<!-- for more visit: https://www.w3schools.com/jsref/jsref_obj_array.asp -->
+
+<!-- AS Array ek Object-Container ki tarah hi hota hai jismeh apn mutliple any-types-of-data daal skteh hai , as But Array meh apnko Object ki tarah keys-name nhi daalna pdta, mtlb voh keys-apne app hi index-wise set ho jati hai , thus toh Array meh apnko directly key-ki-Values hi daalni hoti hai. 
+ -->
+
+<!-- NOw apn JavaScript meh Array banana dekhenge mtlb Array-Syntax dekhenge:-->
+<!-- var array-name = [ "data1" , "data2" , "data3" , "data4" , ...] -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Array and Array-Object</title>
+</head>
+
+<body>
+   <h1>Array and dedicated-Array-Object</h1>
+   <script>
+       Array.prototype.newkey1 = "key1"
+      //  AS "Array" named Object meh prototype namak Constructor-fn hota hai jo jab koi array define hota hai toh voh compilation k time run hota hai and uss defined array k liyeh dedicated-array-Object banata hai.
+      Array.prototype.newkey2 = "key2"
+      Array.prototype.myUcase = function() {
+         var i;
+         for (i = 0; i < this.length; i++) {
+            this[i] = this[i].toUpperCase();
+            // where yaha this uss array ya array-object ko bhi denote krta hai.
+         }
+         // for-more: visi this:
+          // https://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_prototype_array
+      } 
+      
+      var array1 = ["harry", "aju", "ayan", "saurav", "azhar", "khemo", "praful", 1, 3, 54, 24.32]
+
+      //🎆🎆 Now apn Array-Object ko Explore krenge Bcoz ek bar Array banane k baad apn uss Array pe bohar sare alag-alag kaam krna chahenge thus apn ess Array-Object ki properties( mtlb keys) and methods ( mtlb functions) ko krke hi kr payenge:
+
+      //👍 Array-Object-Properties mtlb Array-Object-Keys:
+      /*    1.constructor (eski ki ess Object ka jo Contructor()-fn hota hai uska name eski value hoti hai.)
+            2.length  (ess property ya key ki value array-ki-lenght hoti hai, ya apn ese bhi bolteh hai ki esski return value array-number-of-element hoti hai.)
+            3.prototype ( (where prototype ka mtbl muul ya mtlb actual-creator) esseh apn orr bhi properties Array-Object meh add kr skteh hai as like this: note-point: As yeh apn kisi ek particular arrya-Object k liyeh nhi kr skteh hai mtlb yeh allovert the sabhi Array-Object k liyeh hota hai thus toh yeh kaam apnko array Declare krne se phle krna hota hai otherwise yeh kaam nhi karega.)
+            
+            toh as like this: apn prototype-key meh orr bhi keys and functions add kr skteh hai:
+                Array.prototype.newkey1 = "key1"
+               Array.prototype.newkey2 = "key2"
+               Array.prototype.myUcase = function() {
+               var i;
+               for (i = 0; i < this.length; i++) {
+                  this[i] = this[i].toUpperCase();
+                  // where yaha this uss array ya array-object ko bhi denote krta hai.
+                  }
+               } 
+   
+                   now apn ess tarah esseh acess kr skteh hai:
+                  array-name.newkey1;
+                  array-name.newkey2;
+                  array-name.newkey3;
+      
+            "this" Object-name ko hi denote krta hai , and apn this ka use uss Object k Constructor-fn meh krteh hai ya uss Object ki keys ki values hi krteh hai as toh esseh apn uss Object-ki-keys uss Object k khud ke andar use kr skteh hai. 
+            
+      // as apn enn keys ko access krke enki values ko update ya change kr skteh hai. and ya apn direct esi setted value get kr stkeh hai. mtlb set and get kr skteh hai.
+      */
+      console.log(constructor)
+      array1.length = 33;
+      // thus apn ne jo-default-Object bana tha uski key-value ko change kr diya hai , as apn esseh generally nhi krna chahiyeh bcoz yeh array-dedicated-Object by-default banta hai mtlb uss defined-array ko dekh k banta hai. thus toh sahi hi hota hai. 
+      console.log(array1.length)
+      // console.log(array1.prototype)
+      // using Prototype to add more keys to the all Array-dedicated-Object jo ki array define krne pr banteh hai:
+     
+
+      console.log(array1.length)
+
+      console.log(array1.newkey1);
+      console.log(array1.newkey2);
+      // console.log(array1.newkey3());
+
+// NOW:
+//👍 Array-Object-Methods or Array-Object's-Functions:
+/*    1.concat() ( ess function apn 2 arrays ko concat kr skteh hai mtlb jod skteh hai and yeh function return meh ek new array deta hai. thus mtlb yeh function actual array meh add nhi krta mtlb actual array ko change nhi krta.
+and fn ki paramters values: multiple-arrays hoti hai jinko apnko add krna hai as like this:
+ (array2, array3, ..., arrayX)
+      2.pop() ( yeh function array k last element ko remove kr deta hai and removed-element ko return krta hai.)
+      3.shift() ( yeh function array k first element ko remove kr deta hai and uss removed-element ko return krta hai.)
+      4.reverse() (yeh function array k elements ka order reverse kr deta hai mtlb aab 0-index array ka last element aajayea and as like this, and phir uss reversed array ko return kr deta hai.)
+      5.valueOf() ( yeh function simply array ko hi return kr deta hai)
+      6.unshift() (yeh function array k begining meh inputed-element add kr deta hai and return meh newly-formed ki length return krta hai.)
+      7.toString() (yeh function array ko string meh convert kr deta hai and return meh voh string deta hai. and esseh actual change nhi hota)
+      8.splice() (yeh function inputed-element ko add kr deta hai and agr voh inputed-element ess array meh nhi hai yeh uss element yeh add kr deta hai and return meh voh new array deta hai. and eski return-value empty array hoti hai.
+      and eske parameters is like this:
+      splice (p1 , p2 , p3 )
+      where yahe p1 yeh specify ki konse index pe items add/remove krne hai
+      and p2 yeh specify krta hai ki kitne items remove krne hai and agr 0 deteh hai eska mtlb hai ki koi removing nhi krna hai
+      and p3 , p4 , p5... yeh specify krta hai yeh yeh items ess p1-index se add krne hai.)
+      9.sort() (yeh function array ko alphabatically sort mtlb arrange kr deta hai)
+      10.
+      for more visit: https://www.w3schools.com/jsref/jsref_obj_array.asp
+
+*/
+
+
+array2 = ["array2-data1","array2-data2","array2-data3","array2-data4", ]
+aray2 = ["prray2-data1","array2-data2","array2-data3","array2-data4", ]
+console.log(array1.concat(array2))
+
+array2.pop()
+// as apn toh sirf ess function ko call kr rhe hai jo ki ess array2-namak-Object meh hai.
+console.log(array2.pop())
+console.log(array2)
+
+console.log(array2.shift())
+console.log(array2)
+
+console.log(aray2.reverse())
+
+console.log(aray2.valueOf())
+console.log(aray2.unshift("hi first element"))
+console.log(aray2.valueOf())
+
+console.log(aray2.toString())
+
+aray2.splice( 1, 2 , "hilo" , "hilo2")
+// thus toh mtlb 1-index se addition ya removing hoga, and phle removing hota hai and then phir addtion hota hai.
+console.log(aray2)
+console.log(aray2.sort())
+
+   </script>
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+<!-- As jab array banta hai then tab uska bhi uss-Array-ka-dedicated-Object jo banta hai, voh Kuch ess tarah ka banta hai: -->
+<!-- Class arrry-dedicated-name{
+Constructor (element1 , e2 , e3..){
+this.0 = e1;
+this.1 = e2;
+..so..on
+}
+Arrry-sort-function(){
+   Work-box
+}
+Arry-fn2(){
+Work-box
+}
+
+} -->

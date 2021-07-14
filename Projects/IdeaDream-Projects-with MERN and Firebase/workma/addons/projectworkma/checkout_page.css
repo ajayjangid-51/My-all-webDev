@@ -1,0 +1,112 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background: rgb(194, 189, 189);
+}
+.maini{
+    display: flex;
+    width: 94%;
+    margin: auto;
+}
+.left_allproducts{
+    margin: 5px;
+
+    border: 1px solid red;
+    background-color: white;
+    flex: 1;
+}
+.heading_product{
+    display: flex;
+    justify-content: space-evenly;
+}
+.pricing{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 50%;
+}
+.pricingcurrent{
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.navbar{
+    border: 1px solid black;
+    height: 60px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+.deliver_details{
+    border: 1px solid gray;
+}
+.delivery_location{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.product_details{
+    display: flex;
+    padding: 15px;
+}
+.product_image{
+    display: flex;
+    flex-direction: column;
+}
+.imagi{
+    border: 1px solid black;
+    height: 150px;
+    width: 100px;
+}
+.product_name{
+    border-left: 2px solid green;
+    border-right: 2px solid green;
+    margin: 5px;
+    padding: 10px;
+}
+.delivery_date{
+    padding: 10px;
+    
+}
+.right_total{
+    /* padding: 20px; */
+    background: white;
+    border: 1px solid red;
+    margin: 5px;
+}
+.padins{
+    display: flex;
+    padding: 20px;
+    justify-content: space-between;
+}
+
+.dashed_border{
+    border-bottom: 2px dashed gray;
+
+}
+
+.green_text{
+    font-weight: bolder;
+    /* color: darkgray; */
+    color: green;
+
+}
+#placeorder{
+    border: 1px solid gray;
+    border-radius: 5px;
+    background: orange;
+    padding: 10px;
+    width: 200px;
+    position: relative;
+    float: right;
+    right: 5px;
+}
+button{
+    border-radius: 20px;
+    box-shadow: none;
+    border: 1px solid grey;
+    padding: 5px;
+}

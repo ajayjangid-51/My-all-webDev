@@ -1,0 +1,64 @@
+<!-- NOW yaha pe apan CSS meh BACKGROUND and BORDER property k bareh meh janenge: -->
+<!-- jaise agar apan ko apne kisi text k piche ki taraf background ya BORDER add krna ya dena ho toh voh apan simply  "background property  and border property in css " use krke add ya dee skte hai. and now uss background and border (of a "BLOCK ELEMENT") ki size kitni ho voh apan "HEIGHT" and "WIDTH" property use krke phale hi set kr skte hai,
+and now phale apan background property k bareh meh dekhenge: background property ki kaphi sub-properties hoti hai jaise as like:
+1. background-color: 
+2.background-image: and phir uski 
+3.background-position: (mtlb background img hai toh uski position kya rkni hai), 
+4. background-repeat: (means bkgrnd img hai toh usko repeat krna and kis tarah se repeat krna etc..)
+toh simply kahe toh background ek property and phir essmeh further koi choice dikhe jaise: color,image,position,repeat then yeh ess property ki sub-property ban jati hai and phir apan inko bhi set kr skte hai
+simply by putting the value in "value block"
+TIP:
+yaha pe jo background and border property ki sub-properties hoti hai and that will automatically suggested by VS-CODE
+AS like BACKGROUND property BORDER property bhi hoti hai jaise:
+1.border-color:
+2.border-style:
+3.border-top-right-radius::
+4.border-radius: and many more bt jab VS-CODE meh apan jab property block meh border type krenge it automatically suggest all sub-properties of "border property" and then value block meh apan value set krdeng-  -->
+
+<!-- IMP NOTE POINT:yaha pe jo width and height hai voh actually element ki width and height hoti hai na ki uske charo taraf border ya background ki isiley hamesa BLOCK ELEMENTS ki hi width and height define hoti and INLINE ELEMENTS ki widht and height define nhi hoti. bcoz inline element(except image size) mtlb jitna text ki size hai voh utni hi rhegi uski width ya height badhane ka kya mtlb and agar kabhi esa krna hi ho toh apan text-size ko set kr skte hai. -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BACKGROUND AND BORDER WITH pre-defined HEIGHT AND WIDTH </title>
+    <style>
+        #c2 {
+            height: 400px;
+            width: 840px;
+            background-color: seagreen;
+            background-image: url(https://www.furman.edu/academics/physics/wp-content/uploads/sites/103/2019/10/physics-1-1024x576.jpg ) ;
+            background-repeat: repeat-x;
+            background-position:center top ;
+            /* here centre comes to x-axis and top comes to y-axis as like jaise apan mathmatics meh kisi point k cordinates likhte hai thik vasehi (x-cordinate, y-cordinate) */
+            color: #cf2937;
+            font-size: 59px;
+            border: sienna 6px solid;
+            border-top-right-radius: 46px;
+        }
+        #c3{
+            height: 200px;
+            width: 101px;
+            border: yellow 10px ;
+            border-style:dotted;
+            background-image: url(https://cxl.com/wp-content/uploads/2019/09/image3.png) ;   
+        }
+    </style>
+
+</head>
+
+<body>
+    <h2>HELLO JI KAISE HO AAP SAB LOG</h2>
+    <P class="class1">this is a good content paragraph with class1</P>
+    <P id="c2" class="class1">this is a good content paragraph with class1</P>
+    <P id="c3" class="class1">this is a good content paragraph with class1</P>
+    <P class="class1">this is a good content paragraph with class1</P>
+
+    <span class="spans">these all are spans containing something good</span>
+    <span id="s1" class="spans">these all are spans containing something good</span>
+    <span id="s5" class="spans">these all are spans containing something good</span>
+
+</body>
+
+</html>

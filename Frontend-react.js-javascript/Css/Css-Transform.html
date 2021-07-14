@@ -1,0 +1,93 @@
+<!-- YAHA pe apn CSS-Transform k bareh meh dekhenge: -->
+<!-- AS Transform-styling se apn html-elements ko move , rotate , zoom and skew kr skteh hai , thus toh apnko kabhi Html-elements ko on-hover ya phir esseh hi hmtl-elements ko move , rotate , zoom etc krna ho then apn simply Transform-Css-property ka use krteh hai. -->
+<!-- AS Transformation define hi html-elements k liyeh hota hai mtlb html-elements ka move , rotate , zoom etc hona hi uss element ka Transformation hona khelata hai. -->
+
+<!-- 📓notepoint: AS apn yaha pe 2D-transformation dekhenge , as 2D-transformation ka mtlb ki element sirf in the plane transfrom hoga mtlb move hoga. -->
+<!-- Now as Transform-property meh yeh functions hoteh hai as mtlb kisi html-element ka Transformation krne k liyeh yeh kuch functions hoteh hai.:
+    1.translate( right-move-in-px , down-move-in-px ) (ess function se) 
+    1.rotate( +-Xdeg )  (ess function se html-element rotate hota hai.)
+    1.scaleX( X-times-of-width)  (yeh function element ki inputed-times sirf width decrease ya increase krta hai.)
+    1.scaleY( X-times-of-height) (yeh function element ki inputed-times sirf height decrease ya increase krta hai.)
+    1.scale( times-of-width , times-of-height )  (ess function element ki size(in widht and height) increase hoti hai as per the parameters )
+    1.skewX( Xdeg) (ess function se element Y-axis se inputed-angle pe element ki dono-side tirchi ho jati hai. )
+    1.skewY( Ydeg) (ess function se element X-axis se inputed-angle pe element ki dono-side tirchi ho jati hai. )
+    1.skew()
+
+    🔥 shorthand hor all functions: is matrix()-fn as apn yeh yeh upar wale sab functions ka input apne ess matrix()-fn meh ek saat hi de skteh hai in this sequence..
+    matrix(  scaleX()-inputvalue ,  skewY()-inputvalue ,  skewX()-inputvalue ,  scaleY()-inputvalue ,  translateX()-inputvalue ,  translateY()-inputvalue )
+
+     matrix(1, -0.3, 0, 1, 0, 0);
+
+-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Css-Transform-Property</title>
+    <style>
+        .divi{
+            border: 4px solid blue;
+            height: 100px;
+            width: 100px;
+            /* transform: translate(50px, 100px); */
+            /* as agr apn esseh transfrom daalteh hai then apnko yeh targeted mtlb applied div. transfrom huaa milega. thus isiliy apn :hover krne pr yeh transform-Property daalteh hai. */
+        }
+        .divi:hover{
+            /*  1. */
+            /* transform: translate( 50px ,100px); */
+
+            /*  2. */
+            /* transform: rotate(20deg); */
+            /* as + degree se element clockwise rotate hota hai. */
+            /* transform: rotate(-20deg); */
+            /* as - degree se elemetn anti-clockwise rotate hota hai. */
+
+            /* 3. */
+            /* transform: scale( 3, 2); */
+            /* transform: scale( 0.3, 0.2); */
+            /* as paramter decimal- meh hoteh hai then voh element ki decrease hi hogi bcoz yeh parameter mtlb times of size of element */
+
+            /* 4. */
+            /* transform: scaleX(2); */
+            /* transform: scaleX(0.4); */
+            
+            /* 5. */
+            /* transform: scaley(3); */
+            /* transform: scaley(0.4); */
+
+            /* 📓note-point: AS yeh increament element k centre se hota hai. */
+
+            /* 6. */
+            /* transform: skewX(-20deg);  - sign se +direction meh Y-axis se tircha hojata hai. */
+            /* transform: skewX(20deg); */
+            
+            /* 7. */
+            /* transform: skewY(20deg); */
+            /* 8. */
+            /* transform: skew( skewX-deg, skewY-deg); */
+            /* transform: skew(20deg, 10deg); */
+            transform: skew(20deg, 0deg); 
+            transform: skew(20deg); 
+
+            /* as dono same skewX ki tarah hi behave krenge. mtlb y-axis yeh inputed-angle pe skew honge. */
+
+            /* and agr apn koi parameter nhi deta hai ya 0 deteh hai then voh ek baat hi hai. */
+
+        }
+
+        /*  📓note-point: AS apn transform-origin-property se Transform ki origin set kr skteh hai as mtlb esseh toh by-default element Centre ya corner se hota hai but apn ess transform-origin-Property voh change kr skteh hai as like this: 
+        transform-origin: 20% 40%;   */
+
+        /* as apn hamesa phle transition add krteh hai then transformation add krteh hai.. */
+        
+    </style>
+</head>
+<body>
+    <div class="divi">
+        <h1>Aju Jangid</h1>
+    </div>
+</body>
+</html>

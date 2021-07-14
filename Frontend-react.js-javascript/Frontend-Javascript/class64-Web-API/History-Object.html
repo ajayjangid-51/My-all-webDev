@@ -1,0 +1,35 @@
+<!-- History-Object -->
+<!-- History-Object meh  
+note-point 📓: History-Object actually Window-Object ka hi part hai mtlb history-object window-Object ki hi key-object hai, thus apn isiliy history-object ki key-properties and functions ko access krne k liyeh window.history.key-name likhteh hai. -->
+<!-- 🔥 History-Object-keys: 
+    1.length (ess key meh total-no.of-URLs-visit through this website or mtlb history-list ka number hota hai. )
+    Wherer history-list define hoti hai kisi ek partiuclar-website-urls k liyeh. mtlb uss website meh se visited-url ess history-list meh store hoteh hai. mtlb jitne Url ess website meh se visited honge voh sab url- serial-wise ess history-list meh store ho jayenge.
+    Note: Internet Explorer and Opera start at 0, while Firefox, Chrome, and Safari start at 1. and its Maximum value is 50.
+
+-->
+<!-- 🔥 History-Object-Functions:
+    1.back()  (yeh function history-list meh se current-active-url k previous-wale Url ko load kr deta hai.)
+    1.forward() (yeh function apn history-list meh se current-active-url k forward(mtlb aage)-wale Url ko load kr deta hai mtlb just aage wala page-load ho jata hai.)
+    1.go( url-no-in-historyList-wrt-current-page ) (yeh function se apn ek specific-url ko load kr skteh hai. jaise: go(-2) , go(2))
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>History-Object</title>
+</head>
+<body>
+    <h1>History-Object:</h1>
+    <!-- <a href="facebook.com">visit facebook</a> -->
+    <a href="google.com">visit google</a>
+    <script>
+        console.log(window.history.length)
+        console.log(window)
+        // console.log(history.length)
+        console.log(window.history.back())
+        console.log(window.history.forward())
+        console.log(window.history.go())
+    </script>
+</body>
+</html>

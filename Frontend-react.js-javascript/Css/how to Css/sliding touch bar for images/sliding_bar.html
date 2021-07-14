@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sliding Bar</title>
+    <link rel="stylesheet" href="slidingbar.css">
+    <!-- apnko path hamesa as like as jaise apn linux meh path dete hai same vase hi dena hota hai. -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Recursive:wght@500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- <p>hi</p> -->
+    <div class="main">
+        <div class="header">
+            <img src="images\hambuger.png" class="menuicon" alt="">
+            <p>MEET APP</p>
+            <img src="images\bellicon.png" class="bellicon" alt="">
+        </div>
+        <div class="maintext">
+            <h3>OUR TEAM</h3>
+            <small>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illum omnis dolorem nam? Sequi, nam officia magni hic ea aliquid tenetur non rem quis officiis! Rerum dolorum laborum ratione reiciendis quidem.</small>
+        </div>
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+            <img src="images/amn.jpg" alt="">
+            </div>
+              <div class="swiper-slide" >
+            <img src="images/beti.jpg" alt="">
+            </div>
+              <div class="swiper-slide" >
+            <img src="images/girl.jpg" alt="">
+            </div>
+              <div class="swiper-slide" >
+            <img src="images/woman.jpg" alt="">
+            </div>
+              <div class="swiper-slide" >
+            <img src="images/fashion.jpg" alt="">
+            </div>
+              <div class="swiper-slide" >
+            <img src="images/nidek.jpg" alt="">
+            </div>
+            <!-- <div class="swiper-slide" style="background-image:url(./images/nature-5.jpg)"></div> -->
+      <!-- <div class="swiper-slide" style="background-image:url(./images/nature-6.jpg)"></div>
+      <div class="swiper-slide" style="background-image:url(./images/nature-7.jpg)"></div>
+      <div class="swiper-slide" style="background-image:url(./images/nature-8.jpg)"></div>
+      <div class="swiper-slide" style="background-image:url(./images/nature-9.jpg)"></div> -->
+              
+            </div>
+            <!-- Add Pagination -->
+        
+          </div>
+
+        <div class="footermenu">
+            <!-- hi -->
+            <img src="images/homeicon.jpg" alt="">
+            <img src="images/searchicon.jpg" alt="">
+            <img src="images/accounticon.png" alt="">
+            <img src="images/backicon.png" alt="">
+        </div>
+
+        
+        
+    </div>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script>
+        var swiper = new Swiper('.swiper-container', {
+          effect: 'coverflow',
+          grabCursor: true,
+          centeredSlides: true,
+          slidesPerView: 'auto',
+          coverflowEffect: {
+            rotate: 50,
+            stretch: 0,
+            depth: 100,
+            modifier: 1,
+            slideShadows: true,
+          },
+         
+        });
+      </script>
+</body>
+</html>

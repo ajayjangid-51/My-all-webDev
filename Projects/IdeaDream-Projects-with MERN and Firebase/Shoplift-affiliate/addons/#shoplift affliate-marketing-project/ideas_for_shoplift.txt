@@ -1,0 +1,7 @@
+1.we_placeorder_by_ourcredit_card
+2.free_delivery (bcoz we order_a_collection > 500)
+3.targeting postman-of_every_village (bcoz all products will be 
+delivered at postoffice by amazon and then at that postoffice 
+our shoplift-packing will be done and it will delivered by 
+that postoffices-postman.)
+4.we_get_affiliate_comminsion.

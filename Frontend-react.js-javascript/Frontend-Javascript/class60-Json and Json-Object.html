@@ -1,0 +1,62 @@
+<!-- YAHA pe apn Json and Json-Object k bareh meh dekhenge: -->
+<!-- Json and Json-dedicated-Json-Object -->
+<!--    Json simply ek string hi hoti hai.. -->
+ <!-- Where yeh String JavaScript k kisi Object ko notify kr rhi hoti hai thus isiliy eska naam JavaScript-Objec-Notation or Notifier hai mtlb in Short JSON hai... -->
+ <!-- Thus jab kabhi JavaScript-Object ko ek String meh convert kr diya jata hai then uss string-Converted form of JavaScript-Object ko simply JSON bolteh hai.. bcoz voh string actual meh ek JavaScript-Object ko hi notify mtlb represent kr rhi hai ya karegi jab usee vapis JavaScript-Object meh convert kiya jayega tab mtlb voh string notify toh kr rhi hoti hai  thus isiliy apn uss string ko simply Json bolteh hai... -->
+ <!-- Thus now koi bhi string jo ki kisi JavaScript-Object se bani hai mtlb usseh convert hoke bani then voh string Json-string hogi -->
+ <!-- Note-point: kisi JavaScript-Object ki Json bana k liyeh uss JavaScript-Object ki key-value koi function , date ya undefined nhi honi chahiyeh. Otherwise mtlb agr hoti hai toh uss JavaScript-Object ka Json-string nhi ban payegi -->
+ <!-- Now Json isliy banateh hai bcoz of memory-issue mtlb apnko memory bachani hoti hai as much as possible. As website-loading meh cheez bohat matter krti hai..thus isiliy Json-string banee gayi hai -->
+ <!-- As apn aab Json banana dekhenge, as apn Json Json-namak-Object k functions se banateh hai -->
+
+ <!-- Json-Object: -->
+ <!-- As Json-Object meh mainly 2-functions hoteh hai:
+    1. Stringify()
+    2.parse() -->
+    <!-- <script>
+var myObj = { "name":"John", "age":31, "city":"New York" };
+As apn ess tarah json-object k stringify-fn ko use krke JavaScript-Object ko Json-string meh kr deteh hai..
+var myJSON = JSON.stringify(myObj);
+window.location = "demo_json.php?x=" + myJSON;
+</script> -->
+<!-- And apn aab Json-string ko vapis se uske notifying JavaScript-Object meh parse() se convert kr skteh hai: 
+        Var object = parse(myJSON) -->
+
+<!-- and now apn Json ko local-storage meh store krna and local-storage se retrieve krna dekhenge: -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Json and Json-Object</title>
+</head>
+<body>
+    <h1>Json and Json-Object</h1>
+    <script>
+        var object1 = { "key1":"value1" , "key2":"value2" , "key3":"value3" , "key4":"value4"}
+
+        console.log(object1)
+        var json_string = JSON.stringify(object1)
+        // console.log(JSON.stringify(object1)) 
+        console.log(json_string)
+        // as apnko all-object-black-in-color meh dikhaee dega thus mtlb yeh json-string hai.
+
+// Receiving-the-Json mtlb Json-String ko vapis se uske javascript-Object meh convert krna.
+        var parsed_jsonString = JSON.parse(json_string)
+        console.log(parsed_jsonString)
+
+// Now aab apn Json-String ko local-storage meh store krenge and uss local-storage meh stored Json-string ko retrieve bhi krenge:
+  // as ess suggestion-meh key:string ka mtlb hai ki apnko esmeh paramter koi string hi dena hai.: setItem(key: string, value: string): void
+        localStorage.setItem("storedJson" , json_string)
+
+        // now retriving that stored-Json in storedJson-named file.
+
+        retrieve_jsonstring = localStorage.getItem("storedJson")
+        parsed_retrievedJson = JSON.parse(retrieve_jsonstring)
+        console.log(parsed_retrievedJson)
+
+
+
+    </script>
+</body>
+</html>

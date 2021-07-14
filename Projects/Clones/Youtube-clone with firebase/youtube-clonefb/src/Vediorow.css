@@ -1,0 +1,44 @@
+.vediorow {
+    display: flex;
+    margin-bottom: 2.2vh;
+}
+.vediorow__img {
+    flex: .32;
+    height: 30vh;
+    /* border: 1px dotted green; */
+}
+.vediorow__img img{
+    width: 100%;
+    height: 100%;
+}
+
+.vediorow__info {
+    flex: .72;
+    /* margin-top: 0; */
+    padding-left: 13px;
+    /* border: 1px dotted green; */
+
+    
+}
+.vediorow__info h3{
+    color: gray;
+}
+.spni{
+    margin-bottom: 1vh;
+}
+.vedio_avitr{
+    width: 30px !important;
+    height: 30px !important;
+}
+
+.vediorow__info p{
+    display: flex;
+    align-items: center;
+    margin-bottom: 2vh;
+    font-size: 14px;
+    color: rgb(134, 134, 134);
+
+}
+.vediorow__info p span{
+    margin-left: 1vw;
+}

@@ -1,0 +1,51 @@
+<!-- YAHA pe apan JSON-object k bareh meh dekhenge: -->
+<!-- 
+yaha JSON ka pura naam "JAVASCRIPT OBJECT NOTATION" mtlb indirectly yeh kisi object ko notify kr rha hota hai ya krega in a another "form of object (mtlb same object but ek "string" ki form meh)".
+Toh JSON ek tarika, ek format jis se apan heavy-weight-data ko light-weight-data meh convert kr lete hai; and  -->
+<!--
+ SIMPLY bole toh JSON ek OBJECT hai which comprises 2 functions:
+1..stringify()  (yeh function kisi bhi object,array,functions,variables etc ko single "STRING" meh convert kr deta hai mtlb indirectly voh heavy-weight-data ko light-weight-STRING-data meh kr deta hai)
+2..parse()  (and yeh function only stringified-input ko vapis se apni original form meh re-convert kr deta hai) -->
+
+<!-- TIP:toh apan ess JSON-object-functions ka use data ko "STORE" ya "TRANSPORT(from server to webpage)" krne k liyeh krteh hai bcoz kya hota hai ki heavy-weight-data ko STORE krna and TRANSPORT krna muskil hota jaise it will occupy more-space, it will take more time, it will consume more amount of data etc . toh apan ese thik ya sahi krne k liyeh simply JSON-functions ka use krke data ko light-weight krke phir store ya TRANSPORT krteh hai.        -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSON-intro in JS</title>
+</head>
+<body>
+    <div class="container">
+        <h1>JSON intro and its use</h1>
+    </div>
+    <script>
+        let jsnn= JSON
+    console.log(jsnn)
+    // toh JSON ek JS ka OBJECT hi hai jismeh 2 functions embeded hai:
+
+    let anobjt={
+        name: "hello hi",
+        friends: "ayan, prafull, khemo, azhar, saurav,mihir",
+        channel: "codewithharry",
+        food: "bindiloversqad"
+    }
+    console.log(anobjt)
+    let anobjtstrd= JSON.stringify(anobjt)
+    // toh yaha upar anobjt-OBJECT is converted into lightweight "string" and aab yeh easily store and transport hojayegi.
+    console.log(anobjtstrd)
+
+    // and now aab apan agar chaheh toh ess converted string meh string bhi apply kr skteh hai, as like:
+    anobjtstrd= anobjtstrd.replace('bindiloversqad', 'goodbindi')
+    console.log(anobjtstrd)
+
+
+// now re-converting the stringified-OBJECT to its-actual-OBJECT;
+    let anobjtprsd= JSON.parse(anobjtstrd)
+    console.log(anobjtprsd)
+
+
+
+    </script>
+</body>
+</html>

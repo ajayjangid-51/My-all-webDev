@@ -1,0 +1,21 @@
+{
+  "name": "malang-dance-club",
+  "version": "1.0.0",
+  "description": "This is a official website of malang-dance-club",
+  "main": "mainfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "awesome"
+  ],
+  "author": "aju",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "fs": "0.0.1-security",
+    "nodemon": "^2.0.4",
+    "path": "^0.12.7",
+    "pug": "^3.0.0"
+  }
+}

@@ -1,0 +1,57 @@
+<!-- APAN yaha pe elements ki VISIBITY and Z-index STYLE PROPERTY k bareh meh dekhenge, -->
+<!-- VISIBILITY property means ELEMENT ki webpage meh visibility,
+
+some types of ELEMENT's VISIBILITY :
+1.visibility:visible; (element ki yeh visibility default hoti hai means jaise element webpage meh by initially dekhta hai )
+2.visibility:hidden; (bcoz of this element webpage meh apni jagah hide ho jata but vaha pe element ki jagah reserve rhti hai. and agar apan ko element ko hide krna ho and uski jagah bhi reserve na ho then vaha pe we can use "display:none;" property(mtlb agar apan ko kisi element ko hatana hai then bina usse search and dlt kre simply uski "display style-none" kr denge) )
+3.visibility:collapse; and etc.. -->
+
+<!-- Z-INDEX means jaise kabhi kabar elements ko positioned(not default) krne par voh ek dusre k upar overlap kr jateh hai means one element cover other element but for e.g agar apan chahte hai ki first element second element ko cover kre na ki second element first element ko then for this we use Z-INDEX PROPERTY for that elements (simply means apan unn elements ko Z-index numbering denge and jiski numbering jada hogi voh element upar ayega ),  -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VISIBILITY and Z-index in CSS</title>
+<style>
+    .box{
+        border: 2px solid blueviolet;
+        width: 100px;
+        height: 100px;
+    }
+    #box1{
+        background-color: cadetblue;   
+    }
+    #box2{
+        background-color: rgb(100, 190, 92);
+        visibility: hidden;
+
+
+        /* display: none; 
+        by using this apan ne box2 ko bina search and dlt kre usse webpage se hata diya */
+    }
+    #box3{
+        background-color: rgb(228, 117, 250); 
+        position: relative;
+        top: 23px;
+        left: 23px;
+        /* now ess(BOX3) ko positioned krne k baad yaha pe BOX4 BOX3 ko cover ya overlap kr rha but we want ki BOX3 BOX4 ko cover kre then simply we "z-index numbering" */
+        z-index: 32;
+    }
+    #box4{
+        background-color: rgb(210, 223, 41);
+        position: relative;
+        /* z-index: 34; */
+    }
+</style>
+
+</head>
+<body>
+    <div class="box" id="box1"></div>
+    <div class="box" id="box2"></div>
+    <div class="box" id="box3"></div>
+    <div class="box" id="box4"></div>
+    
+</body>
+</html>

@@ -1,0 +1,76 @@
+<!-- YAHA pe apan "BOX-shadow and TEXT-shadow" k bareh meh dekhenge: -->
+<!-- BOX-shadow and ka mtlb hai ki respective ELEMENT-BLOCK k around uski shadow di jayegi (h2-element is block element then BOX-shadow se ess block k around shadow lagegi) and TEXT-shadow ka mtlb us TEXT k around uski shadow di jayegi,
+toh agar kabhi apanko apne HTML markup k kisi BOXES ya TEXT(heading or paras etc) pe unki shadow daal ni hai then simply we use the respective "BOX-SHADOW and TEXT-SHADOW style property" as like:
+
+                BOX-SHADOW: (inset or outset) (set-x) (set-y) (blur) (spread) (color(in rgb or rgba) );
+         
+NOW: 1.inset ka mtlb hai ki jo shadow ayegi voh BLOCK-BOX k andar ki taraf ayegi and outset ka mtlb hai ki shadow BLOCK-BOX k bahar k taraf ayegi,
+     2.set-x (means the width of shadow in +ive x-direction),
+     3.set-y (means the width of shadow in +ive y-direction),
+note:if width is -ive then it means the width of shadow in -ive x and y-direction (means shadow BOX ya TEXT k upward shown hogi)
+    4.blur (means shadow blur hojayegi), 
+    5.spread (means shadow will spread in all four directions), 
+    6.color in rgba (rgba means (red,green,blue,"alfa")  where alfa is factor which control the brightness of color(light or dark) )                    
+-->
+
+<!-- FOR TEXT-SHADOW style property: -->
+<!-- TEXT-SHADOW: (inset or outset) (set-x) (set-y) (blur) (color(in rgb or rgba) );
+note: for TEXT-SHADOW the syntax is all same bas text-shadow meh inset-outset spred attribute nahi aate                -->
+
+<!-- TIP imp: "APAN hamesa BOX-SHADOW and TEXT-SHADOW by the help of chrome-developmemt tool se hi karenge." -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BOX-shadow and TEXT-shadow</title>
+    <style>
+        .container {
+            display: flex;
+            /* border: 2px solid black; */
+        }
+
+        .box {
+            border: 2px solid brown;
+            padding: 22px;
+            margin: 14px;
+            background-color: khaki;
+            box-shadow: inset 4px 4px 6px 8px rebeccapurple;
+            box-shadow: inset 4px 4px 6px 8px rgba(11, 119, 119, 0.7);
+        }
+
+        h2 {
+            /* text-shadow: 12px 2px 6px rgb(233, 28, 28); */
+            text-shadow:-7px -5px 4px #c77c1d;
+            box-shadow: 7px 6px 6px 1px #190d0d;
+            background-color: #922525;
+
+            /* yeh shadow-property apan ne live chrome-development-tool ki help se set ki hai and apan hamesa shadow-propety esi tarah set krenge takki apne webpage-elements thode 3D-type and acche lage. */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="box" id="box-1">
+            <h2>THIS IS HEADING-1</h2>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Mollitia, vero praesentium! Accusamus nostrum
+                possimus ipsum, ad atque officia esse iusto veritatis tenetur? Ut!</p>
+        </div>
+        <div class="box" id="box-2">
+            <h2>THIS IS HEADING-2</h2>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Mollitia, vero praesentium! Accusamus nostrum
+                possimus ipsum, ad atque officia esse iusto veritatis tenetur? Ut!</p>
+        </div>
+        <div class="box" id="box-3">
+            <h2>THIS IS HEADING-3</h2>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Mollitia, vero praesentium! Accusamus nostrum
+                possimus ipsum, ad atque officia esse iusto veritatis tenetur? Ut!</p>
+        </div>
+    </div>
+
+</body>
+
+</html>

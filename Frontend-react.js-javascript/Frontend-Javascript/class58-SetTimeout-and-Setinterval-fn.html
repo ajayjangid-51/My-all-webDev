@@ -1,0 +1,71 @@
+<!-- YAHA pe apan kisi function k load hone k way par kuch functions jaise SetTimeInterval-fn,SetInterval-fn etc (mtlb
+function k loading-way meh changement krna ) k bareh meh dekhenge: -->
+
+<!-- toh jaise apne pass koi created-function hai and toh agar apnko uske load hone meh kuch changement krna hai jaise kisi
+function ko thode time-interval k baad load krna ya ek particular time-interval k baad function ko repeadtly reload krna
+etc...etc.. -->
+
+<!-- Types of Loading-Functions: -->
+<!-- 
+1.SetTimeout(function-name , time-interval in msec ,function's-parameter ,function's-parameter)
+(ess function se inputed-fn inputed time-interval k baad load hoga or inputed-timeinterval se delay hoga)
+2.clearTimeout(settimeout variable ID or variable-name) (esseh SetTimeout-fn deactivate ho jayega)
+
+3.Setinterval(function-name , time-interval , function-parameters)
+(esseh function defined-time interval tak rhega and then phir vapis se load hoga and defined time-interval tak rhega and
+then phir vapis se load and this reloading continues infintly)
+4.clearInterval(setinterval-ID) (esseh Setinterval-fn deactivate ho jayega) -->
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Settimeout and Setinterval functions</title>
+</head>
+
+<body>
+    <div class="container">
+        <h2>hello ji this is heading-2</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt, molestiae eligendi voluptas, libero ad eos
+            eveniet nobis illo ullam maiores quasi repellat.</p>
+        at now the TIME is <span id="time"></span>
+    </div>
+   
+
+    <script>
+        console.log("hello ji")
+
+
+        function timeot(name) {
+            console.log("good morning ji i am a timeot function" + name)
+        }
+        // let a="okay"
+        timeot()
+        // toh apnko yaha upar wale timeot function k loading way meh kuch changement krna then we simply apply loading-fn in JS:
+        let a = setTimeout(timeot, 2220, "  harry")
+        console.log(a)
+        // clearTimeout(a)
+        // clearTimeout(1)
+
+        let si = setInterval(timeot, 3000);
+        clearInterval(si)
+
+// CREATING a TIME-clock on the webpage
+        function time() {
+            let ntime = new Date;
+            console.log(ntime)
+            let nntm = document.getElementById("time").innerHTML = ntime;
+        }
+        time()
+        setInterval(time, 1000);
+        // yeh "new Date" simply apne pc k date-time ko uthata hai and phir apan esse print krva denge simply by creating its variable(named ntime);
+        // and now agar apan setinterval kr de then yeh uss interval k baad vapis se load hoga thus jaise 1sec baad compiler vapis se time ko load krega and this will work as it is CLOCK.
+    </script>
+</body>
+
+</html>

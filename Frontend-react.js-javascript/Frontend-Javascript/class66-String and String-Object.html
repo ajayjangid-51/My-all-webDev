@@ -1,0 +1,149 @@
+<!-- YAHA pe apn String and String-Object and prototype-Property k bareh meh dekhenge: -->
+<!-- AS String k bareh meh toh apn janteh hi hai ki String simply ek sentence ya paragraph hi hota hai mtlb , programming meh Sentences or Paragraphs ko fancy tarike se String bolteh hai. or apn esseh bhi bol skteh hai ki String is array of characters. and string ko apn double-quote or single-quote dono meh hi likh skteh hai. -->
+
+<!-- primitive values jaise: 'hi jonny' k liyeh koi properties and functions nhi hoteh but JavaScript meh Primitive-values k liyeh properties and functions hoteh hai bcoz javaScript meh primitive-values ko bhi as a Object treat kiya jata hai , as Actually boleh toh: AS jab bhi kabhi koi String define hoti hai  then toh vaha uss String se Dedicated Compiler ek String-Class/ya-Object banata hai and usmeh kafi sari keys and functions predefined hoteh hai and thus apn phir ess created String k liyeh yeh eske Object k keys and functions ka use kr skteh hai. Thus now apn String-Object k bareh meh dekhenge:-->
+<!-- AS kisi Object ko create krne k apne 2-method hoteh hai: 
+    1.without-Constructor-fn mtlb simple method like this: let obj1 = { "key1": "value1" , "key2":"value2"}
+    2.by-Constructor-fn  as like this: function obj_by_fn( value1 , value2 , value3){
+        this.key1 = value1
+        this.key2 = value2
+        this.key3 = value3
+    }
+
+    note-point: agr Object kisi function se create kiya gaya hai then uss object ko use krne k liyeh apnko phle uski copy banani pdti hai as like as jaise apn class k liyeh banateh hai. like this:
+    let objcopy = new obj1( input1 , input2 , input3 ..)
+ -->
+<!-- 📓note-point:as like Class; "Object" ka bhi Constructor ho skta hai. voh apn pe depend krta hai ki apnne uss Object k liyeh Contructor banaya hai ya nhi , as toh voh Constructor-fn ess tarah se hota hai:
+    function constructor_fun(p1 ,p2 , p3){
+        this.name = p1
+        this.id = p2
+        this.job = p3 
+    }
+
+    thus toh mtlb apn ess tarah Constructor-fn or simply function se Object bana skteh hai. thus mtlb object banana and class banana same sa kaam hi hai but bs class banane meh apn class-keyword use krteh hai and Object-making-by-constructor-fn meh apn simply as like function se hi banateh hai.
+ -->
+
+<!-- for-more: visit: https://www.w3schools.com/jsref/jsref_obj_string.asp -->
+<!-- String-Object: -->
+<!-- As string-Object meh String-dedicated keys and functions hoteh hai , where enn keys and functions ka use krke apn String pe kafi kuch diff-diff kaam kr skteh hai: thus now apn String-Object k keys and functions k bareh meh hi dekhenge ki apn string pe kya kay kaam kr skteh hai. -->
+<!-- String-Object-keys
+    1.constructor (esmeh string-Object k Constructor ka naam store hota hai)
+    2.length (essmeh string ki lenght( mtlb no.-of-characters store hoteh hai.) and yeh kaam koi function run hoke kr deta hai.)
+    3.prototype (essmeh apn apni khud ki orr more properties and functions add kr skteh hai in the String-Object , takki apn apni String pe apply kr ske. thus toh mtlb jab bhi apnko apna khud ka banaya huaa function or key use krni toh apn directly essi string-Object meh se uss functions ya key ko access kr skteh hai , Otherwise apn prototype meh apne functions ya keys add nhi kiyeh hai then apn ess String-Object se hi unn apne banayeh huyeh functions and keys ko use kr skteh hai. and 📓note: as prototype ko use krne k liyeh apnko uss Object ka constructor-fn pata hona chahiyeh, as bcoz usseh hi apn prototype meh orr new extra keys and functions add krteh hai. 📓note2: prototype-property har Object and class k liyeh define hoti hai. )
+ -->
+ <!--Visit: https://www.w3schools.com/jsref/jsref_obj_string.asp -->
+<!-- String-Object-functions:
+    1.charAt() ( yeh function inpuped-index pe jo character present hai voh return krta hai.)
+    2.charCodeAt() (yeh function inputed-index pe jo character hai uska unicode return krta hai.)
+
+    3.concat() (yeh function inputed-stings ko concat kr deta hai mtlb jod deta hai and phir uss uss ek single concated-string ko return kr deta hai , and note-point ki yeh method actual string ko change nhi krt)
+)
+    4.endsWith() (yeh function inputed-string or character ko check krta hai ki yeh string ess inputed-character ya string se end ho rhi hai ya nhi.)
+    📓note: enn functions k inputs apn simply function k kaam ko samaj kr pata laga skteh hai ya code-suggestion ko dekh kr bhi pata laga skteh hai.
+
+    5.fromCharCode() (yeh function inputed character-code ko uske character meh convert kr deta hai.
+    📓note-point: yeh function String-Object ka "static"-function hai thus mtlb esko apn sirf String-Object se access kr skteh hai , mtlb orr kisi copy of String-object se nhi kr skteh hai.)
+
+    6.includes() (yeh function inputed string or character k liyeh string meh check krta hai ki yeh String ya characters ess string meh hai ya nhi, and return meh true or false return krta hai.)
+    7.indexOf() (yeh function inputd string ya characters ka first match index-number deta hai)
+
+    8.lastIndexOf() ()
+    9toUpperCase() (yeh function puri String ko Capitalize kr deta hai, but yeh actual string ko change nhi krta hai mtlb sirf string ko capitalize krke voh capitalized string return krta hai.)
+
+    10.toLowerCase() (yeh function puri string ko lowercase meh convert kr deta hai.)
+    11.toString()
+
+    12.trim() (yeh function string k dono ends meh present whitespaces ko remove kr deta hai.)
+    13.valueOf() (yeh function string-Object ki primitive value return krta hai.)
+
+    14.startsWith() ( yeh function )
+
+    15.slice()
+ -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String-Object</title>
+</head>
+
+<body>
+    <span id="demo"></span>
+    <script>
+
+        // 🎆🎆 Prototype-Property: 🎆🎆
+        // 🎆 adding more keys and functions to this String-Object, and yeh kaam apn prototype se kr skteh hai ess tarah se:
+        // firstly Creating an Object by constructor-fn way not by directly
+        function Obj1_by_fn(p1, p2, p3) {
+            this.key1 = p1
+            this.key2 = p3
+            this.key3 = p3
+        }
+        
+
+        // using the Object which is made by constructor-fn:
+        let Obj_copy = new Obj1_by_fn("aju", " ayan ", "harry")
+        console.log(Obj_copy.key1)
+        console.log(Obj_copy.key2)
+        console.log(Obj_copy.key3)
+
+        // console.log(Obj_copy.extrakey)  // abhi toh yeh undefined hai but aage jake apn esko define mtlb apne ess Object meh add kr denge:
+
+
+        // Now apn Abb apn prototype-property jo ki har Object and Class k liyeh define hoti hai , uska use krke ess Obj1 meh orr keys and functions add krenge:
+        Obj1_by_fn.prototype.extrakey = "i am extra key"
+        // console.log(Obj_copy.extrakey)
+
+        // 👿 📓: 🎆🎆 Thus now abbse apn esseh hi prototype meh apne khud k functions and properties bana kr k add krenge bcoz yeh esseh krne se functions and properties ko use krna easy and aasaan ban jata hai.
+
+
+        let str1 = "hey hi hello bhailog kaise ho kaisi ayan  kh mo chal rhi hai coding and kitna time dete ho coding meh"
+
+        // keys:
+        console.log(str1.constructor)
+        console.log(str1.length)
+        // 📓: As Stack meh sbse phle console.log()-fn load hoga and then phir esske andar bhi koi function ya object then yeh log()-fn pause hojayega and phir eske andar wala function upper-Stack meh load hoga and phir yeh apna kaam krke mtlb end hoke apne parent-function ko apni return-value return karega, now aab vapis ek parent-fn mtlb log()-fn vapis se resume hoga and phir apna kaam krke end hojayega. note-point: agr fn k andar and uske andar fn hoga toh then mtlb voh Stack-allocation k according hi hota hai.
+
+        String.prototype.newkey = "i am new key"
+        // AS toh Object ki prototpe property-use krne k liyeh apnko Uss object ka constructor-function ka naam pata hona chahihyeh tabbhi apn prototype-property ka use krke more keys and functions add kr payenge. and voh constructor-name consturtor-key meh store hoti hai.
+        console.log(str1.newkey)
+
+        
+        // functions:
+        console.log(str1.charAt(5))
+        console.log(str1.charCodeAt(5))
+        console.log(str1.endsWith("db"))
+        console.log(str1.endsWith("meh")) 
+        console.log(str1.concat("string1" , "string2" , "bye bye")) 
+        console.log(String.fromCharCode(111, 69 , 101 , 105)) 
+
+        console.log(str1.includes("sex"))
+        console.log(str1.includes("rhi"))
+        console.log(str1.includes("ayan"))
+        console.log(str1.includes("khmo"))
+        console.log(str1.includes("kh mo"))  // mtlb exactly hai k nhi.
+
+        str1.toUpperCase()
+        console.log(str1.toUpperCase())
+        console.log(str1)
+
+        console.log(str1.startsWith())
+        console.log(str1.slice("meh"))
+
+        // 🎆🎆 Sbhi string functions/methods new value hi return krteh hai mtlb voh orginal String ko change nhi krteh . 🎆🎆
+
+        // String-Html Wrapper Methods.
+        console.log(str1.anchor())
+
+        
+
+        
+
+
+    </script>
+</body>
+
+</html>

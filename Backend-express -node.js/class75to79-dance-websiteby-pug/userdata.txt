@@ -1,0 +1,8 @@
+i m okay ji
+
+DATABASE:
+DATABASE mtlb voh jagah jaha pe apna sara data store hai.(yaha pe sara-data mtlb apni website ya app pe "aane wala DATA" or apni website ya aap se as a response "bhej ne wala DATA")
+AND DATABING:
+DATABING mtlb DATABASE-wale DATA ko control krna, usse DATABASE meh alag alag jagah alag-alag port meh store krna and etc....DATABING khelata hai. and DATABING apan MONGOdb se sikh teh hai mtlb apan usseh DATABASE meh ghus kr uske DATA ko set krenge.
+
+ 

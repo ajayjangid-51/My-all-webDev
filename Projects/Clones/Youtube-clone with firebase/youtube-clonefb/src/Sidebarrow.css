@@ -1,0 +1,33 @@
+
+.cc{
+    display: flex;
+    padding: 10px;
+    padding-left: 25px;
+    padding-right: 25px;
+    /* justify-content: space-between; */
+    align-items: center;
+    cursor: pointer;
+}
+.cc p{
+    padding-left: 1.5vw;
+}
+.cc:hover .MuiSvgIcon-root{
+    color: red;
+}
+/* .cc:focus{ */
+.cc:hover{
+    background: rgb(196, 196, 196);
+    font-weight: 600;
+
+
+}
+.selected{
+    /* background: orange; */
+    background: rgb(201, 201, 201);
+    font-weight: 600;
+    
+}
+.selected .MuiSvgIcon-root{
+    color: red;
+
+} 

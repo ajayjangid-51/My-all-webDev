@@ -1,0 +1,56 @@
+doctype html
+html
+    head
+        title Contact us
+        style
+            include ../staticsfls/cssfile2.css
+        link(rel="stylesheet", href="https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap")
+            
+    body
+        nav#navbar
+            ul
+                div#logo
+                    img(src="staticsfls/mnlogo.png", alt="zz")
+                    | MDC
+                li #[a(href="/") Home]
+                li #[a(href="/") About]
+                li #[a(href="/contactus") Contact us]
+                li #[a(href="/") Services]
+        section#sec1
+             #signup
+                h1 Create an account
+                h3 it&apos;s quick and easy
+                form(action='/' method="POST")
+                    input(type='text' name='Name' placeholder='First name')
+                    input(type='text' name='surname' placeholder='Surname')
+                    br
+                    input(type='email' name='email' placeholder='Mobile number or email address')
+                    br
+                    input(type='password' name='password' id='#' placeholder='New password')
+                div
+                    h3 Birthday
+                    form(action='/' method="POST")
+                    input(type='date' name='date' id='#' placeholder='#')
+                div.gender
+                    #gender
+                        // <p>&nbsp;</p>
+                        // <h3>&nbsp;</h3>
+                        form(action='/' method="POST")
+                            | Gender 
+                            br
+                            |                                     Male
+                            input(type='radio' name='Gender' id='' placeholder='Male')
+                            |                                     Female
+                            input(type='radio' name='Gender' id='' placeholder='Female')
+                            |                                     Custom
+                            input(type='radio' name='Gender' id='' placeholder='Custom')
+                div.sbmit
+                    p by clicking submit button the entry data will be submitted to the facebook.php
+                    form(action='/hh' method="POST")
+                    input(type="text")
+                    input(type='submit' value='Sign up')
+                    button submit
+                    //- p &nbsp;
+                    //- p &nbsp;
+        footer#foot
+            | Copyright 2020 Malang Dance Club   |   all rights reserved

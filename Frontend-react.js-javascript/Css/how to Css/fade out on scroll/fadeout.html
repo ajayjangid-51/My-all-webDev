@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fade out on Scroll</title>
+    <link rel="stylesheet" href="fadeout.css">
+</head>
+<body>
+    <section class="vedi">
+        <video src="images/video.mp4" autoplay="" muted="" loop=""  ></video>
+    </section>
+    <section class="cont">
+        <div class="content">
+            <h2>Fade out on Scroll</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore eligendi distinctio sed repellendus recusandae placeat tempora praesentium vero saepe dolorem cupiditate facilis necessitatibus quidem illum deserunt minima, atque asperiores molestiae odio maxime ratione ullam? Harum a totam fuga corrupti nam adipisci recusandae ea vero maiores cum! Qui error suscipit sunt eligendi id fugiat tenetur veritatis, deserunt molestiae cum. Cumque aperiam veniam officia ducimus omnis suscipit repellendus recusandae excepturi neque autem, a dolor exercitationem natus maxime dolore aspernatur iusto eaque dignissimos tempora ad ab rerum esse? Ullam sint aliquam cupiditate dolor hic perspiciatis harum maxime, dolores accusamus et non eveniet nisi, voluptatibus autem alias tempora iure praesentium aperiam vero animi esse? Voluptatibus officiis dignissimos fugit autem cum tempore delectus earum quam doloremque consequatur minus vitae dolore expedita at velit recusandae, impedit asperiores adipisci. Unde, ullam excepturi. Doloribus qui praesentium sint quod porro cupiditate similique eaque corrupti, nobis numquam temporibus facilis quibusdam veniam magnam perferendis, odio blanditiis eum amet sequi voluptate consequatur rem. Illum doloremque soluta necessitatibus delectus saepe vero qui ullam, deserunt vel culpa architecto error assumenda, doloribus nesciunt excepturi veniam nulla. Possimus nemo enim non ullam commodi, neque eveniet laudantium perferendis, quisquam fugit magnam assumenda? Voluptatum ipsum tempore earum eligendi quo. Veniam nisi non accusantium exercitationem vitae, vel quod totam molestiae aperiam cum, blanditiis doloremque eaque, voluptate ex quae officia architecto quibusdam?</p>
+        </div>
+    </section>
+    <script>
+        let vedio = document.querySelector('video');
+        // as ki apn ne document.querySelector()-fn ko ess vedio-container meh store kiya hai, thus toh simply mtlb ki abb ess function ki return-value ess container meh store ho jayegi.
+        window.addEventListener('scroll',function(){
+            let value = 1 + window.scrollY/-600;
+            vedio.style.opacity = value;
+            // thus toh apn ne yaha pe vedio-ki-value pr apne yeh style.opacity()-fn apply kr diyeh hai.
+        })
+    </script>
+</body>
+</html>

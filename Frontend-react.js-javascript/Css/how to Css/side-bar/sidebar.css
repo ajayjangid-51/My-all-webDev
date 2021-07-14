@@ -1,0 +1,94 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+body{
+    min-height: 89vh;
+    background: #150019;
+}
+.navigation{
+    /* margin: 40px 40px 60px 60px; */
+    width: 60px;
+    height: 100vh;
+    transition: 0.5s;
+    /* as transition se yeh styling puri loading hone ka time set hota hai. ya apn esseh bhi bol skteh hai ki espe jo bhi jaisa bhi tranisition mtlb changement hoga voh itna time lega..*/ 
+    background-color: #3e0;
+    overflow: hidden;
+}
+.navigation:hover{
+    width: 300px;
+}
+li:hover {
+    background-color: #ea1d63;
+}
+.li{
+    position: absolute;
+    /* position absolute ka mtlb aab jo bhi apn eski position define krenge voh aab body- k respect meh hogi */
+    /* top: 10px; */
+    width: 100%;
+
+
+    position: relative;
+    /* position relative ka mtlb element ki position aab just parent k respect meh define hogi.. */
+    /* as jaise apnne .liii ki position: relative kr di mtlb eska jo just parent hai mtlb voh ul hai then ess ul k respect meh eski position hogi. */
+}
+.navigation ul{
+    position: absolute;
+    /* top: 40px; */
+    /* left:40px; */
+    /* border: 2px solid blue; */
+    /* overflow: hidden; */
+    /* width: 22%; */
+}
+.navigation ul li {
+    width: 100%;
+    position: relative;
+    /* top: 20px; */
+/* left: 40px; */
+/* border: 2px solid yellow; */
+list-style: none;
+}
+
+.navigation ul li a {
+    display: block;
+    /* note-point: display: block krne se voh inline-element bhi block-element ban jata hai and vaha uske charo-taraf little 2px ki marging bhi aa jati hai, as margin toh block-elements k liyeh defaulted setted hai and agr apn chaheh toh ess margin ko hata bhi skteh hai */
+    /* margin-bottom: 0px;  and syad yeh change nhi kr skteh hai.. */
+
+display: flex;
+    position: relative;
+    /* top: 30px; */
+    /* left: 50px; */
+/* border: 2px solid purple; */
+color: burlywood;
+/* color mtlb hamesa element k andar jo text hai uska color hi change hoga bcoz color uss element k andar text ko hi specify krta hai.. */
+
+    text-decoration: none;
+
+
+}
+.icon{
+    position: relative;
+    /* left: 60px; */
+    /* top: 60px; */
+    display: block;
+    min-width: 60px;
+    height: 60px;
+    /* border: 2px solid red; */
+    text-align: center;
+    line-height: 50px;
+    /* line-height mtlb eski-apne-khud k box ki upar wali line se height.. */
+
+
+}
+.title{
+    position: relative;
+    display: block;
+    padding: 0px 10px;
+    min-width: 60px;
+    height: 60px;
+    text-align: start;
+    white-space: nowrap;
+    /* line-height: 50px;     */
+}

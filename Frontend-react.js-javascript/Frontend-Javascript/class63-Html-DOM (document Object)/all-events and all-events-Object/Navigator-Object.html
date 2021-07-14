@@ -1,0 +1,43 @@
+<!-- Navigator-Object -->
+<!-- AS Navigator-Object meh current-Browser ki information related "keys" and "functions" hoteh hai: jinka apn use krek Browser-info ko acces kr skteh haii:
+-->
+
+<!-- AS Navigator-Object meh current-Browser-Infos dedicated Functions and key-value-Pairs hoteh hai , mtlb webpage-url-load hone pr yeh key-functions-call hoteh hai and key-value ki values set hoti hai. -->
+
+<!-- thus NOW apn Navigator-Object mtlb Navigator-Object k keys and key-functions  k bareh meh dekhenge: 
+    1.appName (ess key meh Browser-name hota hai)
+    2.appVersion (ess key meh Browser-version-information hoti hai:)
+    3.language ( essmeh broser ki language hoti hai. ki browser konsi language meh dikh rha hai.)
+    3.javaEnabled()  ( ess function yeh return krta hai ki current-Browser meh java enabaled hai k nhi.)
+    
+    
+    for: more: visit this: https://www.w3schools.com/jsref/obj_navigator.asp
+-->
+<!-- jaise: -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navigator-Object</title>
+</head>
+<body>
+    <h1 onclick="mynavifunction()">Hi heelo bro</h1>
+    <p id="demo"></p>
+    <script>
+        function mynavifunction(){
+
+        // document.getElementById("demo").innerHTML = navigator.appName
+        document.getElementById("demo").innerHTML = navigator.language
+        console.log(navigator.cookieEnabled)
+        console.log(navigator.geolocation.getCurrentPosition(showPosition))
+        console.log(navigator.onLine)
+        }
+
+    function showPosition(posi){
+        console.log(posi.coords.latitude)
+        console.log(posi.coords.longitude)
+    }
+    </script>
+</body>
+</html>

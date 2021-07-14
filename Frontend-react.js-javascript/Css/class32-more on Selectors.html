@@ -1,0 +1,129 @@
+<!-- NOW YAHA pe apan ELEMENTS ka selection "SELECTOR" meh unn k "ATTRIBUTEs and child no". k basis select krna dekhenge: (THIS IS more similar to the last topic "advance selection of ELEMENTS") -->
+<!-- and jab apan ess tarah SELECTOR meh select krte hai then the SELECTOR is called "PSEUDO SELECTOR" -->
+
+<!-- toh simply agar apan ATTRIBUTES k basis pe SELECTOR meh select kare then simply type:
+element[attribute="value"]{ apply style property}     (this means select the element which is having the attribute value this) -->
+
+<!-- AND agar apan CHILD NO. k basis pe SELECTOR meh select kre then simply type:
+a:nth-child(3) (mtlb a 3rd element of its parent and select it)
+toh agar kabhi child-no k basis select krna ho then phle uss element ka child-no. dekhna hai and phir uska parent element(agar parent all-parent then ok otherwise then follow addresing concept and mention child-concept atlast(means as a targerted) -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SELECTION OF ELEMENT BY THEIR DEGINED ATTRIBUTE AND PSEUDO SELECTORS</title>
+    <style>
+        .box{
+        width: 280px;
+        margin:auto;
+        }
+        input{
+            display: block;
+        }
+
+        
+        input[type="text"]{
+            background-color: violet;
+        }
+        /* or */
+        input[placeholder="enter your name"]{
+            background-color: violet;   
+        }
+
+        #txt{
+            background-color: violet;
+                }
+        .inputxt{
+            background-color: violet;
+                }
+
+
+        /* input[id="txt"]{
+            background-color: violet;
+        } */
+        /* Note: toh apan ess tarah apan particular element ko on the basis of its attributes se select kr skte hai but for ATTRIBUTES: ID and CLASS apan element ko directly bhi select kr skte hai. as: 
+                                     .inputxt{
+                                              /* background-color: violet;
+                                               }                                    
+        */
+
+        div div+ul ul:nth-child(2){
+            color: yellow;
+        }
+     /* FOR above PSEUDO SELECTOR:
+     Note point: ul:nth-child(4) means ki ul is a nth-child of its just-parent and the value of n is "4"        */
+
+    /* this means a is 7th child of div   */
+    a:nth-child(7){
+            color: tomato;
+        }
+    ul:nth-child(4){
+         border: 2px solid red;
+     }
+    p:nth-child(5){
+         background-color: indianred;
+     }
+     div a+div ul:nth-child(2){
+         border: 2px solid indigo ;
+         border-radius: 4px;
+         background-color: khaki;
+     }    
+    
+    </style>
+</head>
+<body>
+    <div class="box">
+        <form action="beckned.php">
+            <input type="text" placeholder="enter your name" id="txt"  class="inputxt">
+            <!-- IMP NOTE:yaha upper "element" meh  all these type,placeholder,id and class etc are the attribute or sub property of this respective input-element  and this implies for all elements-->
+            <!-- NOW toh apan ess ELEMENT ko select krenge hai on the basis of its attributes simply by this way:
+                                  input[attribute="its value"]{apply styles} -->
+                       
+
+
+            <input type="password" placeholder="enter your password">
+            <input type="submit" value="submit">
+        </form>
+        <div>div first</div>
+        <div>div second</div>
+        <ul>
+            <ul>
+                <li>this is first li</li>
+            </ul>
+            <ul><li>thsi is second</li>
+            </ul>
+            <li class="list" id="list-1">LIST-1</li>
+            <li class="list" id="list-2">LIST-2</li>
+            <li class="list" id="list-3">LIST-3</li>
+            <li class="list" id="list-4">LIST-4</li>
+            <li class="list" id="list-5">LIST-5</li>
+            <li class="list" id="list-6">LIST-6</li>
+            <li class="list" id="list-7">LIST-7</li>
+            <li class="list" id="list-8">LIST-8</li>
+            <li class="list" id="list-9">LIST-9</li>
+            <li class="list" id="list-10">LIST-10</li>
+        </ul>
+        <p>this is a paragraph </p>
+        <ul id="ul2">
+            <li>first li of ul2</li>
+            <li>second li of ul2</li>
+        </ul>
+        <a href="http://google.com" target="_blank">VISIT GOOGLE</a>
+        <a href="http://facebook.com" target="_self">VISIT FACEBOOK</a>
+        <div>
+            <ul>
+                <li>this is inside first list</li>
+                <li>this is inside second list</li>
+                <li>this is inside third list</li>
+                <li>this is inside fourth list</li>
+            </ul>
+            <ul>
+                <li>okay okay</li>
+            </ul>
+        </div>
+    </div>
+    
+</body>
+</html>

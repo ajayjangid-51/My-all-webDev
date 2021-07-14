@@ -1,0 +1,57 @@
+.sidebar{
+    flex: .33;
+    display: flex;
+    flex-direction: column;
+    /* as apna yeh sidebar-div app_body meh and uski display flex hai mtlb eske sare child flex-items hai, thus toh mtlb yeh sidebar-div bhi eska flex-child hai thus toh phir apn Css meh flex: width ; se width set kr skteh hai ess app_body-div meh. thus ess apna sidebar-div item ess app_body-div meh 50% lega by the row or column as yeh toh flex-box ki flex-direction pe depend krta hai. */
+}
+.sidebar__header{
+    display: flex;
+    
+    padding: 20px;
+    justify-content: space-between;
+    border-right: 1px solid lightcoral;
+}
+.sidebar__searchcontainer{
+    display: flex;
+    background-color: white;
+    width: 100%;
+    align-items: center;
+    height: 35px;
+    border-radius: 20px;
+    /* justify-content: space-around; */
+}
+.sidebar__searchcontainer input{
+    padding: 10px;
+    border: none;
+    margin-left: 10px;
+}
+.sidebar__chats{
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    background-color: white;
+    overflow: scroll;
+}
+.sidebar__searchcontainer .MuiSvgIcon-root{
+    color: pink;
+    padding: 10px;
+
+
+}
+
+.sidebar__headerright{
+    
+    display: flex;
+    /* flex: .50; */
+    min-width: 10vw;  /* vw toh hamesa  viewport k respect meh define hota hai. */
+    /* border: 1px solid red; */
+    justify-content: space-between;
+    align-items: center;
+}
+.sidebar__search{
+    display: flex;
+    align-items: center;
+    background-color: #f6f6f6;
+    padding: 10px;
+    height: 39px;
+}

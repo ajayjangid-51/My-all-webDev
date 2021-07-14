@@ -1,0 +1,12 @@
+.feed{
+    /* border: 1px dashed blue; */
+    flex: .495;
+    /* overflow-y: scroll; */
+    border-right: 1px solid var(--twitterbackgroundcolor);
+    /* min-width: fit-content; */
+}
+
+/* .feed::-webkit-scrollbar{
+    display: none;
+} */
+

@@ -1,0 +1,554 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    text-decoration: none;
+}
+body{
+    overflow-y: scroll;
+}
+
+nav {
+    background-color: #44413a;
+    height: 50px;
+}
+
+nav ul {
+    display: flex;
+    /* justify-content: center; */
+    width: 85%;
+    margin: auto;
+}
+.navbar_SearchSection{
+    padding: 6px;
+    border: none;
+    border-radius: 5px;
+    margin: auto;
+    width: 300px;
+    margin-left: 40px;
+
+}
+#wk{
+    margin-top: 4px;
+    margin-left: 4px;
+    margin-right: 4px;
+    color: green;
+    font-weight: bolder;
+}
+#img {
+    height: 36px;
+}
+
+#lis {
+    display: flex;
+    align-items: center;
+    height: 36px;
+}
+
+#lis a {
+    color: #ded7d7;
+}
+
+nav div ul {
+    display: flex;
+}
+
+na nav ul a {
+    /* text-decoration: none; */
+    color: red;
+}
+
+nav ul li {
+    list-style: none;
+    padding: 5px;
+}
+
+nav ul img {
+    width: 41px;
+    height: 40px;
+}
+
+#mainpg::before {
+    content: "";
+    background: center/cover no-repeat url(civil1.jpg);
+    /* background-repeat: repeat-y; */
+    position: absolute;
+    top: 38px;
+    height: 611px;
+    width: 100%;
+    opacity: 0.6;
+    z-index: -1;
+}
+
+#mainpg {
+    /* border: 2px solid red; */
+    height: 611px;
+}
+body nav{
+    display: flex;
+}
+#hamburger{
+    float:right;
+    margin-top: 15px;
+    margin-right: 15px;
+    cursor: pointer;
+    list-style: none;
+}
+#heading {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    width: 60%;
+    margin: auto;
+    height: 40%;
+}
+#loginPagi{
+    display: none;
+}
+#closeloginPagi{
+    cursor: pointer;
+}
+#heading h1 {
+    font-family: 'Luckiest Guy', cursive;
+    font-size: 50px;
+}
+
+#heading h2 {
+    font-family: 'Spinnaker', sans-serif;
+}
+
+#heading a {
+    color: #9c436c;
+}
+
+#foot {
+    height: 300px;
+    width: 90%;
+    border: 2px solid teal;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 0.5fr));
+    grid-template-rows: repeat(2, 300px);
+    grid-gap: 10px;
+}
+
+#foot div {
+    border: 2px solid hotpink;
+}
+
+#main {
+    height: 611px;
+    border: 2px solid teal;
+}
+
+#main::before {
+    content: "";
+    background: center/cover no-repeat url(pic2.jpg);
+    /* background-repeat: repeat-y; */
+    position: absolute;
+    top: 650px;
+    height: 611px;
+    width: 100%;
+    opacity: 0.6;
+    z-index: -1;
+}
+#img1{
+    float: right;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+}
+#img2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    float: left;
+
+}
+
+#main1 {
+    width: 60%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+#main1 h1 {
+    font-family: 'Luckiest Guy', cursive;
+}
+
+#main1 h2 {
+    font-family: 'Spinnaker', sans-serif;
+}
+
+#main1 a {
+    color: #9c436c;
+    /* projectworkma\pic2.jpg */
+}
+
+/* 🌟 login_page Css 🌟 */
+.loginpage{
+    width: 80vw;
+    height:80vh;
+    border: 4px solid saddlebrown;
+    box-sizing: border-box;
+    position: absolute;
+    top: 70px;
+    left: 9vw;
+    
+}
+.loginpage__main{
+    position: absolute;
+    top: -65px;
+    /* left: 9vw; */
+    width: 100%;
+    height: 100%;
+    /* margin-top: 10px; */
+    margin: 10vh auto;
+    /* margin: vertical horizontal; */
+    /* margin: top right bottom left ( mtlb in clockwise-direction); */
+    border: 1px solid saddlebrown;
+    box-sizing: border-box;
+    display: flex;
+    box-shadow: 0 0 20px black;
+}
+.loginpagemain__left{
+    background: grey;
+     flex: .70;
+     /* border-right: 1px dotted red; */
+    
+ }
+ .loginpagemain__right{
+     flex: .30;
+     background-color: #ded7d7;
+ 
+ }
+ .loginpagemainleft_menu{
+    /* border: 1px dotted green; */
+    /* width: fit-content; */
+    width: 100px;
+    position: relative;
+    /* top: 20px; */
+    /* right: 20px; */
+    right: -2px;
+    float: right;
+    /* width: fit-content se eski width content k according set hojayegi */
+    /* apn css ko aaram se and easily ess vs-code suggestion se hi acche se explore kr skteh hai. */
+}
+.loginpagemainleft_menu ul li{
+    list-style: none;
+    /* padding-left: 8px; */
+    padding: 7px;
+    /* padding: 20px; */
+
+    /* list-style: lower-latin;  (lower lower-latin mtlb lower-case meh a , b, c numbering hogi */
+}
+.loginpagemainleft_menu ul li:hover{
+    background: #ded7d7;
+    /* border-radius: 10px; */
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+.loginpagemainright_img{
+    /* display: flex;
+    flex-direction: column;  esseh image pe 404 niche likha huaa nhi aayega. */ 
+    float: right;
+    position: relative;
+    /* top: 20px; */
+    right: 20px;
+}
+.loginpagemainright__logindetails{
+    /* display: flex; */
+    flex-direction: column;
+    position: relative;
+    width: fit-content;
+    width: 60%;
+    margin: 25vh auto;
+    /* border: 1px dotted red; */
+
+}
+.loginpagemainleft_welcome{
+    width: fit-content;
+    margin: 30vh 10vw;
+}
+.loginpagemainleft_welcome h1,p{
+    padding-bottom: 10px;
+}
+.loginpagemainleft_welcome button{
+
+    margin-right: 10px;
+}
+.loginpagemainright__logindetails button,h2,input{
+    margin-bottom: 10px;
+}
+.loginpagemainright__logindetails input{
+    border: none;
+    border-bottom: 1px solid grey;
+    padding: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.loginpagemainright__logindetails input:active{
+    border: none;
+    background: red;
+}
+.btn{
+    padding: 5px;
+    border-radius: 10px;
+    border: none;
+    background: #e6af2d;
+}
+.btne{
+    /* padding: 8px; */
+    padding: 5px 38% 5px 38%;
+    border-radius: 10px;
+    border: none;
+    background: #e6af2d;
+}
+.btni{
+    padding: 5px;
+    border-radius: 10px;
+    border: none;
+    margin-right: 30px;
+    background: #686d6c9e;
+
+}
+.signupandlogin{
+    display: flex;
+    /* justify-content: center; */
+    /* align-content: center; */
+    width: 100%;
+    align-items: center;
+    /* justify-content: space-evenly; */
+
+}
+.allbtn:hover{
+    background: rgb(50, 175, 77);
+}
+.rembe{
+    font-size: smaller;
+    float: right;
+    position: relative;
+    right: 8px;
+}
+.rembe input:checked{
+    background: blue;
+}
+.signupandlogin a{
+    text-decoration: none;
+    font-weight: bold;
+}
+.allbooks{
+    border: 1px solid red;
+    display: flex;
+    background: #f4f4f4;
+    /* margin: -6vh ; */
+}
+.left_booksCategories{
+    flex: 0.15;
+   border: 1px solid green;
+   margin: 5px;
+   /* position: sticky;
+   position: static; */
+   /* top: 500px; */
+
+}
+.right_booksShowcase{
+    flex: 0.8;
+    border: 1px solid grey;
+    margin: 5px;
+}
+.OnCategories_hover{
+    display: none;
+    position: relative;
+    top: 20px;
+    z-index: 10;
+
+}
+.Category_list{
+    border: 1px solid black;
+    padding: 5px;
+    list-style: none;
+    height: 40px;
+    background: #46343c;
+    color: rgb(214, 207, 207);
+    font-weight: bold;
+    cursor: pointer;
+}
+.Category_list:hover{
+    background: #e6af2d;
+
+}
+#seecategories{
+    border: 1px solid rgb(87, 80, 80);
+    padding: 5px;
+}
+
+.banner_Slides{
+    border: 1px solid blue;
+    height: 300px;
+    margin: 20px;
+
+}
+.bestsellers{
+    border: 1px solid blue;
+    /* height: 300px; */
+    margin: 20px;
+
+}
+.featured_notes{
+    border: 1px solid blue;
+    /* height: 300px; */
+    margin: 20px;
+}
+.notes_Combo{
+    border: 1px solid blue;
+    height: 300px;
+    margin: 20px;
+    padding: 10px;
+    
+}
+.book_detials{
+    display: flex;
+    /* flex-direction: column; */
+    /* justify-content: space-evenly; */
+    padding: 5px;
+
+    overflow-x: scroll;
+
+}
+.slidi{
+    border: 3px solid black;
+    display: none;
+}
+.book_image {
+    height: 300px;
+    /* flex: 0.2; */
+    /* width: 200px; */
+    border: 1px dotted red;
+    display: flex;
+    flex-direction: column;
+    margin: 3px;
+    background-image: url(images/bookletfp.jpeg) ;
+    background-size: 190px 300px;
+    
+    opacity: 95%;
+    /* justify-content: space-evenly; */
+}
+.book_image span{
+    cursor: pointer;
+    width: 70%;
+    padding: 5px;
+
+}
+.book_image span:hover{
+    background: #098585;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    font-weight: bold;
+    color: rgb(224, 161, 211);
+}
+.book_image_hover{
+    display: none;
+    color: white;
+    
+}
+.book1{
+    margin: 5px;
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid blue;
+
+}
+#chatbot{
+    margin-left: 20px;
+    cursor: pointer;
+    /* color: #9c436c; */
+}
+#chatbox{
+    display: none;
+    /* border: 1px solid red; */
+    border-radius: 10px;
+    width: 27%;
+    height: 90vh;
+    position: fixed;
+    top: 50px;
+    float: right;
+    right: 50px;
+    /* padding: 30px; */
+    
+}
+
+.chatbox_heads{
+
+    background: orange;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px;
+    height: 25%;
+}
+.chatbox_input form{
+    background: gray;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    height: 43vh;
+
+}
+.chatbox_input input{
+    padding: 8px;
+    border: 1px solid black;
+    border-radius: 5px;
+
+
+}
+#inputmsg{
+    height: 70px;
+}
+#close_chatbox{
+    background: none;
+    margin-top: 10px;
+    border: 2px solid green;
+    border-radius: 20px;
+    padding: 5px;
+    float: right;
+    position: relative;
+    right: 5px;
+}
+#close_chatbox:hover{
+    background-color: rgb(151, 190, 151);
+}
+#sendmsg{
+    /* margin-top: 10px; */
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid black;
+}
+#sendmsg:hover{
+    background: #9c436c;
+}
+#myaccount{
+    display: none;
+     position: absolute;
+     border: 1px solid grey;
+     top: 50px;
+     right: 15px;
+     background: #ded7d7;
+     width: 130px;
+
+}
+.myaccount_lists{
+    list-style: none;
+    padding: 10px;
+    cursor: pointer;
+
+}
+.myaccount_lists:hover{
+    color: red;
+    
+}

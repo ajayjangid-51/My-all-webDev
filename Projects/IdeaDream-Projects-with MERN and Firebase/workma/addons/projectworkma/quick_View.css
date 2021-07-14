@@ -1,0 +1,76 @@
+.QuickView_main{
+    width: 80vw;
+    height: 80vh;
+    border: 5px solid grey;
+    display: flex;
+    margin: 8vh auto;
+    padding: 10px;
+
+}
+.quickView_main_left{
+    
+    background: url(images/bookletfp.jpeg);
+    background-size: 100%;
+    flex: 2;
+    border: 1px solid red;
+    /* width: 50%; */
+
+
+}
+
+.quickView_main_left span{
+    position: relative;
+    top: 60px;
+    left: 0px;
+    color: white;
+    background: green;
+    padding: 6px;
+    
+}
+#closequickView{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#closequickView h1{
+    display: inline;
+    margin: 0;
+}
+
+
+.quickviewmain_right{
+    display: flex;
+    flex-direction: column;
+    flex: 3;
+    padding: 20px;
+    overflow-y: scroll;
+
+}
+#closequickView span{
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 5px;
+    cursor: pointer; 
+}
+.quickviewmain_right h1 , h3{
+    margin: 0;
+    margin-bottom: 5px;
+}
+.items_no{
+    border: 1px solid blue;
+    padding: 5px;
+    /* display: i; */
+    width: fit-content;
+    height: fit-content;
+}
+.no_ofitems{
+    display: flex;
+    align-items: center;
+}
+.no_ofitems button{
+    padding: 4.5px;
+}
+.all_btns{
+    display: flex;
+    justify-content: space-between;
+}

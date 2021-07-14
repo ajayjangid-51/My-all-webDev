@@ -1,0 +1,17 @@
+ {
+  "name": "addon",
+  "version": "1.0.0",
+  "description": "this software will add and then make it half yout input",
+  "main": "software-main-file.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "awesome"
+  ],
+  "author": "hello",
+  "license": "ISC",
+  "dependencies": {
+    "slugify": "^1.4.0"
+  }
+}

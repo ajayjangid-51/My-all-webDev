@@ -1,0 +1,64 @@
+<!-- YAHA pe apn SVG-path-element k bareh meh dekhenge: -->
+<!-- as path-element simply path define krne k liyeh mtlb line define , draw krne k liyeh use hota hai. -->
+
+<!-- now "path" element k liyeh kuch commands hoteh hai and enn commands se hi apni line ka path define krteh hai:  -->
+<!-- Thus toh now aab apn path-element ki sari Commands dekhenge ki konsi command se apn kaisa path- define kr skteh hai or path k saat kya-kya kr skteh hai. -->
+
+<!-- 🔔Tip: Commands ko samajne se phle apnko drawing-pointer ka concept dhyn meh rkha hai , as ess concept se apn apne according kuch bhi kaisa bhi path(mtlb line) bana skteh hai: mtlb yeh commands ess drawing-pointer k liyeh hi hai.  -->
+
+<!-- path-Commands:
+    1.M ("moveto" as ess command se specified-cordinates pe path-line start hoti hai. )
+    1.L ("lineto" as ess command se specified-cordinates pe path-line end hoti hai )
+    1.H ()
+    1.V
+    1.C
+    1.S
+    1.Q
+    1.T
+    1.A
+    1.Z ("close-path" as ess command se apna path-line pe start huaa tha uss cordinates tk line create ho jati hai from its last-position )
+
+    📓note-point1: as apnko enn Commands k saat (x,y)cordinates bhi dene hoteh hai.
+    📓note-point: as apn enn commands ko small letter meh bhi use kr skteh hai but lower-case meh commands se relative-position define hoti hai. 
+ -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    HELLO BROS
+    <svg height="300px " width="500px" >
+
+        <!-- <path d="M150 10 L100 60 Z " /> -->
+        <!-- <path d="M150 0 L75 100 c100 100 L125 200 Z" stroke="pink" fill="none" stroke-width="4" /> -->
+        <path d="M0 0 L75 75 L225 100 L150 150 L130 0 L0 120  " fill="none" stroke="pink" />
+        <circle cx="100" cy="150" r="21" fill="red" stroke="blue" stroke-width="5" />
+        <!-- <path d="MX-cordinate y-cordinate L75 200 L225 100 " fill="none" stroke="pink" /> -->
+
+        <!-- <path d="m150 0 l75 200 l225 200 z" /> -->
+
+    </svg>
+    <svg>
+        <defs>
+
+            
+            <clipPath id="clipi" >
+                <circle cx="200" cy="200" r="30" stroke="red" />
+                
+            </clipPath>
+        </defs>
+        <image width="500" height="350" xlink:href="https://www.tutorialspoint.com/videotutorials/images/coding_ground_home.jpg"
+         clip-path="url(#clipi)" alt="">
+    </svg>
+
+    <svg height="210" width="400">
+        <path d="M 150 0 L 75 200 L225 200 Z" />
+        Sorry, your browser does not support inline SVG.
+      </svg>
+    
+</body>
+</html>

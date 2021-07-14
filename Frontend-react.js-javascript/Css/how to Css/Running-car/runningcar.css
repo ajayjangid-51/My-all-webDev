@@ -1,0 +1,145 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+.hero{
+    height: 100vh;
+    width: 100%;
+    background-image: url(images/sky.jpg);
+    background-size: cover;
+    /* background-size: inherit; */
+    background-position: center;
+    position: relative;
+    overflow-x: hidden;
+}
+.highway{
+    height: 150px;
+    width: 500%;
+    display: block;
+    background-image: url(images/road.jpg);
+    position: absolute;
+    /* thus toh apn position absolute krke phir ess div ko aaram se jaha chaheh vaha set kr skteh hai */
+    bottom: 0;
+    left: 0;
+    right: 0;
+    /* z-index: 1; */
+    
+    background-repeat: repeat-x;
+    animation: roadrun 5s linear infinite;
+
+}
+@keyframes roadrun{
+    100%{
+        transform: translateX(-3000px);
+    }
+}
+.city{
+    height: 200px;
+    width: 500%;
+    display: block;
+    background-image: url(images/city.png);
+    position: absolute;
+    bottom: 150px;
+    left: 0;
+    right: 0;
+    z-index:1 ;
+    background-repeat: repeat-x;
+    animation: runcity 20s linear infinite;
+}
+@keyframes runcity{
+    100%{
+        transform: translateX(-1400px);
+        /* thus translateX se yeh X meh chalegi 3000px in 5 sec meh
+        and 100% ka mtlb hai   */
+    }
+}
+.car{
+    width: 400px;
+    bottom: 70px;
+    transform: translateX(-50%);
+    position: absolute;
+    left: 50%;
+    z-index: 2;
+}
+.car img{
+    /* height: 100px; */
+    width: 100%;
+    /* position: absolute; */
+    /* position absolute mtlb apnko ess div ki postion fixed rkhi hai and voh fixing apn yaha niche bottom, left, top, rights se define kr denge */
+    /* bottom: 70px;
+   left: 100px;
+   z-index: 1; */
+
+   /* now aab apn ess image pe animation dalenge */
+   animation: updowncar 1s linear infinite;
+}
+@keyframes updowncar{
+    100%{
+        transform: translateY(-1px);
+    }
+    /* yaha 50% mtlb apni postion down aana and phir vapis se apne position pe chalegana k time ka percentage 
+    or 100% ka mtlb yeh bohat fast aayega, for the time-period given and phir ess timeperiod k according yeh vapis bache jitne time meh upar jayega.*/
+    40%{
+        transform: translateY(1px);
+    }
+    10%{
+        transform: translateY(-1);
+    }
+    100%{
+        transform: translateX(1px);
+    }
+}
+.wheel{
+    width: 70px;
+    
+    z-index: 2;
+}
+.wheel img{
+     width: 68px;
+     height: 68px;
+     animation: wheeljump 1.5s linear infinite;
+     animation: roting 1s linear infinite;
+
+}
+.front{
+    position: absolute;
+    left: 56.1%;
+    bottom: 80px;
+
+/* animation: wheeljump 1.5s linear infinite; */
+}
+.back{
+    position: absolute;
+    left: 38.2%;
+    bottom: 80px;
+    
+    
+}
+@keyframes roting{
+    100%{
+        transform: rotate(360deg);
+    }
+}
+@keyframes wheeljump{
+    100%{
+        transform: translateY(-1px);
+        transform: rotate(360deg);
+    }
+    60%{
+        transform: translateY(2px);
+        transform: rotate(360deg);
+
+    }
+    40%{
+        transform: translateY(-1px);
+    }
+    80%{
+        transform: translateX(1.5px);
+    }
+    0%{
+        transform: translateX(-1px);
+    }
+    70%{
+        transform: translateX(2px);
+    }
+}

@@ -1,0 +1,75 @@
+<!-- yaha ess meh apan apane webpage meh forms banayenge and uss form meh kuch data input bhi krvange jaise client ka name,date,time,date of birth, emails, password etc toh yeh sab data enter kravane k liyeh apan input tag use krte hai yeh input tags jab hi kaam krenge tab form tag acitvated ho
+mtlb simply jab bhi apan ko data entery krvani ho toh apan simply first form banayenge means form tag create krenge then phir jaisa bhi data enter krvana ho uske according input tags use krlenge -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>forms and input</title>
+</head>
+
+<body>
+    <h3>APPLICATION FORM</h3>
+    <form action="beckend.php"></form>
+    <!-- yaha pe beckend.php ka mtlb hai ki yeh beckend ek program(means voh program jo website k server pe rehta jo client ki request ko apne server pe search krke or build up krke client ko response result deta hai) hai jo php language meh likha gaya hai. toh yaha pe action=beckend.php esliyeh likha q ki data fill krke
+    submit kiya jayeh toh yeh ess beckend.php program k pass chala jayeh orr vaha pe yeh program ese store krlega  -->
+    <!-- aab kuch inputs daalte hai  -->
+    <!-- input tag k kafi types hote hai jaise
+    1.type="text" kisi text fill up k liyeh
+    2.type="date" date fill up k liyeh
+    3.type="email" email fill up k liyeh
+    4.type="number" only number fill up k liyeh
+    some inputs as a choose...
+    5.type="checkbox" kisi simple question ko check krvane k liyeh
+    6.type="radio" three or four option meh ek select krne k liyeh
+    some inputs as a button...
+    7.type="reset" yeh button sare fill up data ko reset krne k liyeh use kiya jata hai
+    8.type="submit" yeh button fill data ko save and submit krne and fir use beckend.php ko redirect kr dena
+-->
+    <label for="name"> NAME </label> <br>
+    <!-- yaha pe label tag se apn kisi bhi input-box meh directly jump kr skteh hai mltb voh-input-box apne aap hi select ho jata hai, bas apnko ess label-tag meh text daalna hota hai and jaise hi uss text pe click kiya jayega respective input-box directly select hojayega.
+    bas label tag meh <label for="id of the desired input-tag (jis k liyeh label tag use kr rhe hai)"> aur yaha input k liyeh "contain name" aata hai</label>
+
+    ##toh mtlb hamesa kisi bhi input k liyeh label condition dalni hai then first use label tag then after the input tag with its id and contain name in label## -->
+
+    <input type="text" name="his name" id="name"> <br><br>
+    <!-- yaha pe jo name="kuch text" tag hai eska use esemeh hota hai jaise input meh data fill and fir submit kiya gaya then yeh data beckend.php k pass save hojayega toh mtlb sirf jo data fill kiya gaya hai sirf vahi save hoga toh baad meh apan pata nhi chal payega ki yeh particular data kya means it is name,email,or what toh by giving corresponding name=" " to input then yeh fill up data ess corresponding name k saat save hojayega -->
+    <div>
+        DATE: <input type="datetime" name="date and time when it was filled" id="name"><br><br>
+    </div>
+    EMAIL:<input type="email" name="his email" id="name"><br>
+    <br>
+    <!-- upar yaha pe apan <br> tag ki jagah <div></div> tag ka bhi use kr skte hai for newline bcoz jab koi bhi text div tag meh likha jata hai toh voh uss text k liyeh do ya do se jyaga puri lines ko reserve kr leta hai -->
+    <!-- input tags bhi kafi type k hote hai jaise as according to kis type ka data fillup hoga -->
+
+    <br>
+    DATE: <input type="date" name="date selected" id="name"><br><br>
+    AMOUNT: <input type="number" name="number selected" id="name"><br><br>
+    <div>
+        I AM NOT ROBOT: <input type="checkbox" name="robot">
+    </div><br>
+    GENDER: MALE <input type="radio" name="gender" id="helo">
+    FEMALE <input type="radio" name="gender" id="name">
+    OTHER <input type="radio" name="gender" id="name"><br><br>
+    <div>
+        <input type="submit" value="submit now">
+        <input type="reset" value="reset now">
+    </div><br>
+    <div>
+        <input type="reset" value="resetall">
+        <!-- yaha value meh button ka name aata hai --> <br>
+    </div>
+    write bio in short: <br><textarea name="feedback" id="feed" cols="100" rows="10"></textarea>
+    <!-- upar yaha apan textarea tag use krke ek badasa box clients or websites visitors se koi short feedback ya suggestion lene k liyeh use kr skte hai -->
+    
+    <label for="vehicle"> model:</label>
+    <select name="vehicle choosen" id="vehicle">
+        <option value=""> mercedes benz</option>
+        <option value="">audi </option>
+        <option value="">ferrai</option>
+    </select>
+    <!-- aab yaha select tag ki help se ek "option list" create hoti hai and  phir apan uss "option list" meh option tag ki help se option tag ki value meh different option dal skte hai and phir atlast client "option list" meh select kr skta hai  -->
+</body>
+
+</html>

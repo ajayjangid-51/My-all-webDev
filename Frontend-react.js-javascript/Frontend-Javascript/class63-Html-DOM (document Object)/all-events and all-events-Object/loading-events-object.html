@@ -1,0 +1,56 @@
+<!-- LOADING-EVENTS -->
+<!-- Now YAHA pe apn Loading-Events k bareh meh dekhenge: -->
+<!-- As Loading-Events voh Events hoteh hai jab  apn koi External-Source-Load krteh hai apne kisi div-element meh. jaise: apn apne webpage meh koi Vedio , Audio , images and etc .. kuch load krvateh hai then vaha pe mtlb Loading-Event hota hai -->
+
+<!-- 🔥1: Loading-Event-FUnctions mtlb jab Loading-event hota hai tab yeh function apne aap execute ho jateh hai:
+    1.lenghtComputable (yeh function return krta hai process-lenggth computable hai k nhi)
+    2.total ( yeh total amount of work for loading return krta hai and apne respective Strucuture-key store kr deta hai )
+    3.loaded (mtlb kitna work abhi tak load ho gaya hai.)
+ -->
+
+<!-- 🔥2: Loading-Events:
+    1.onerror ( jab loading hone meh koi error aa jati hai then uss event ko onerror-event bolteh hai.)
+    2.onloadstart ( mtlb jab loading start hoti hai uss event ko loadtstart event bolteh hai)
+
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loading-Event</title>
+    <style>
+        video{
+            border: 2px solid black;
+        }
+    </style>
+</head>
+<body>
+    <div class="LoadingEvent">
+        <!-- onloadstart="loadingevent_function()" -->
+        <video controls autoplay  id="vii">
+            <source src="https://www.youtube.com/watch?v=XMUYoiUlutM" type="video/mp4"> 
+                the vedio can't be loaded
+        </video>
+    </div>
+    <script>
+        // let x = document.getElementById("vedi")
+        // function loadingevent_function(){
+        //     alert("your vedio is starting to load click on okay")
+            
+        // }
+        document.getElementById("vii").onloadstart = function (){
+            loadfn()
+        }
+        function loadfn(){
+            let x = event.loaded
+            console.log(x)
+        }
+
+        // 🔥 VERY-imp-note-Point: apnko hamesa ek cheez ka dhyan rkhna hai ki jo event hai voh event kisi element k liyeh specifly ho rha hai ya actual-pure-website k liyeh  ho rha hai , and agr puri website k liyeh ho rha hai then vaha pe apnko koi element-store nhi krna padega. as like jaise yaha apn ne onloadingevent k liyeh kiya hai.
+
+
+        // note-for-console-meh-showing-error == jaise agr apnko yeh: cannot read the property red of null in file-name . eska mtlb hai ki aap ne ess property ko actual meh kisi element pe apply nhi kiya , thus isiliy null aa rha hai.
+    </script>
+</body>
+</html>

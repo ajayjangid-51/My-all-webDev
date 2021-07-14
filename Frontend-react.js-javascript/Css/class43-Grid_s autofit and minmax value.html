@@ -1,0 +1,68 @@
+<!-- CSS-GRID part-2 -->
+<!-- YAHA pe apan CSS-GRID meh "g-t-c property" ki value "autofit and minmax" k bareh meh dekhenge: -->
+
+<!-- NOTE: web-designing meh GRID-g-t-c ki value "autofit" and "minmax" mainly website ko responsive banane k liyeh hi use hoti hai. -->
+
+<!-- we use g-t-c value as like :
+      grid-template-columns: repeat(auto-fit, minmax(100px, 200px));
+
+      (esmeh no. of column(auto-fit) yani screen-size k according jitni no. of columns unki input width k basis pe create ho skte hai utne column apne aap create ho jayenge and yaha pe jada max value hi matter kregi,
+      so isiliy screen size k accroding yeh apni aap set ho jate hai thus mtlb apni website responsivly behave krti hai) -->
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GRID's autofit and minmax attributes</title>
+    <style>
+        .container{
+            display: grid;
+            grid-gap:4px;
+            grid-template-columns: repeat(auto-fit, minmax(100px, 200px));
+            /*NOTE:agar apan max-value in px meh daal te hai then yaha sirf max-value matter kregi (means no. of boxes max-width value ko actual width maan k screen meh auto-fit ho jayenge ) */
+
+            /* NOTE: agar apan max-value in fr meh daalte hai: */
+            grid-template-columns: repeat(auto-fit, minmax(188px, 1fr));
+            
+            /* this means BOX ki min-width 188px toh honi hi chahiyeh and phir 1fr means puri-screen k according sabki size same ho jayey(mtlb simply puri "screen cover honi chahiyeh" with sab boxes of same-size)
+            mtlb mere sbhi boxes ki kaam se kaam 188px width toh hogi hi and agar screen meh jagah jada() hai toh voh 188px se badi bhi ho skti and phir agar screen meh space hai voh box-widht badi ho kr max se kaam ya max k equal ho kr apne aap set hojegi(aur agar apan ne max-width fr meh set ki hai toh voh agar screen meh space hai toh box-width 188px se jda ho kr jitne box screen meh equally fit ho skte hai voh aapne aap calculate krke fit ho jayenge ) s but phir apan ne max-width 1fr set ki hai   */ 
+            /* toh upar apan ne autofit and minmax value ka use kiya takki apni website responsive ban jayeh, */
+
+            /*TIP: apan "fr" unit ka use mainly puri screen ko cover krane k liyeh krte hai. */
+            
+    
+            
+           
+
+        }
+        .box{
+            border: 2px solid black;
+            background-color: burlywood;
+            padding: 23px;
+
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box">GRID-item-1</div>
+        <div class="box">GRID-item-2</div>
+        <div class="box">GRID-item-3</div>
+        <div class="box">GRID-item-4</div>
+        <div class="box">GRID-item-5</div>
+        <div class="box">GRID-item-6</div>
+        <div class="box">GRID-item-7</div>
+        <div class="box">GRID-item-8</div>
+        <div class="box">GRID-item-9</div>
+        <div class="box">GRID-item-10</div>
+        <div class="box">GRID-item-11</div>
+        <div class="box">GRID-item-12</div>
+
+        <!--IMP NOTE: now apnko enn BOXES ko webpage meh alag alag jagah jachana hai, ya bichana hai,map krnahai, ya align and enki(boxes ki) re-sizing krni hai toh(means indirectly webpage ka layout banana hai) then simply by the help of GRID-properties apan yeh sara kaam easily and asani se kr skte hai.    -->
+    </div>
+    
+</body>
+</html>

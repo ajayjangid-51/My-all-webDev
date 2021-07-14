@@ -1,0 +1,77 @@
+<!-- NOW yaha pe apan ALIGNMENT k bareh meh dekhenge
+ALIGNMENT yani jo webpage ka "SHWOING design, text and data" hai unko webpage meh kha and kaise set krne ko hi alingment khte hai. 
+for.eg. apane pass koi div element meh text with border(BOX) hai then now agar apanko ess BOX(text with border) ko page k left ya right meh shift krna ho then uss k liyeh we use the  STYLE property named "FLOAT:  ;" in this element aur esseh jo div hai uske border k respect meh set hoga,
+bcoz float ka meaning hai border(if width and height defined ho) meh kahi pr hi float krna toh mtlb agar element pe background ya border defined toh floated element apne background ya border se OVERFLOW ho jata hai toh ess OVERFLOW ko rouk ne k liyeh we use STYLE property "OVERFLOW:auto;"   --> 
+<!-- and yeh kaam apan MARGIN define krke bhi kr skte hai bt usmeh kaphi time lag skta hai so esley we prefer to use float property, -->
+
+
+<!-- AND apan BOX meh only TEXT ki alignment krni ho then by using style property "TEXT-align:  ;" in the text's element -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ALIGNMENT OF ELEMENT TEXT,DESIGN and float </title>
+    <style>
+        #physics{border: 10px solid rgb(77, 3, 87);
+            width: 800px;
+            height: 600px;
+            margin-left: 257px;
+           
+        }
+     .chapter{
+         border: 10px solid rgb(87, 2, 2);
+         width: 380px;
+         /* we have set this width by inspect development tool in crome  so that it looks good*/
+         margin: 45px auto;
+         
+     }
+     #chap1{
+         float: left;
+         text-align: right;
+         /* types of text-alignment */
+         /* text-align: justify; (esseh text pure BOX meh charo side se align ho jata hai "align mtlb ek line meh")
+        text-align: left; (sirf left side meh align hoga)
+        text-align: right; (it align the text from right side)
+        text-align: start; (it align all lines of text form starting )
+        text-align: center; (it align all lines of text in the centre) */
+        
+         
+         
+        }
+                                    /* #chap2{
+                                   margin: 30px 19px 30px 1000px;
+                                    box-sizing: border-box;
+                                } */
+        /* YAHA upar apan ne margin se element ki place in webpage fix kri hai..  
+        and yeh margin style property kaise aur kha lagani hai and aur bhi sari bateh jaise kis tarah aur bhi kamm ko set krna hai ya set hota hai voh apan thoda piche wali practice yaad krke apply krenge  */
+                                
+     #chap2{
+         float: right;
+         height: 54px;
+        }
+        #chap3{
+            float:right;
+            /* OVERLAPPING */
+            /* NOTE:agar apan phle 2 element ko float krke third ya agle element ko float krenge then there is chance of "OVERLAPPING" overlaping mtlb third element ka first ya second element k upar ya niche aa jana.. toh eseh(overlaping of third element)  ko sahi krne k liyeh we use the property named "clear-left" in the third element,
+            clear-left in third element ka mtlb ki third element ko floated element se alag kr doo.    */
+            clear: both;
+            
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="subject" id="physics">
+        <p id="chap1" class="chapter">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi facere explicabo maiores soluta illum eveniet ipsam vel, accusantium, id nulla nesciunt!</p>
+        <p class="chapter" id="chap2">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quidem, aut?</p>
+        <p class="chapter" id="chap3">Lorem Lorem ipsum dolor sit, amet consectetur adipisicing elit. Reprehenderit, modi laudantium? ipsum dolor sit, amet consectetur adipisicing elit. Quidem, aut?</p>
+        </div>
+    <div class="subject" id="maths">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquam laborum maxime officia repellendus fuga corporis tempora impedit! Doloribus quasi totam esse quis rerum officiis architecto expedita voluptas similique possimus nemo mollitia, fugit consequuntumaths</div>
+   
+   
+    
+</body>
+</html>

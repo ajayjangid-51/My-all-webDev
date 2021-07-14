@@ -1,0 +1,76 @@
+<!-- YAHA pe apan JAVASCRIPT meh "MATH-object" k bareh meh baat krenge: -->
+<!--
+ jaise ki apan janteh hai ki OBJECT means jis-meh 2 ya 2 se jda elements(variables and functions) aa skteh hai ya
+included hoteh hai. toh yaha MATH-object mtlb yeh voh OBJECT hai jo ki mathematics k kaphi sari cheeze include krta hai jaise value of constants in mathematics, some operationals-functions(jaise square-root fn, round-off fn, power-fn and many more) toh kabhi apanko esseh hi kuch mathematics ka kaam ho then apan simply and directly ess MATH-object k functions ko call kr lenge, toh mtlb apanko esseh mathematical kaamo k liyeh alag se koi functions create nhi krna padega. bcoz esseh mathematical function ess MATH-object meh phle se hi created hai toh apan directly and simply enn MATH-functions ko call kr lenge as per need. -->
+
+<!-- NOTE: toh jaise agar object meh as a element koi function ho then usse function ko call apan ess tarah krteh as:
+  object.fn-name() -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MATH-object in JAVASCRIPT</title>
+</head>
+
+<body>
+    <div class="container">
+        <h1>knowing about MATH-object in JAVASCRIPT</h1>
+    </div>
+    <script>
+        let mobj = Math;
+        // where note-point ki : yaha yeh Math Object hai koi class nhi hai , thus agr yeh Math koi class hoti toh phir apn usseh ess tarah use krteh:
+        // let copyofmathclass = new Math();
+        // toh mtlb esseh aab apne ess copyofmathclass-container meh yeh Math-Class ka Object pura store ho gaya hai. thus toh yeh copyofmathclasss bhi ek Object hi ban gaya q ki esmeh ek Object hi toh store hai , and toh phir apn ess copyofmathclass-Object ki keys ko ess tarah access kr skteh hai:
+        // copyofmathclass.any-math-classobjectkey
+        console.log((mobj))
+        // toh apanko yaha pe jo functions created or included hai in this MATH-object voh shown honge.
+
+        console.log("the square-root of 25 is", Math.sqrt(25))
+        console.log("the square-root of 51 is", Math.sqrt(51))
+        console.log("the round-off of 5.16333222 is", Math.round(51.16333222))
+        // console.log("3 raise to the power 3 is ", Math.pow(3, 3)
+
+        let a = 2;
+        b = 3
+        // console.l.log( Math.pow(b,a))
+
+        // ceil and floor function of Math-object;
+        console.log("the ceil round-value of 5.26 is", Math.ceil(5.26))
+        console.log("the floor round-value of 5.26 is", Math.floor(5.26))
+
+        // absolute function of Math-object;
+        console.log("the absolute value of 5.26 is", Math.abs(5.26))
+        console.log("the absolute value of -5.26 is", Math.abs(-5.26))
+
+        // Trigonometry functions; 
+        console.log("the value of sin(PI/2) or sin(90) is", Math.sin(3.14 / 2))
+        console.log("the value of cos(PI) or cos(180) is", Math.cos(3.14))
+        console.log("the value of tan(PI) or tan(180) is", Math.tan(3.14))
+
+        // min max functions;
+        console.log("the minimum in the 3,4,2,5 is ", Math.min(3, 4, 2, 5))
+        console.log("the maximum in the 3,4,2,5 is ", Math.max(3, 4, 2, 5))
+
+        // log functions;
+        console.log("the value of log 100 to the base 10 is equal to ", Math.log10(100))
+
+    //    GENERATING a random number;
+    console.log("the random-number between 0 and 1 is  ", Math.random())
+    // NOTE: yeh yaha Math.random() function sirf 0 and 1 k bich meh hi random-no. deta hai mtlb indirectly boleh toh yeh Math.zrandoM()-fn ki value 0 and 1 k bich meh hoti hai; so agar apanko different numbers k bich ka random-number chahiyeh then apan formula applly krenge;
+
+    // random-number b/w a and b is = a + (b-a)*Main.random()
+    let a1=10;
+    let b1=20;
+    let r10_20 = a1 + (b1-a1)*Math.random();
+    console.log("the random number is given by ", r10_20)
+
+
+
+
+    </script>
+
+</body>
+
+</html>

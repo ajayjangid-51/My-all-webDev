@@ -1,0 +1,66 @@
+<!-- YAHA pe apn Web-APIs related Objects dekhenge: jinki madad se apn acchi Web-APIs bana skteh hai, where API mtlb application programming interface mtlb application k backedn meh hone wale prograaming and voh application k bich k interface API bolteh hai  -->
+
+<!-- Console-Object -->
+<!--Now aab apn Console-Object k bareh meh dekhenge: where Console-Object se apn Browser-Console ko access kr skteh hai, mtlb apn uss Browser-Console meh bohat sare alag-alag kaam bhi kr skteh hai. -->
+
+<!-- 🔥 Console-Object-keys:
+    AS-Console-Object meh koi keys nhi hoti. 
+
+-->
+<!-- 🔥 Console-Object-Functions:
+    1.assert( assertion-in-boolean , "assertion-error-message") (yeh function agr assertion( mtlb दावा ) false hota hai then console meh error-message return krta hai. where asseration is like this:  ) 
+    1.clear() (yeh function console ko clear kr deta hai) 
+    1.error() (yeh function console meh error-message print ya show krta hai)
+    1.info() ( yeh function console meh inputed message ko print krta hai and or mtlb ess function se apn console meh informational-info print krva skteh hai.)
+    1.log() ( yeh function console meh inputed message ko print krta hai)
+    1. 
+    1.time() (ess function se apn timer start kr skteh hai.)
+    1.timeEnd() (ess function se apn started-timer ko stop kr skteh hai and and yeh function in the return total-time between stop and end meh return krta hai.) 💁‍♂ 🔥 thus enn time() and timeEnd()- functions se apn jo particular-code ko run hone meh time lagta hai voh find out kr skteh hai. thus mtlb yeh time and timeEnd() -functions kafi important hai.
+    1.warn() (ess function se apn Console meh warning-message print krva skteh hai. ) 
+    1.trace() (Outputs a stack trace to the console mtlb esseh apnko stack meh one by one function load and complete hone wale ka name return hota hai, show hota hai.)
+    1.group() ( ess function se apn Console meh ek console-group bana skteh hai and usmeh phir kuch commands run kr skteh hai..) 
+    2.groupCollapsed() (ess function se console-meh console-group hi banta hai but voh collapsed huaa banta hai mtlb apnko down-arrow ki press krna hota hai uss group-meh-executed-commands ko dekhne k liyeh. and note-point 📓: apn string-input deke uss group ka label bhi set kr skteh hai, otherwise apne group Label as : console.group hi hoga.)
+    1.groupEnd() (ess function se apn created-console-meh-console-group ko exit kr skteh hai.)
+
+    12.table() (ess function se apn Console meh Table bana skteh hai, as ess function ka parameter ek "array" hota hai ya ek "Object" hota hai, and 📦tip: apn ess created-table k column-label pe click krke uss table-content ki sorting bhi kr skteh hai.)
+
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Console-Object:</title>
+</head>
+<body>
+    <script>
+        console.assert( document.getElementById("gid") , "oh soory your assertion of that 5 is greater than 2 is false") 
+        // thus toh mtlb agr kabhi apn sure nhi ho toh apnko yeh cheeze apne-website hai ya nhi then apn assert ka use kr skteh hai.
+        var myObj = { firstname : "John", lastname : "Doe" };
+        console.assert( document.getElementById("gid") , myObj) 
+        console.clear()
+        console.error("hey this is error message")
+        console.error("hey this is error2 message")
+        console.count()
+        console.info("this is very informational-info")
+        console.time()
+        console.log("this is time taken")
+        console.timeEnd()
+        console.table()
+        console.warn("this is warning message")
+        console.trace()
+
+        // console.group()
+        // console.groupEnd()
+        console.groupCollapsed("mygroup-Label")
+        console.log("hello we now inside the created group")
+        console.log("I am fine")
+        console.groupEnd()
+        console.log("heelo bye bye grop")
+
+        console.table(myObj)
+        console.table(["lambhorghini" , "bucati" , "verna" , "i20"])
+
+    </script>
+</body>
+</html>
